@@ -56,9 +56,106 @@
     return (clone.textContent || "").trim().replace(/\s+/g, " ");
   }
 
+  // ---- Smart search (header) ----
+  // Live-filters the small product catalog as the reviewer types, and
+  // hands off to the Laptops page's own filter engine on Enter / result
+  // click, so "search" and "browse" are the same underlying system.
+  function stashSearch(query) {
+    try {
+      sessionStorage.setItem("protoSearch", query);
+    } catch (err) {}
+  }
+
+  function renderSearchResults(query) {
+    var box = document.querySelector("[data-search-results]");
+    if (!box) return;
+    var products = window.TEXPERTS_PRODUCTS || [];
+    var q = query.trim().toLowerCase();
+    box.innerHTML = "";
+    if (!q) return;
+    var matches = products.filter(function (p) {
+      return p.name.toLowerCase().indexOf(q) !== -1 || (p.spec || "").toLowerCase().indexOf(q) !== -1;
+    });
+    if (!matches.length) {
+      var empty = document.createElement("div");
+      empty.className = "px-3 py-3 text-sm text-text-muted";
+      empty.textContent = 'No matches for "' + query.trim() + '" — try Laptops to browse everything.';
+      box.appendChild(empty);
+      return;
+    }
+    matches.slice(0, 6).forEach(function (p) {
+      var row = document.createElement("a");
+      row.href = "#";
+      row.className = "flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors";
+      row.setAttribute("data-search-result", "");
+      row.setAttribute("data-detail", p.detail ? "1" : "0");
+      row.setAttribute("data-name", p.name);
+      row.innerHTML =
+        '<span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center shrink-0 overflow-hidden"><img src="' +
+        p.img +
+        '" class="max-h-full max-w-full object-contain" alt=""/></span>' +
+        '<span class="flex flex-col leading-tight flex-1 min-w-0"><span class="text-sm font-medium truncate">' +
+        p.name +
+        '</span><span class="text-xs text-text-muted truncate">' +
+        p.spec +
+        "</span></span>" +
+        '<span class="text-sm font-semibold shrink-0">' +
+        p.price +
+        "</span>";
+      box.appendChild(row);
+    });
+  }
+
+  function closeSearch() {
+    var panel = document.querySelector("[data-search-panel]");
+    if (panel) panel.classList.add("hidden");
+  }
+
+  function openSearch() {
+    var panel = document.querySelector("[data-search-panel]");
+    var input = document.querySelector("[data-search-input]");
+    if (panel) panel.classList.remove("hidden");
+    if (input) {
+      input.focus();
+      renderSearchResults(input.value || "");
+    }
+  }
+
+  var searchInput = document.querySelector("[data-search-input]");
+  if (searchInput) {
+    searchInput.addEventListener("input", function () {
+      renderSearchResults(searchInput.value);
+    });
+    searchInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && searchInput.value.trim()) {
+        stashSearch(searchInput.value.trim());
+        window.location.href = "laptops.html";
+      }
+      if (e.key === "Escape") {
+        closeSearch();
+      }
+    });
+  }
+
   document.addEventListener("click", function (e) {
     var el = e.target.closest("a, button");
+
+    // Click-away closes the open search panel.
+    var panel = document.querySelector("[data-search-panel]");
+    if (panel && !panel.classList.contains("hidden") && !panel.contains(e.target) && !(el && el.hasAttribute("data-search-toggle"))) {
+      closeSearch();
+    }
+
     if (!el) return;
+
+    // Smart Laptop Finder (homepage) -> pre-filters the Laptops page.
+    if (el.hasAttribute("data-finder")) {
+      try {
+        sessionStorage.setItem("protoUseCase", el.getAttribute("data-finder"));
+      } catch (err) {}
+      window.location.href = "laptops.html";
+      return;
+    }
 
     // Mobile nav toggle.
     if (el.hasAttribute("data-menu-toggle")) {
@@ -66,6 +163,27 @@
       if (menu) {
         menu.classList.toggle("hidden");
         menu.classList.toggle("flex");
+      }
+      return;
+    }
+
+    // Search toggle + result clicks.
+    if (el.hasAttribute("data-search-toggle")) {
+      var openPanel = document.querySelector("[data-search-panel]");
+      if (openPanel && openPanel.classList.contains("hidden")) {
+        openSearch();
+      } else {
+        closeSearch();
+      }
+      return;
+    }
+    if (el.hasAttribute("data-search-result")) {
+      e.preventDefault();
+      if (el.getAttribute("data-detail") === "1") {
+        window.location.href = "product.html";
+      } else {
+        stashSearch(el.getAttribute("data-name") || "");
+        window.location.href = "laptops.html";
       }
       return;
     }

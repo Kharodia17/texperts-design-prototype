@@ -62,7 +62,7 @@ tailwind.config = {
 <a class="text-sm font-medium text-text-primary/75 hover:text-primary transition-colors" data-path="about" href="#">Stores</a>
 </nav>
 <div class="flex items-center gap-3">
-<button class="text-text-primary/70 hover:text-primary transition-colors" title="Search" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button>
+<button class="text-text-primary/70 hover:text-primary transition-colors" data-search-toggle="" title="Search" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button>
 <a class="relative text-text-primary/70 hover:text-primary transition-colors" data-path="cart-and-checkout" href="#" title="Cart">
 <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
 <span class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-status-online text-[10px] font-bold flex items-center justify-center text-surface-dark">2</span>
@@ -72,6 +72,15 @@ tailwind.config = {
 </button>
 </div>
 </div>
+<div class="hidden border-t border-border-subtle bg-surface" data-search-panel="">
+<div class="max-w-[1200px] mx-auto px-5 py-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-text-muted text-[20px] pointer-events-none">search</span>
+<input autocomplete="off" class="w-full pl-11 pr-4 py-3 rounded-full border border-border-subtle bg-surface-container-lowest text-sm focus:outline-none focus:border-primary transition-colors" data-search-input="" placeholder="Search ThinkPad, EliteBook, Latitude..." type="text"/>
+</div>
+<div class="mt-2 flex flex-col gap-0.5 max-h-80 overflow-y-auto" data-search-results=""></div>
+</div>
+</div>
 <nav class="md:hidden hidden flex-col border-t border-border-subtle bg-surface" data-mobile-menu="">
 <a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="laptops" href="#">Laptops</a>
 <a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="desktops" href="#">Desktops</a>
@@ -79,6 +88,7 @@ tailwind.config = {
 <a class="block px-5 py-3 text-sm font-medium text-text-primary" data-path="about" href="#">Stores</a>
 </nav>
 </header>
+<script>window.TEXPERTS_PRODUCTS = [{"id":"dell-5410","name":"Dell Latitude 5410","price":"R4,500","spec":"i5 10th Gen · 8GB · 256GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBpcXrfpgkjqJP0sGcYZ1WUpnJgttgMvbeM2Y3f328zpFcXEX5E8TtgeD4xOXMuYXu5f0xmKB8HhMR4y7ARS1Ou4_8fKEWkvtT2NdZhM_PeccsywWrwcguCGfOXWtwTc9ebl10JVeCdmgZO1F6nANCRJDGed80nOqPuwThbvHxdJ5tKDonWoyXErWyh9r4kD6y4rdykjtuVJXlTZOEKQjkM16PiOe_lGtfKvQWhlmLyxvENON0idY8","detail":true},{"id":"hp-elitebook-840","name":"HP EliteBook 840 G7","price":"R5,999","spec":"i5 10th Gen · 16GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBAJxrBxOK_N_-xDVHUWMUheZaEEf285YQV1uKW0XHuVNzMaxcn0BgRA-R2StdAAgS-VsMFH54-7x4LGkH6No4Il_NCUVuwnLCJkrJU94hKxQO-iqEkrp-eW-RWL8XndKmELKngeJX4irDF-DQI0Dga4WC-VLr4OkHhoilLiCGLgUHEbiizkk9XVNct1u-nkvFv55puxUZ8qksUZ6xmMQwq1KJC88D6KGV1Q7yodXqK2k_vCist2U4","detail":false},{"id":"thinkpad-t14","name":"Lenovo ThinkPad T14","price":"R6,299","spec":"Ryzen 5 PRO · 16GB · 512GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDf3n48LYkEZ--OVAuKTnxjCPQlY9BZ3PkNhJOCHlT0CWvzEZc3bt3gztXIsPop12a5LnBN1Pn-SJqvvgGpa_KFzBDQUPoX4coJWNQl9AwFyJG0xIydoRkG9fJEP7lFqy1KBcv7-d42eO4N45l2bcblYr0OfbhmwatK7kbiW6HICU11cb6JJZOSIcY7lG844pDztQAuALaxoWSJjCgQ0Zc_4XDe42TcKwrOQh_J_SVxQ9B-M6rxQNs","detail":false},{"id":"precision-3551","name":"Dell Precision 3551","price":"R11,999","spec":"i7 8-Core · 32GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuB6SxuQt6d3zJojtxlSH4y8QSgOnaEeRZETWRIiriQphoZChIFF9rJItncA_wBlIJVuUQR74rm38OzKJH4RlkJwpRLtl6X63TbFmgfsHRJmutG4oi8bRYULlcLHy3ZpRFj12WIZWuVXFhGMvH1_cXdgk9gXwJ1CaSL6ZIDCo_QZLCQ-hb5sNx1adMylos3Y2oy4D43g5bh3_KO6NkYtXk4E0mkTJjX7wd0RVa5Y1J-1peUefoJ3mlM","detail":false},{"id":"probook-450","name":"HP ProBook 450 G8","price":"R3,799","spec":"i5 11th Gen · 8GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDCJaSBSrzwrQ0_fZAD6qOWoJhlP3riTJTNLscVefjbxwqIadweYjPLsMoSCqVitkEMe9pr4f3iFYNgGq4YcJW8ZZBhKplTMqRQg3YvuW2RvbLHhUy4sv_xdCvwa-yWDXnEjAawDHg1XVaB8WlxoQJyNNsuN2DGk1_ncQrDbYQn5FB6nO2Da7_jQV8sdD8seocNkT4Pp0tU4SnAAwOqYhlsWHAwB2ohuRdqfMcnHMnobUXiTwg5cQc","detail":false},{"id":"x1-carbon","name":"Lenovo X1 Carbon","price":"R8,499","spec":"i7 vPro · 16GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDOKN0s2bZtq_xGciZnB39zDdmJQV7vhZQPCTJlmwiOUGJgbugRLbTdbSebpHiacduEQfWuaL65H-J9IwfMKWc8xBU_kZKeLqmXHfkybxTVNs81CLPSA9kQozkKj4wxmZiHI_6dxwz2quHThp6HHzbhGhzfi7ULQ4L8M9GBDondOw0mg8MsSk1GtdzwnXPodGT_5My_FT1hYLCArLUSopVH_NBJ-iS6yTCe86H4__ny9Gx83MWSooY","detail":false}];</script>
 <main>
 <section class="bg-surface-dark text-text-inverse">
 <div class="max-w-[1200px] mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
@@ -136,6 +146,36 @@ Business laptops.<br/>Half the price.
 </div>
 </section>
 
+<section class="max-w-[1200px] mx-auto px-5 pb-14">
+<div class="bg-surface-dark text-text-inverse rounded-2xl px-6 py-8 md:px-10 md:py-10 relative overflow-hidden">
+<div class="absolute -right-10 -top-16 w-64 h-64 bg-primary-container/25 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+<div class="max-w-xs">
+<span class="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-status-online mb-2"><span class="material-symbols-outlined text-[14px]">bolt</span>Smart Laptop Finder</span>
+<h2 class="font-display font-bold text-xl leading-snug">Not sure where to start?</h2>
+<p class="text-sm text-white/60 mt-1">Tell us what you'll use it for &mdash; we'll filter the catalog for you.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 flex-1">
+<button class="group flex-1 flex flex-col items-start gap-2 text-left bg-white/5 hover:bg-white/10 border border-white/10 hover:border-status-online/50 rounded-xl px-5 py-4 transition-all" data-finder="office" type="button">
+<span class="material-symbols-outlined text-status-online text-[22px]">work</span>
+<span class="font-semibold text-sm">Everyday Office</span>
+<span class="text-xs text-white/50">Email, docs &amp; browsing</span>
+</button>
+<button class="group flex-1 flex flex-col items-start gap-2 text-left bg-white/5 hover:bg-white/10 border border-white/10 hover:border-status-online/50 rounded-xl px-5 py-4 transition-all" data-finder="travel" type="button">
+<span class="material-symbols-outlined text-status-online text-[22px]">flight_takeoff</span>
+<span class="font-semibold text-sm">Business Travel</span>
+<span class="text-xs text-white/50">Light, tough &amp; long battery</span>
+</button>
+<button class="group flex-1 flex flex-col items-start gap-2 text-left bg-white/5 hover:bg-white/10 border border-white/10 hover:border-status-online/50 rounded-xl px-5 py-4 transition-all" data-finder="power" type="button">
+<span class="material-symbols-outlined text-status-online text-[22px]">speed</span>
+<span class="font-semibold text-sm">Power &amp; Design</span>
+<span class="text-xs text-white/50">CAD, dev &amp; heavy multitasking</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+
 <section class="max-w-[1200px] mx-auto px-5 py-6">
 <div class="flex items-end justify-between mb-6">
 <h2 class="font-display font-bold text-2xl">Popular Right Now</h2>
@@ -143,7 +183,7 @@ Business laptops.<br/>Half the price.
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
 
-<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="dell-5410" data-name="dell latitude 5410" data-brand="dell" data-grade="a" data-price="4500" data-rating="4.8" data-usecase="office budget">
 <a class="flex flex-col flex-1" href="#" title="View Dell Latitude 5410">
 <div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
 <span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-25%</span>
@@ -168,7 +208,7 @@ Business laptops.<br/>Half the price.
 </div>
 </div>
 
-<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="hp-elitebook-840" data-name="hp elitebook 840 g7" data-brand="hp" data-grade="a" data-price="5999" data-rating="4.7" data-usecase="office travel">
 <a class="flex flex-col flex-1" href="#" title="Inquire HP EliteBook 840 G7">
 <div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
 <span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-20%</span>
@@ -193,7 +233,7 @@ Business laptops.<br/>Half the price.
 </div>
 </div>
 
-<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="thinkpad-t14" data-name="lenovo thinkpad t14" data-brand="lenovo" data-grade="a" data-price="6299" data-rating="4.9" data-usecase="travel">
 <a class="flex flex-col flex-1" href="#" title="Inquire Lenovo ThinkPad T14">
 <div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
 <span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-21%</span>
@@ -218,7 +258,7 @@ Business laptops.<br/>Half the price.
 </div>
 </div>
 
-<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="precision-3551" data-name="dell precision 3551" data-brand="dell" data-grade="a" data-price="11999" data-rating="4.6" data-usecase="power">
 <a class="flex flex-col flex-1" href="#" title="Inquire Dell Precision 3551">
 <div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
 <span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-20%</span>
