@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Texperts | Store Locations</title>
+<link href="../assets/logo/favicon.png" rel="icon" type="image/png"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -40,7 +41,7 @@ tailwind.config = {
   }
 };</script>
 </head>
-<body class="bg-surface font-body text-text-primary antialiased" data-page="about" data-theme="texperts">
+<body class="bg-surface font-body text-text-primary antialiased" data-page="about">
 <div class="bg-surface-dark text-white/80">
 <div class="max-w-[1200px] mx-auto px-5 h-9 flex items-center justify-between text-xs">
 <a class="flex items-center gap-1.5 hover:text-status-online transition-colors" href="tel:0737233333"><span class="material-symbols-outlined text-[14px] text-status-online">call</span>073 723 3333</a>
@@ -49,7 +50,8 @@ tailwind.config = {
 </div>
 <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border-subtle shadow-sm">
 <div class="max-w-[1200px] mx-auto px-5 h-16 flex items-center justify-between gap-6">
-<a class="flex items-center gap-2 shrink-0" data-path="catalog" href="#">
+<a class="flex items-center gap-2.5 shrink-0" data-path="catalog" href="#">
+<img alt="Texperts" class="h-8 w-auto" src="../assets/logo/logo-icon-black.png"/>
 <div class="flex flex-col leading-none gap-0.5">
 <span class="font-display font-bold text-lg uppercase tracking-tight text-text-primary">Texperts</span>
 <span class="font-mono text-[8px] uppercase tracking-widest text-text-muted">Simple IT Solutions</span>
@@ -153,7 +155,10 @@ tailwind.config = {
 </div>
 <div class="max-w-[1200px] mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
 <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+<div class="flex items-center gap-2.5">
+<img alt="Texperts" class="h-7 w-auto" src="../assets/logo/logo-icon-white.png"/>
 <span class="font-display font-bold text-lg uppercase">Texperts</span>
+</div>
 <p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
 <div class="flex items-center gap-3 pt-1">
 <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark transition-colors" href="https://wa.me/27737233333" target="_blank" rel="noopener" title="WhatsApp"><span class="material-symbols-outlined text-[16px]">chat</span></a>
@@ -185,7 +190,6 @@ tailwind.config = {
 </span>
 </div>
 </footer>
-<script defer="" src="../assets/proto-nav.js"></script>
-<script defer="" src="../assets/switcher.js"></script>
+<script defer="" src="proto-nav.js"></script>
 </body>
 </html>
