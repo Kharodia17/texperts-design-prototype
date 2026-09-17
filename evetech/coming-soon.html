@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Texperts | Coming Soon</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#050507",
+        "surface-card": "#101018",
+        "surface-container-low": "#15151F",
+        "surface-container-lowest": "#0A0A0F",
+        "border-dark": "#22222E",
+        "text-primary": "#FFFFFF",
+        "text-muted": "#8B8B99",
+        "accent": "#B6FF00",
+        "cyan": "#1AA6E6",
+        "magenta": "#E619B0",
+        "violet": "#7C3AED"
+      },
+      fontFamily: {
+        display: ["Space Grotesk", "sans-serif"],
+        mono: ["Space Mono", "monospace"],
+        body: ["Inter", "sans-serif"]
+      }
+    }
+  }
+};</script>
+</head>
+<body class="bg-surface text-white font-body antialiased min-h-screen flex flex-col" data-theme="evetech">
+<header class="w-full">
+<div class="max-w-[1320px] mx-auto px-5 py-5 flex items-center justify-between">
+<a class="flex items-center gap-2" href="index.html">
+<span class="font-display font-extrabold uppercase tracking-tight text-lg">TEXPERTS</span>
+</a>
+<a class="font-mono text-[11px] uppercase tracking-widest text-accent hover:text-white transition-colors" href="index.html">&larr; Back to Home</a>
+</div>
+</header>
+<main class="flex-1 flex items-center justify-center px-5 relative overflow-hidden">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-magenta/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-cyan/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="relative z-10 max-w-xl text-center flex flex-col items-center gap-5 py-16">
+<div class="inline-flex items-center gap-2 bg-surface-card border border-border-dark px-4 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<span class="font-mono text-[11px] uppercase tracking-widest text-accent">In Development</span>
+</div>
+<h1 class="font-display font-extrabold text-3xl md:text-4xl uppercase tracking-tight leading-tight">
+<span id="section-name">This section</span> is coming soon
+</h1>
+<p class="text-white/60 text-[15px] leading-relaxed">
+This part of the prototype hasn't been designed yet. It's not part of this design review round &mdash; check back once it's ready, or head to one of the finished screens below.
+</p>
+<div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-black rounded-md font-display text-sm font-extrabold uppercase hover:shadow-[0_0_25px_rgba(182,255,0,0.4)] transition-all" href="index.html">Home</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-surface-card border border-border-dark rounded-md font-display text-sm font-bold uppercase hover:border-accent/60 transition-all" href="laptops.html">Laptops Catalog</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-surface-card border border-border-dark rounded-md font-display text-sm font-bold uppercase hover:border-accent/60 transition-all" href="product.html">Product Detail</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-surface-card border border-border-dark rounded-md font-display text-sm font-bold uppercase hover:border-accent/60 transition-all" href="stores.html">Store Locations</a>
+</div>
+<a id="back-link" class="text-white/40 text-xs font-mono uppercase tracking-widest hover:text-accent transition-colors pt-2" href="index.html">&larr; Go back</a>
+</div>
+</main>
+<footer class="w-full py-6 text-center font-mono text-[10px] uppercase tracking-widest text-white/30">
+Texperts Design Prototype &mdash; For Client Review Only
+</footer>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var section = params.get("section");
+  var from = params.get("from");
+  try {
+    var stashed = JSON.parse(sessionStorage.getItem("protoComingSoon") || "null");
+    if (stashed) {
+      section = section || stashed.section;
+      from = from || stashed.from;
+      sessionStorage.removeItem("protoComingSoon");
+    }
+  } catch (err) {}
+  var ROUTES = { catalog: "index.html", laptops: "laptops.html", about: "stores.html", product: "product.html" };
+  if (section) {
+    document.getElementById("section-name").textContent = section;
+    document.title = "Texperts | " + section + " — Coming Soon";
+  }
+  var backLink = document.getElementById("back-link");
+  if (from && ROUTES[from]) {
+    backLink.setAttribute("href", ROUTES[from]);
+  }
+})();
+</script>
+<script defer="" src="../assets/switcher.js"></script>
+</body>
+</html>

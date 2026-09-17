@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Texperts | Laptops</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}@media (max-width:767px){body{padding-bottom:64px;}}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#FFFFFF",
+        "surface-alt": "#F5F6FA",
+        "border-subtle": "#EAEBF2",
+        "text-primary": "#1B1F3B",
+        "text-muted": "#6B7280",
+        "navy": "#2C3A8C",
+        "violet": "#7B4FDB",
+        "cta": "#3DBE5B",
+        "sale": "#E5352B"
+      },
+      fontFamily: {
+        display: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"]
+      }
+    }
+  }
+};</script>
+</head>
+<body class="bg-surface-alt font-body text-text-primary antialiased" data-page="laptops" data-theme="clickcomputer">
+<div class="bg-navy text-white/80">
+<div class="max-w-[1240px] mx-auto px-5 h-9 flex items-center justify-between text-xs">
+<a class="flex items-center gap-1.5 hover:text-white transition-colors" href="tel:0737233333"><span class="material-symbols-outlined text-[14px]">call</span>073 723 3333</a>
+<a class="flex items-center gap-1.5 hover:text-white transition-colors" href="https://wa.me/27737233333" target="_blank" rel="noopener"><span class="material-symbols-outlined text-[14px]">chat</span>WhatsApp Us</a>
+</div>
+</div>
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-border-subtle">
+<div class="max-w-[1240px] mx-auto px-5 h-16 flex items-center justify-between gap-4">
+<button class="lg:hidden text-text-primary" data-menu-toggle="" title="Menu" type="button"><span class="material-symbols-outlined text-[26px]">menu</span></button>
+<a class="flex items-center gap-2 shrink-0" data-path="catalog" href="#">
+<span class="inline-flex items-center justify-center shrink-0" style="width:32px;height:32px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white font-black" style="font-size:16px;">C</span></span>
+<span class="font-display font-extrabold text-lg tracking-tight text-text-primary">TEXPERTS</span>
+</a>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-medium text-text-primary hover:text-navy transition-colors" data-path="laptops" href="#">Laptop</a>
+<a class="text-sm font-medium text-text-primary hover:text-navy transition-colors" data-path="desktops" href="#">Desktop</a>
+<a class="text-sm font-medium text-text-primary hover:text-navy transition-colors" data-path="accessories" href="#">Accessories</a>
+<a class="text-sm font-medium text-text-primary hover:text-navy transition-colors" data-path="custom-builds" href="#">Gaming</a>
+<a class="text-sm font-medium text-text-primary hover:text-navy transition-colors" data-path="about" href="#">Stores</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="text-text-primary hover:text-navy transition-colors" data-search-toggle="" title="Search" type="button"><span class="material-symbols-outlined text-[24px]">search</span></button>
+<a class="hidden sm:flex text-text-primary hover:text-navy transition-colors" data-path="support" href="#" title="Wishlist"><span class="material-symbols-outlined text-[24px]">favorite_border</span></a>
+<a class="relative text-text-primary hover:text-navy transition-colors" data-path="cart-and-checkout" href="#" title="Cart">
+<span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+<span class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-cta text-[10px] font-bold flex items-center justify-center text-white">2</span>
+</a>
+</div>
+</div>
+<div class="hidden border-t border-border-subtle" data-search-panel="">
+<div class="max-w-[1240px] mx-auto px-5 py-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-[20px] pointer-events-none">search</span>
+<input autocomplete="off" class="w-full pl-11 pr-4 py-3 rounded-full border border-border-subtle bg-surface-alt text-sm focus:outline-none focus:border-navy transition-colors" data-search-input="" placeholder="Search Latitude, ThinkPad, EliteBook..." type="text"/>
+</div>
+<div class="mt-2 flex flex-col gap-0.5 max-h-80 overflow-y-auto" data-search-results=""></div>
+</div>
+</div>
+<nav class="lg:hidden hidden flex-col border-t border-border-subtle bg-white" data-mobile-menu="">
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="laptops" href="#">Laptop</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="desktops" href="#">Desktop</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="accessories" href="#">Accessories</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="custom-builds" href="#">Gaming</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary" data-path="about" href="#">Stores</a>
+</nav>
+</header>
+<script>window.TEXPERTS_PRODUCTS = [{"id":"dell-5410","name":"Dell Latitude 5410","price":"R4,500","spec":"i5 10th Gen · 8GB · 256GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBpcXrfpgkjqJP0sGcYZ1WUpnJgttgMvbeM2Y3f328zpFcXEX5E8TtgeD4xOXMuYXu5f0xmKB8HhMR4y7ARS1Ou4_8fKEWkvtT2NdZhM_PeccsywWrwcguCGfOXWtwTc9ebl10JVeCdmgZO1F6nANCRJDGed80nOqPuwThbvHxdJ5tKDonWoyXErWyh9r4kD6y4rdykjtuVJXlTZOEKQjkM16PiOe_lGtfKvQWhlmLyxvENON0idY8","detail":true},{"id":"hp-elitebook-840","name":"HP EliteBook 840 G7","price":"R5,999","spec":"i5 10th Gen · 16GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBAJxrBxOK_N_-xDVHUWMUheZaEEf285YQV1uKW0XHuVNzMaxcn0BgRA-R2StdAAgS-VsMFH54-7x4LGkH6No4Il_NCUVuwnLCJkrJU94hKxQO-iqEkrp-eW-RWL8XndKmELKngeJX4irDF-DQI0Dga4WC-VLr4OkHhoilLiCGLgUHEbiizkk9XVNct1u-nkvFv55puxUZ8qksUZ6xmMQwq1KJC88D6KGV1Q7yodXqK2k_vCist2U4","detail":false},{"id":"thinkpad-t14","name":"Lenovo ThinkPad T14","price":"R6,299","spec":"Ryzen 5 PRO · 16GB · 512GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDf3n48LYkEZ--OVAuKTnxjCPQlY9BZ3PkNhJOCHlT0CWvzEZc3bt3gztXIsPop12a5LnBN1Pn-SJqvvgGpa_KFzBDQUPoX4coJWNQl9AwFyJG0xIydoRkG9fJEP7lFqy1KBcv7-d42eO4N45l2bcblYr0OfbhmwatK7kbiW6HICU11cb6JJZOSIcY7lG844pDztQAuALaxoWSJjCgQ0Zc_4XDe42TcKwrOQh_J_SVxQ9B-M6rxQNs","detail":false},{"id":"precision-3551","name":"Dell Precision 3551","price":"R11,999","spec":"i7 8-Core · 32GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuB6SxuQt6d3zJojtxlSH4y8QSgOnaEeRZETWRIiriQphoZChIFF9rJItncA_wBlIJVuUQR74rm38OzKJH4RlkJwpRLtl6X63TbFmgfsHRJmutG4oi8bRYULlcLHy3ZpRFj12WIZWuVXFhGMvH1_cXdgk9gXwJ1CaSL6ZIDCo_QZLCQ-hb5sNx1adMylos3Y2oy4D43g5bh3_KO6NkYtXk4E0mkTJjX7wd0RVa5Y1J-1peUefoJ3mlM","detail":false},{"id":"probook-450","name":"HP ProBook 450 G8","price":"R3,799","spec":"i5 11th Gen · 8GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDCJaSBSrzwrQ0_fZAD6qOWoJhlP3riTJTNLscVefjbxwqIadweYjPLsMoSCqVitkEMe9pr4f3iFYNgGq4YcJW8ZZBhKplTMqRQg3YvuW2RvbLHhUy4sv_xdCvwa-yWDXnEjAawDHg1XVaB8WlxoQJyNNsuN2DGk1_ncQrDbYQn5FB6nO2Da7_jQV8sdD8seocNkT4Pp0tU4SnAAwOqYhlsWHAwB2ohuRdqfMcnHMnobUXiTwg5cQc","detail":false},{"id":"x1-carbon","name":"Lenovo X1 Carbon","price":"R8,499","spec":"i7 vPro · 16GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDOKN0s2bZtq_xGciZnB39zDdmJQV7vhZQPCTJlmwiOUGJgbugRLbTdbSebpHiacduEQfWuaL65H-J9IwfMKWc8xBU_kZKeLqmXHfkybxTVNs81CLPSA9kQozkKj4wxmZiHI_6dxwz2quHThp6HHzbhGhzfi7ULQ4L8M9GBDondOw0mg8MsSk1GtdzwnXPodGT_5My_FT1hYLCArLUSopVH_NBJ-iS6yTCe86H4__ny9Gx83MWSooY","detail":false}];</script>
+<main class="max-w-[1240px] mx-auto px-5 py-8">
+<nav class="flex items-center gap-1.5 text-xs text-gray-400 mb-4">
+<a class="hover:text-navy transition-colors" data-path="catalog" href="#">Home</a>
+<span>/</span>
+<span class="text-text-primary font-medium">Laptops</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-4">
+<div>
+<h1 class="font-display font-bold text-2xl">Certified Refurbished Laptops</h1>
+<p class="text-gray-500 text-sm mt-1">Grade-A &amp; Grade-B business laptops, tested and warrantied.</p>
+</div>
+<div class="flex items-center gap-2 text-sm">
+<label class="text-gray-500" for="sort">Sort</label>
+<select class="border border-border-subtle rounded-md px-3 py-2 text-sm bg-white" data-sort="" id="sort">
+<option value="featured">Featured</option>
+<option value="price-asc">Price: Low to High</option>
+<option value="price-desc">Price: High to Low</option>
+<option value="rating-desc">Top Rated</option>
+</select>
+</div>
+</div>
+
+<div class="hidden mb-6 flex-wrap items-center gap-2" data-smart-banner="">
+<span class="text-sm text-gray-500">Showing best matches for</span>
+<span class="inline-flex items-center gap-1.5 bg-navy/10 text-navy text-xs font-bold px-3 py-1.5 rounded-full" data-smart-label=""></span>
+<button class="text-xs font-semibold text-gray-500 hover:text-navy transition-colors underline" data-smart-clear="" type="button">Clear</button>
+</div>
+
+<div class="grid md:grid-cols-[200px_1fr] gap-8">
+<aside class="flex flex-col gap-6 bg-white rounded-lg shadow-sm p-5 self-start" data-filter-panel="">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-sm">Filters</h3>
+<button class="text-xs font-semibold text-navy hover:underline" data-filters-clear="" type="button">Clear all</button>
+</div>
+<div>
+<h3 class="font-semibold text-sm mb-3">Brand</h3>
+<div class="flex flex-col gap-2 text-sm text-gray-600" data-filter-group="brand">
+<label class="flex items-center gap-2"><input checked="" class="accent-navy" data-value="dell" type="checkbox"/>Dell</label>
+<label class="flex items-center gap-2"><input checked="" class="accent-navy" data-value="hp" type="checkbox"/>HP</label>
+<label class="flex items-center gap-2"><input checked="" class="accent-navy" data-value="lenovo" type="checkbox"/>Lenovo</label>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-sm mb-3">Price</h3>
+<div class="flex flex-col gap-2 text-sm text-gray-600" data-filter-group="price">
+<label class="flex items-center gap-2"><input class="accent-navy" data-value="under5" type="checkbox"/>Under R5,000</label>
+<label class="flex items-center gap-2"><input class="accent-navy" data-value="5to10" type="checkbox"/>R5,000 &ndash; R10,000</label>
+<label class="flex items-center gap-2"><input class="accent-navy" data-value="over10" type="checkbox"/>Over R10,000</label>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-sm mb-3">Condition</h3>
+<div class="flex flex-col gap-2 text-sm text-gray-600" data-filter-group="grade">
+<label class="flex items-center gap-2"><input checked="" class="accent-navy" data-value="a" type="checkbox"/>Grade A</label>
+<label class="flex items-center gap-2"><input checked="" class="accent-navy" data-value="b" type="checkbox"/>Grade B</label>
+</div>
+</div>
+</aside>
+
+<div>
+<p class="text-sm text-gray-500 mb-4" data-result-count=""></p>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-5" data-product-grid="" id="product-grid">
+
+<div class="group flex flex-col bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-200" data-product-card="" data-id="dell-5410" data-name="dell latitude 5410" data-brand="dell" data-grade="a" data-price="4500" data-rating="4.8" data-usecase="office budget">
+<a class="flex flex-col flex-1" href="#" title="View Dell Latitude 5410">
+<div class="relative aspect-[4/3] bg-gray-50 rounded-t-lg flex items-center justify-center p-5 overflow-hidden">
+<span class="absolute top-2.5 left-2.5 w-7 h-7 flex items-center justify-center" style="clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white text-[10px] font-black">C</span></span>
+<span class="absolute top-2.5 right-2.5 flex flex-col gap-1 items-end"><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">i5 10th Gen</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">8GB</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">256GB SSD</span></span>
+<span class="absolute bottom-2.5 left-2.5 bg-sale text-white text-[10px] font-bold px-2 py-1 rounded">-25%</span>
+<img alt="Dell Latitude 5410" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpcXrfpgkjqJP0sGcYZ1WUpnJgttgMvbeM2Y3f328zpFcXEX5E8TtgeD4xOXMuYXu5f0xmKB8HhMR4y7ARS1Ou4_8fKEWkvtT2NdZhM_PeccsywWrwcguCGfOXWtwTc9ebl10JVeCdmgZO1F6nANCRJDGed80nOqPuwThbvHxdJ5tKDonWoyXErWyh9r4kD6y4rdykjtuVJXlTZOEKQjkM16PiOe_lGtfKvQWhlmLyxvENON0idY8"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold">Grade A Certified</span>
+<h3 class="text-[15px] font-semibold text-gray-800 leading-snug">Dell Latitude 5410</h3>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
+<span class="text-[11px] text-gray-400">4.8 (156)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-bold text-lg text-navy">R4,500</span>
+<span class="text-xs text-gray-400 line-through">R5,999</span>
+</div>
+</div>
+</a>
+<div class="px-4 pb-4 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-full bg-cta text-white font-bold text-xs uppercase tracking-wide hover:brightness-95 transition-all" type="button">Add to Cart</button>
+<button aria-label="Save to wishlist" class="w-9 h-9 shrink-0 rounded-full border border-gray-200 flex items-center justify-center hover:border-cta hover:text-cta transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">favorite_border</span></button>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-200" data-product-card="" data-id="hp-elitebook-840" data-name="hp elitebook 840 g7" data-brand="hp" data-grade="a" data-price="5999" data-rating="4.7" data-usecase="office travel">
+<a class="flex flex-col flex-1" href="#" title="Inquire HP EliteBook 840 G7">
+<div class="relative aspect-[4/3] bg-gray-50 rounded-t-lg flex items-center justify-center p-5 overflow-hidden">
+<span class="absolute top-2.5 left-2.5 w-7 h-7 flex items-center justify-center" style="clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white text-[10px] font-black">C</span></span>
+<span class="absolute top-2.5 right-2.5 flex flex-col gap-1 items-end"><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">i5 10th Gen</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">16GB</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">256GB NVMe</span></span>
+<span class="absolute bottom-2.5 left-2.5 bg-sale text-white text-[10px] font-bold px-2 py-1 rounded">-20%</span>
+<img alt="HP EliteBook 840 G7" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAJxrBxOK_N_-xDVHUWMUheZaEEf285YQV1uKW0XHuVNzMaxcn0BgRA-R2StdAAgS-VsMFH54-7x4LGkH6No4Il_NCUVuwnLCJkrJU94hKxQO-iqEkrp-eW-RWL8XndKmELKngeJX4irDF-DQI0Dga4WC-VLr4OkHhoilLiCGLgUHEbiizkk9XVNct1u-nkvFv55puxUZ8qksUZ6xmMQwq1KJC88D6KGV1Q7yodXqK2k_vCist2U4"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold">Grade A Certified</span>
+<h3 class="text-[15px] font-semibold text-gray-800 leading-snug">HP EliteBook 840 G7</h3>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
+<span class="text-[11px] text-gray-400">4.7 (98)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-bold text-lg text-navy">R5,999</span>
+<span class="text-xs text-gray-400 line-through">R7,499</span>
+</div>
+</div>
+</a>
+<div class="px-4 pb-4 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-full bg-cta text-white font-bold text-xs uppercase tracking-wide hover:brightness-95 transition-all" type="button">Add to Cart</button>
+<button aria-label="Save to wishlist" class="w-9 h-9 shrink-0 rounded-full border border-gray-200 flex items-center justify-center hover:border-cta hover:text-cta transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">favorite_border</span></button>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-200" data-product-card="" data-id="thinkpad-t14" data-name="lenovo thinkpad t14" data-brand="lenovo" data-grade="a" data-price="6299" data-rating="4.9" data-usecase="travel">
+<a class="flex flex-col flex-1" href="#" title="Inquire Lenovo ThinkPad T14">
+<div class="relative aspect-[4/3] bg-gray-50 rounded-t-lg flex items-center justify-center p-5 overflow-hidden">
+<span class="absolute top-2.5 left-2.5 w-7 h-7 flex items-center justify-center" style="clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white text-[10px] font-black">C</span></span>
+<span class="absolute top-2.5 right-2.5 flex flex-col gap-1 items-end"><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">Ryzen 5 PRO</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">16GB</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">512GB SSD</span></span>
+<span class="absolute bottom-2.5 left-2.5 bg-sale text-white text-[10px] font-bold px-2 py-1 rounded">-21%</span>
+<img alt="Lenovo ThinkPad T14" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf3n48LYkEZ--OVAuKTnxjCPQlY9BZ3PkNhJOCHlT0CWvzEZc3bt3gztXIsPop12a5LnBN1Pn-SJqvvgGpa_KFzBDQUPoX4coJWNQl9AwFyJG0xIydoRkG9fJEP7lFqy1KBcv7-d42eO4N45l2bcblYr0OfbhmwatK7kbiW6HICU11cb6JJZOSIcY7lG844pDztQAuALaxoWSJjCgQ0Zc_4XDe42TcKwrOQh_J_SVxQ9B-M6rxQNs"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold">Grade A Certified</span>
+<h3 class="text-[15px] font-semibold text-gray-800 leading-snug">Lenovo ThinkPad T14</h3>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
+<span class="text-[11px] text-gray-400">4.9 (142)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-bold text-lg text-navy">R6,299</span>
+<span class="text-xs text-gray-400 line-through">R7,999</span>
+</div>
+</div>
+</a>
+<div class="px-4 pb-4 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-full bg-cta text-white font-bold text-xs uppercase tracking-wide hover:brightness-95 transition-all" type="button">Add to Cart</button>
+<button aria-label="Save to wishlist" class="w-9 h-9 shrink-0 rounded-full border border-gray-200 flex items-center justify-center hover:border-cta hover:text-cta transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">favorite_border</span></button>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-200" data-product-card="" data-id="precision-3551" data-name="dell precision 3551" data-brand="dell" data-grade="a" data-price="11999" data-rating="4.6" data-usecase="power">
+<a class="flex flex-col flex-1" href="#" title="Inquire Dell Precision 3551">
+<div class="relative aspect-[4/3] bg-gray-50 rounded-t-lg flex items-center justify-center p-5 overflow-hidden">
+<span class="absolute top-2.5 left-2.5 w-7 h-7 flex items-center justify-center" style="clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white text-[10px] font-black">C</span></span>
+<span class="absolute top-2.5 right-2.5 flex flex-col gap-1 items-end"><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">i7 8-Core</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">32GB</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">512GB NVMe</span></span>
+<span class="absolute bottom-2.5 left-2.5 bg-sale text-white text-[10px] font-bold px-2 py-1 rounded">-20%</span>
+<img alt="Dell Precision 3551" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6SxuQt6d3zJojtxlSH4y8QSgOnaEeRZETWRIiriQphoZChIFF9rJItncA_wBlIJVuUQR74rm38OzKJH4RlkJwpRLtl6X63TbFmgfsHRJmutG4oi8bRYULlcLHy3ZpRFj12WIZWuVXFhGMvH1_cXdgk9gXwJ1CaSL6ZIDCo_QZLCQ-hb5sNx1adMylos3Y2oy4D43g5bh3_KO6NkYtXk4E0mkTJjX7wd0RVa5Y1J-1peUefoJ3mlM"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold">Grade A Certified</span>
+<h3 class="text-[15px] font-semibold text-gray-800 leading-snug">Dell Precision 3551</h3>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
+<span class="text-[11px] text-gray-400">4.6 (41)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-bold text-lg text-navy">R11,999</span>
+<span class="text-xs text-gray-400 line-through">R14,999</span>
+</div>
+</div>
+</a>
+<div class="px-4 pb-4 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-full bg-cta text-white font-bold text-xs uppercase tracking-wide hover:brightness-95 transition-all" type="button">Add to Cart</button>
+<button aria-label="Save to wishlist" class="w-9 h-9 shrink-0 rounded-full border border-gray-200 flex items-center justify-center hover:border-cta hover:text-cta transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">favorite_border</span></button>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-200" data-product-card="" data-id="probook-450" data-name="hp probook 450 g8" data-brand="hp" data-grade="b" data-price="3799" data-rating="4.4" data-usecase="office budget">
+<a class="flex flex-col flex-1" href="#" title="Inquire HP ProBook 450 G8">
+<div class="relative aspect-[4/3] bg-gray-50 rounded-t-lg flex items-center justify-center p-5 overflow-hidden">
+<span class="absolute top-2.5 left-2.5 w-7 h-7 flex items-center justify-center" style="clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white text-[10px] font-black">C</span></span>
+<span class="absolute top-2.5 right-2.5 flex flex-col gap-1 items-end"><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">i5 11th Gen</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">8GB</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">256GB NVMe</span></span>
+<span class="absolute bottom-2.5 left-2.5 bg-sale text-white text-[10px] font-bold px-2 py-1 rounded">-24%</span>
+<img alt="HP ProBook 450 G8" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCJaSBSrzwrQ0_fZAD6qOWoJhlP3riTJTNLscVefjbxwqIadweYjPLsMoSCqVitkEMe9pr4f3iFYNgGq4YcJW8ZZBhKplTMqRQg3YvuW2RvbLHhUy4sv_xdCvwa-yWDXnEjAawDHg1XVaB8WlxoQJyNNsuN2DGk1_ncQrDbYQn5FB6nO2Da7_jQV8sdD8seocNkT4Pp0tU4SnAAwOqYhlsWHAwB2ohuRdqfMcnHMnobUXiTwg5cQc"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold">Grade B Certified</span>
+<h3 class="text-[15px] font-semibold text-gray-800 leading-snug">HP ProBook 450 G8</h3>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-gray-200">★</span></span>
+<span class="text-[11px] text-gray-400">4.4 (67)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-bold text-lg text-navy">R3,799</span>
+<span class="text-xs text-gray-400 line-through">R4,999</span>
+</div>
+</div>
+</a>
+<div class="px-4 pb-4 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-full bg-cta text-white font-bold text-xs uppercase tracking-wide hover:brightness-95 transition-all" type="button">Add to Cart</button>
+<button aria-label="Save to wishlist" class="w-9 h-9 shrink-0 rounded-full border border-gray-200 flex items-center justify-center hover:border-cta hover:text-cta transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">favorite_border</span></button>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white rounded-lg shadow-sm hover:shadow-xl transition-all duration-200" data-product-card="" data-id="x1-carbon" data-name="lenovo x1 carbon" data-brand="lenovo" data-grade="a" data-price="8499" data-rating="4.8" data-usecase="travel power">
+<a class="flex flex-col flex-1" href="#" title="Inquire Lenovo X1 Carbon">
+<div class="relative aspect-[4/3] bg-gray-50 rounded-t-lg flex items-center justify-center p-5 overflow-hidden">
+<span class="absolute top-2.5 left-2.5 w-7 h-7 flex items-center justify-center" style="clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white text-[10px] font-black">C</span></span>
+<span class="absolute top-2.5 right-2.5 flex flex-col gap-1 items-end"><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">i7 vPro</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">16GB</span><span class="block bg-navy text-white text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wide">512GB NVMe</span></span>
+<span class="absolute bottom-2.5 left-2.5 bg-sale text-white text-[10px] font-bold px-2 py-1 rounded">-23%</span>
+<img alt="Lenovo X1 Carbon" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOKN0s2bZtq_xGciZnB39zDdmJQV7vhZQPCTJlmwiOUGJgbugRLbTdbSebpHiacduEQfWuaL65H-J9IwfMKWc8xBU_kZKeLqmXHfkybxTVNs81CLPSA9kQozkKj4wxmZiHI_6dxwz2quHThp6HHzbhGhzfi7ULQ4L8M9GBDondOw0mg8MsSk1GtdzwnXPodGT_5My_FT1hYLCArLUSopVH_NBJ-iS6yTCe86H4__ny9Gx83MWSooY"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="text-[10px] uppercase tracking-wide text-gray-400 font-semibold">Grade A Certified</span>
+<h3 class="text-[15px] font-semibold text-gray-800 leading-snug">Lenovo X1 Carbon</h3>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
+<span class="text-[11px] text-gray-400">4.8 (89)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-bold text-lg text-navy">R8,499</span>
+<span class="text-xs text-gray-400 line-through">R10,999</span>
+</div>
+</div>
+</a>
+<div class="px-4 pb-4 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-full bg-cta text-white font-bold text-xs uppercase tracking-wide hover:brightness-95 transition-all" type="button">Add to Cart</button>
+<button aria-label="Save to wishlist" class="w-9 h-9 shrink-0 rounded-full border border-gray-200 flex items-center justify-center hover:border-cta hover:text-cta transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">favorite_border</span></button>
+</div>
+</div>
+</div>
+<div class="hidden flex-col items-center gap-3 py-16 text-center" data-empty-state="">
+<span class="material-symbols-outlined text-[36px] text-gray-300">search_off</span>
+<p class="font-semibold">No laptops match your filters</p>
+<p class="text-sm text-gray-500">Try widening your brand, price or condition selection.</p>
+<button class="text-sm font-semibold text-navy hover:underline" data-filters-clear="" type="button">Clear all filters</button>
+</div>
+
+<div class="mt-10 flex items-center justify-between bg-white rounded-lg shadow-sm px-5 py-3.5 text-sm text-gray-600">
+<span>Need 5+ units? <a class="text-navy font-semibold hover:underline" data-path="support" href="#">Talk to our trade desk</a></span>
+<a class="text-navy font-semibold hover:underline" href="tel:0737233333">073 723 3333</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-navy text-white">
+<div class="max-w-[1240px] mx-auto px-5 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+<div class="flex items-center gap-2"><span class="inline-flex items-center justify-center shrink-0" style="width:28px;height:28px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white font-black" style="font-size:14px;">C</span></span><span class="font-display font-extrabold text-lg">TEXPERTS</span></div>
+<p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
+</div>
+<div class="flex flex-col gap-2 text-sm">
+<span class="font-semibold text-white mb-1">Shop</span>
+<a class="text-white/60 hover:text-white transition-colors" data-path="laptops" href="#">Laptops</a>
+<a class="text-white/60 hover:text-white transition-colors" data-path="desktops" href="#">Desktops</a>
+<a class="text-white/60 hover:text-white transition-colors" data-path="accessories" href="#">Accessories</a>
+</div>
+<div class="flex flex-col gap-2 text-sm">
+<span class="font-semibold text-white mb-1">Company</span>
+<a class="text-white/60 hover:text-white transition-colors" data-path="about" href="#">Our Stores</a>
+<a class="text-white/60 hover:text-white transition-colors" data-path="support" href="#">Warranty</a>
+<a class="text-white/60 hover:text-white transition-colors" data-path="support" href="#">Support</a>
+</div>
+<div class="flex flex-col gap-2 text-sm">
+<span class="font-semibold text-white mb-1">Contact</span>
+<a class="text-white/60 hover:text-white transition-colors" href="tel:0737233333">073 723 3333</a>
+<a class="text-white/60 hover:text-white transition-colors break-all" href="mailto:info@texpertsonline.co.za">info@texpertsonline.co.za</a>
+</div>
+</div>
+<div class="border-t border-white/10 py-5 max-w-[1240px] mx-auto px-5 text-center text-xs text-white/40">&#169; 2026 Texperts &middot; Simple IT Solutions</div>
+</footer>
+<a class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-105 transition-transform" href="https://wa.me/27737233333" style="background:linear-gradient(135deg,#2C3A8C,#7B4FDB);" target="_blank" rel="noopener" title="Chat on WhatsApp">
+<span class="material-symbols-outlined text-white text-[26px]">chat</span>
+</a>
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-border-subtle flex items-center justify-around py-2">
+<a class="flex flex-col items-center gap-0.5 text-text-primary" data-path="catalog" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="text-[10px] font-medium">Shop</span></a>
+<a class="flex flex-col items-center gap-0.5 text-text-primary" data-path="support" href="#"><span class="material-symbols-outlined text-[22px]">favorite_border</span><span class="text-[10px] font-medium">Wishlist</span></a>
+<a class="flex flex-col items-center gap-0.5 text-text-primary" data-path="cart-and-checkout" href="#"><span class="material-symbols-outlined text-[22px]">shopping_cart</span><span class="text-[10px] font-medium">Cart</span></a>
+<a class="flex flex-col items-center gap-0.5 text-text-primary" data-path="account-portal" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="text-[10px] font-medium">Account</span></a>
+</nav>
+<script defer="" src="../assets/proto-nav.js"></script>
+<script defer="" src="../assets/switcher.js"></script>
+
+<script>
+(function () {
+  var grid = document.querySelector("[data-product-grid]");
+  var cards = Array.prototype.slice.call(grid.querySelectorAll("[data-product-card]"));
+  var sortSelect = document.querySelector("[data-sort]");
+  var countEl = document.querySelector("[data-result-count]");
+  var emptyState = document.querySelector("[data-empty-state]");
+  var smartBanner = document.querySelector("[data-smart-banner]");
+  var smartLabel = document.querySelector("[data-smart-label]");
+  var activeUseCase = null;
+  var activeSearch = null;
+
+  function checkedValues(group) {
+    var box = document.querySelector('[data-filter-group="' + group + '"]');
+    return Array.prototype.slice.call(box.querySelectorAll("input:checked")).map(function (i) { return i.getAttribute("data-value"); });
+  }
+
+  function priceMatches(priceNum, ranges) {
+    if (!ranges.length) return false;
+    return ranges.some(function (r) {
+      if (r === "under5") return priceNum < 5000;
+      if (r === "5to10") return priceNum >= 5000 && priceNum <= 10000;
+      if (r === "over10") return priceNum > 10000;
+      return false;
+    });
+  }
+
+  function applyFilters() {
+    var brands = checkedValues("brand");
+    var prices = checkedValues("price");
+    var grades = checkedValues("grade");
+    var visible = 0;
+
+    cards.forEach(function (card) {
+      var brandOk = brands.length ? brands.indexOf(card.getAttribute("data-brand")) !== -1 : false;
+      var priceOk = prices.length ? priceMatches(parseInt(card.getAttribute("data-price"), 10), prices) : true;
+      var gradeOk = grades.length ? grades.indexOf(card.getAttribute("data-grade")) !== -1 : false;
+      var useCaseOk = activeUseCase ? (card.getAttribute("data-usecase") || "").indexOf(activeUseCase) !== -1 : true;
+      var searchOk = activeSearch ? card.getAttribute("data-name").indexOf(activeSearch) !== -1 : true;
+      var show = brandOk && priceOk && gradeOk && useCaseOk && searchOk;
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+
+    countEl.textContent = "Showing " + visible + " of " + cards.length + " laptops";
+    emptyState.classList.toggle("hidden", visible !== 0);
+    emptyState.classList.toggle("flex", visible === 0);
+    grid.classList.toggle("hidden", visible === 0);
+  }
+
+  function applySort() {
+    var mode = sortSelect.value;
+    var sorted = cards.slice();
+    if (mode === "price-asc") sorted.sort(function (a, b) { return a.getAttribute("data-price") - b.getAttribute("data-price"); });
+    if (mode === "price-desc") sorted.sort(function (a, b) { return b.getAttribute("data-price") - a.getAttribute("data-price"); });
+    if (mode === "rating-desc") sorted.sort(function (a, b) { return b.getAttribute("data-rating") - a.getAttribute("data-rating"); });
+    sorted.forEach(function (card) { grid.appendChild(card); });
+  }
+
+  function refresh() {
+    applyFilters();
+    applySort();
+  }
+
+  document.querySelectorAll('[data-filter-panel] input[type="checkbox"]').forEach(function (input) {
+    input.addEventListener("change", refresh);
+  });
+  sortSelect.addEventListener("change", refresh);
+
+  document.querySelectorAll("[data-filters-clear]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll('[data-filter-panel] input[type="checkbox"]').forEach(function (i) { i.checked = true; });
+      clearSmart();
+      refresh();
+    });
+  });
+
+  function clearSmart() {
+    activeUseCase = null;
+    activeSearch = null;
+    smartBanner.classList.add("hidden");
+    smartBanner.classList.remove("flex");
+    try { sessionStorage.removeItem("protoUseCase"); sessionStorage.removeItem("protoSearch"); } catch (err) {}
+  }
+
+  var clearBtn = document.querySelector("[data-smart-clear]");
+  if (clearBtn) clearBtn.addEventListener("click", function () { clearSmart(); refresh(); });
+
+  var USE_CASE_LABELS = { office: "Everyday Office Work", travel: "Business Travel", power: "Power &amp; Design Work" };
+  try {
+    var useCase = sessionStorage.getItem("protoUseCase");
+    var search = sessionStorage.getItem("protoSearch");
+    if (useCase) {
+      activeUseCase = useCase;
+      smartLabel.innerHTML = USE_CASE_LABELS[useCase] || useCase;
+      smartBanner.classList.remove("hidden");
+      smartBanner.classList.add("flex");
+      sessionStorage.removeItem("protoUseCase");
+    } else if (search) {
+      activeSearch = search.toLowerCase();
+      smartLabel.textContent = '"' + search + '"';
+      smartBanner.classList.remove("hidden");
+      smartBanner.classList.add("flex");
+      sessionStorage.removeItem("protoSearch");
+    }
+  } catch (err) {}
+
+  refresh();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Texperts | Coming Soon</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}@media (max-width:767px){body{padding-bottom:64px;}}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#FFFFFF",
+        "surface-alt": "#F5F6FA",
+        "border-subtle": "#EAEBF2",
+        "text-primary": "#1B1F3B",
+        "text-muted": "#6B7280",
+        "navy": "#2C3A8C",
+        "violet": "#7B4FDB",
+        "cta": "#3DBE5B",
+        "sale": "#E5352B"
+      },
+      fontFamily: {
+        display: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"]
+      }
+    }
+  }
+};</script>
+</head>
+<body class="bg-surface-alt text-text-primary font-body antialiased min-h-screen flex flex-col" data-theme="clickcomputer">
+<header class="w-full bg-white border-b border-border-subtle">
+<div class="max-w-[1240px] mx-auto px-5 py-5 flex items-center justify-between">
+<a class="flex items-center gap-2" href="index.html">
+<span class="inline-flex items-center justify-center shrink-0" style="width:28px;height:28px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 25%);background:linear-gradient(135deg,#2C3A8C,#7B4FDB);"><span class="text-white font-black" style="font-size:14px;">C</span></span>
+<span class="font-display font-extrabold text-lg">TEXPERTS</span>
+</a>
+<a class="text-sm font-semibold text-navy hover:underline" href="index.html">&larr; Back to Home</a>
+</div>
+</header>
+<main class="flex-1 flex items-center justify-center px-5">
+<div class="max-w-xl text-center flex flex-col items-center gap-5 py-16">
+<div class="inline-flex items-center gap-2 bg-white shadow-sm px-4 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-navy"></span>
+<span class="text-[11px] uppercase tracking-widest text-navy font-bold">In Development</span>
+</div>
+<h1 class="font-display font-bold text-2xl md:text-3xl leading-tight">
+<span id="section-name">This section</span> is coming soon
+</h1>
+<p class="text-gray-500 text-[15px] leading-relaxed">
+This part of the prototype hasn't been designed yet. It's not part of this design review round &mdash; check back once it's ready, or head to one of the finished screens below.
+</p>
+<div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-cta text-white rounded-full font-display text-sm font-bold hover:brightness-95 transition-all" href="index.html">Home</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-white shadow-sm rounded-full font-display text-sm font-bold hover:shadow-md transition-all" href="laptops.html">Laptops Catalog</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-white shadow-sm rounded-full font-display text-sm font-bold hover:shadow-md transition-all" href="product.html">Product Detail</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-white shadow-sm rounded-full font-display text-sm font-bold hover:shadow-md transition-all" href="stores.html">Store Locations</a>
+</div>
+<a id="back-link" class="text-gray-400 text-xs uppercase tracking-widest hover:text-navy transition-colors pt-2" href="index.html">&larr; Go back</a>
+</div>
+</main>
+<footer class="w-full py-6 text-center text-[10px] uppercase tracking-widest text-gray-400 bg-white border-t border-border-subtle">
+Texperts Design Prototype &mdash; For Client Review Only
+</footer>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var section = params.get("section");
+  var from = params.get("from");
+  try {
+    var stashed = JSON.parse(sessionStorage.getItem("protoComingSoon") || "null");
+    if (stashed) {
+      section = section || stashed.section;
+      from = from || stashed.from;
+      sessionStorage.removeItem("protoComingSoon");
+    }
+  } catch (err) {}
+  var ROUTES = { catalog: "index.html", laptops: "laptops.html", about: "stores.html", product: "product.html" };
+  if (section) {
+    document.getElementById("section-name").textContent = section;
+    document.title = "Texperts | " + section + " — Coming Soon";
+  }
+  var backLink = document.getElementById("back-link");
+  if (from && ROUTES[from]) {
+    backLink.setAttribute("href", ROUTES[from]);
+  }
+})();
+</script>
+<script defer="" src="../assets/switcher.js"></script>
+</body>
+</html>

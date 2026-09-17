@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Texperts | Store Locations</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#050507",
+        "surface-card": "#101018",
+        "surface-container-low": "#15151F",
+        "surface-container-lowest": "#0A0A0F",
+        "border-dark": "#22222E",
+        "text-primary": "#FFFFFF",
+        "text-muted": "#8B8B99",
+        "accent": "#B6FF00",
+        "cyan": "#1AA6E6",
+        "magenta": "#E619B0",
+        "violet": "#7C3AED"
+      },
+      fontFamily: {
+        display: ["Space Grotesk", "sans-serif"],
+        mono: ["Space Mono", "monospace"],
+        body: ["Inter", "sans-serif"]
+      }
+    }
+  }
+};</script>
+</head>
+<body class="bg-surface font-body text-white antialiased" data-page="about" data-theme="evetech">
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border-dark">
+<div class="max-w-[1200px] mx-auto px-5 h-16 flex items-center justify-between gap-4">
+<a class="flex items-center gap-2 shrink-0" data-path="catalog" href="#">
+<span class="font-display font-extrabold text-xl uppercase tracking-tight text-white">TEXPERTS</span>
+</a>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-bold uppercase tracking-wide text-white/70 hover:text-accent transition-colors" data-path="laptops" href="#">Laptops</a>
+<a class="text-sm font-bold uppercase tracking-wide text-white/70 hover:text-accent transition-colors" data-path="desktops" href="#">Desktops</a>
+<a class="text-sm font-bold uppercase tracking-wide text-white/70 hover:text-accent transition-colors" data-path="accessories" href="#">Accessories</a>
+<a class="text-sm font-bold uppercase tracking-wide text-white/70 hover:text-accent transition-colors" data-path="about" href="#">Stores</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="text-white/70 hover:text-accent transition-colors" data-search-toggle="" title="Search" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button>
+<a class="relative text-white/70 hover:text-accent transition-colors" data-path="cart-and-checkout" href="#" title="Cart">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-accent text-[10px] font-bold flex items-center justify-center text-black">2</span>
+</a>
+<button class="lg:hidden text-white/70 hover:text-accent transition-colors" data-menu-toggle="" title="Menu" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden border-t border-border-dark bg-surface" data-search-panel="">
+<div class="max-w-[1200px] mx-auto px-5 py-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-white/40 text-[20px] pointer-events-none">search</span>
+<input autocomplete="off" class="w-full pl-11 pr-4 py-3 rounded-full bg-surface-card border border-border-dark text-sm text-white placeholder:text-white/35 focus:outline-none focus:border-accent transition-colors" data-search-input="" placeholder="Search ThinkPad, EliteBook, Latitude..." type="text"/>
+</div>
+<div class="mt-2 flex flex-col gap-0.5 max-h-80 overflow-y-auto" data-search-results=""></div>
+</div>
+</div>
+<nav class="lg:hidden hidden flex-col border-t border-border-dark bg-surface" data-mobile-menu="">
+<a class="block px-5 py-3 text-sm font-bold uppercase text-white border-b border-border-dark" data-path="laptops" href="#">Laptops</a>
+<a class="block px-5 py-3 text-sm font-bold uppercase text-white border-b border-border-dark" data-path="desktops" href="#">Desktops</a>
+<a class="block px-5 py-3 text-sm font-bold uppercase text-white border-b border-border-dark" data-path="accessories" href="#">Accessories</a>
+<a class="block px-5 py-3 text-sm font-bold uppercase text-white" data-path="about" href="#">Stores</a>
+</nav>
+<div class="border-t border-border-dark bg-surface-container-lowest">
+<div class="max-w-[1200px] mx-auto px-5 py-4 flex items-center gap-5 overflow-x-auto">
+
+<a class="flex flex-col items-center gap-1.5 shrink-0" data-path="laptops" href="#">
+<span class="w-14 h-14 rounded-full flex items-center justify-center bg-surface-card border-2 border-accent/40 hover:border-accent transition-colors"><span class="material-symbols-outlined text-accent text-[22px]">laptop_mac</span></span>
+<span class="text-[11px] font-semibold text-white/70 whitespace-nowrap">Laptops</span>
+</a>
+
+<a class="flex flex-col items-center gap-1.5 shrink-0" data-path="desktops" href="#">
+<span class="w-14 h-14 rounded-full flex items-center justify-center bg-surface-card border-2 border-accent/40 hover:border-accent transition-colors"><span class="material-symbols-outlined text-accent text-[22px]">desktop_windows</span></span>
+<span class="text-[11px] font-semibold text-white/70 whitespace-nowrap">Desktops</span>
+</a>
+
+<a class="flex flex-col items-center gap-1.5 shrink-0" data-path="accessories" href="#">
+<span class="w-14 h-14 rounded-full flex items-center justify-center bg-surface-card border-2 border-accent/40 hover:border-accent transition-colors"><span class="material-symbols-outlined text-accent text-[22px]">headset_mic</span></span>
+<span class="text-[11px] font-semibold text-white/70 whitespace-nowrap">Accessories</span>
+</a>
+
+<a class="flex flex-col items-center gap-1.5 shrink-0" data-path="custom-builds" href="#">
+<span class="w-14 h-14 rounded-full flex items-center justify-center bg-surface-card border-2 border-accent/40 hover:border-accent transition-colors"><span class="material-symbols-outlined text-accent text-[22px]">tune</span></span>
+<span class="text-[11px] font-semibold text-white/70 whitespace-nowrap">Custom Builds</span>
+</a>
+
+<a class="flex flex-col items-center gap-1.5 shrink-0" data-path="support" href="#">
+<span class="w-14 h-14 rounded-full flex items-center justify-center bg-surface-card border-2 border-accent/40 hover:border-accent transition-colors"><span class="material-symbols-outlined text-accent text-[22px]">bolt</span></span>
+<span class="text-[11px] font-semibold text-white/70 whitespace-nowrap">Flash Deals</span>
+</a>
+</div>
+</div>
+</header>
+<script>window.TEXPERTS_PRODUCTS = [{"id":"dell-5410","name":"Dell Latitude 5410","price":"R4,500","spec":"i5 10th Gen · 8GB · 256GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBpcXrfpgkjqJP0sGcYZ1WUpnJgttgMvbeM2Y3f328zpFcXEX5E8TtgeD4xOXMuYXu5f0xmKB8HhMR4y7ARS1Ou4_8fKEWkvtT2NdZhM_PeccsywWrwcguCGfOXWtwTc9ebl10JVeCdmgZO1F6nANCRJDGed80nOqPuwThbvHxdJ5tKDonWoyXErWyh9r4kD6y4rdykjtuVJXlTZOEKQjkM16PiOe_lGtfKvQWhlmLyxvENON0idY8","detail":true},{"id":"hp-elitebook-840","name":"HP EliteBook 840 G7","price":"R5,999","spec":"i5 10th Gen · 16GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBAJxrBxOK_N_-xDVHUWMUheZaEEf285YQV1uKW0XHuVNzMaxcn0BgRA-R2StdAAgS-VsMFH54-7x4LGkH6No4Il_NCUVuwnLCJkrJU94hKxQO-iqEkrp-eW-RWL8XndKmELKngeJX4irDF-DQI0Dga4WC-VLr4OkHhoilLiCGLgUHEbiizkk9XVNct1u-nkvFv55puxUZ8qksUZ6xmMQwq1KJC88D6KGV1Q7yodXqK2k_vCist2U4","detail":false},{"id":"thinkpad-t14","name":"Lenovo ThinkPad T14","price":"R6,299","spec":"Ryzen 5 PRO · 16GB · 512GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDf3n48LYkEZ--OVAuKTnxjCPQlY9BZ3PkNhJOCHlT0CWvzEZc3bt3gztXIsPop12a5LnBN1Pn-SJqvvgGpa_KFzBDQUPoX4coJWNQl9AwFyJG0xIydoRkG9fJEP7lFqy1KBcv7-d42eO4N45l2bcblYr0OfbhmwatK7kbiW6HICU11cb6JJZOSIcY7lG844pDztQAuALaxoWSJjCgQ0Zc_4XDe42TcKwrOQh_J_SVxQ9B-M6rxQNs","detail":false},{"id":"precision-3551","name":"Dell Precision 3551","price":"R11,999","spec":"i7 8-Core · 32GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuB6SxuQt6d3zJojtxlSH4y8QSgOnaEeRZETWRIiriQphoZChIFF9rJItncA_wBlIJVuUQR74rm38OzKJH4RlkJwpRLtl6X63TbFmgfsHRJmutG4oi8bRYULlcLHy3ZpRFj12WIZWuVXFhGMvH1_cXdgk9gXwJ1CaSL6ZIDCo_QZLCQ-hb5sNx1adMylos3Y2oy4D43g5bh3_KO6NkYtXk4E0mkTJjX7wd0RVa5Y1J-1peUefoJ3mlM","detail":false},{"id":"probook-450","name":"HP ProBook 450 G8","price":"R3,799","spec":"i5 11th Gen · 8GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDCJaSBSrzwrQ0_fZAD6qOWoJhlP3riTJTNLscVefjbxwqIadweYjPLsMoSCqVitkEMe9pr4f3iFYNgGq4YcJW8ZZBhKplTMqRQg3YvuW2RvbLHhUy4sv_xdCvwa-yWDXnEjAawDHg1XVaB8WlxoQJyNNsuN2DGk1_ncQrDbYQn5FB6nO2Da7_jQV8sdD8seocNkT4Pp0tU4SnAAwOqYhlsWHAwB2ohuRdqfMcnHMnobUXiTwg5cQc","detail":false},{"id":"x1-carbon","name":"Lenovo X1 Carbon","price":"R8,499","spec":"i7 vPro · 16GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDOKN0s2bZtq_xGciZnB39zDdmJQV7vhZQPCTJlmwiOUGJgbugRLbTdbSebpHiacduEQfWuaL65H-J9IwfMKWc8xBU_kZKeLqmXHfkybxTVNs81CLPSA9kQozkKj4wxmZiHI_6dxwz2quHThp6HHzbhGhzfi7ULQ4L8M9GBDondOw0mg8MsSk1GtdzwnXPodGT_5My_FT1hYLCArLUSopVH_NBJ-iS6yTCe86H4__ny9Gx83MWSooY","detail":false}];</script>
+<main class="max-w-[1200px] mx-auto px-5 py-10">
+<nav class="flex items-center gap-1.5 text-xs text-white/40 mb-4">
+<a class="hover:text-accent transition-colors" data-path="catalog" href="#">Home</a>
+<span>/</span>
+<span class="text-white font-medium">Store Locations</span>
+</nav>
+<h1 class="font-display font-extrabold text-3xl uppercase mb-2">Visit Our Stores</h1>
+<p class="text-white/50 text-sm mb-8 max-w-lg">Three locations across South Africa &mdash; walk in, get expert advice, and collect your order.</p>
+
+<div class="grid md:grid-cols-3 gap-5">
+
+<article class="flex flex-col bg-surface-card border border-border-dark rounded-lg overflow-hidden hover:border-accent/50 transition-all">
+<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPakRdGn3sPTXFyr3riYivPeKtTG8FDYNvCFSgfB-cXPGdAQxMcTLDBweNJRt-TetXw4lXeLfXDWMT4M5EvHbKRiD-5uKfE99pPWrzJUKm3Hpd9ABNX4Qkhuabj2waSrQHgkl8OvZqpm0cECAo3mgRDYlN0SiOPLFo2IDBG6QDaMSy_IydOrANqkEfbxpnWV7bqTPqsKL-pUArGbIXN99vsrBLIDrLiqblfRdhnws8XrDbDkj3G-U')"></div>
+<div class="p-5 flex flex-col gap-2">
+<h3 class="font-display font-bold text-base">Head Office Showroom</h3>
+<p class="text-sm text-white/50">China-Southern Africa Expo, Unit B-02/B-03, Johannesburg</p>
+<p class="text-sm text-white/50 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
+<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
+<a class="text-accent hover:underline" href="tel:0737233333">073 723 3333</a>
+<a class="text-accent hover:underline" href="https://www.google.com/maps/search/?api=1&query=Head%20Office%20Showroom%20China-Southern%20Africa%20Expo%2C%20Unit%20B-02%2FB-03%2C%20Johannesburg" target="_blank" rel="noopener">Get Directions</a>
+</div>
+</div>
+</article>
+
+<article class="flex flex-col bg-surface-card border border-border-dark rounded-lg overflow-hidden hover:border-accent/50 transition-all">
+<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhqjxaQAVmOh5UJO0jowhqamK7e3LCsVi0KThwoNB3BvpG7H26YMQaWw-OQi5jkH2qtTr2ggZ_lev0kTpR5P1bqSMQ2pYUdgvJRC1bx1DIvGZI0H9EsQ_sJxD1Yl_I0D7LXG7VxjDBc8LD8kf7mtCi3AT1Lg-Z7dcoSXf_lsEawEJeM9OjohP70DPGhV2FZTHSYWeo-MlWbsYGPluIHy_AuXVFR-H1JMbSUV0H-8vqeQF-uXttx3g')"></div>
+<div class="p-5 flex flex-col gap-2">
+<h3 class="font-display font-bold text-base">Johannesburg Central</h3>
+<p class="text-sm text-white/50">Oriental Plaza, Shop S234, Fordsburg</p>
+<p class="text-sm text-white/50 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
+<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
+<a class="text-accent hover:underline" href="tel:0737144444">073 714 4444</a>
+<a class="text-accent hover:underline" href="https://www.google.com/maps/search/?api=1&query=Johannesburg%20Central%20Oriental%20Plaza%2C%20Shop%20S234%2C%20Fordsburg" target="_blank" rel="noopener">Get Directions</a>
+</div>
+</div>
+</article>
+
+<article class="flex flex-col bg-surface-card border border-border-dark rounded-lg overflow-hidden hover:border-accent/50 transition-all">
+<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlmnvNr2TR0q9DtSAmbd9cr0mPut2jwSCS9Oxj6mgPz1BoO93NzyaeqS7gJAQcnwiB4_JsVgIqd2dKVZN031qBVLsnC5A03SDkEGpEjg2m7zHQFM0n1iSF9UGtW-iwHVN3QWNUz1S9EHxJ-pekAG4jcAkcZsl2XPiw3fxBbRGJfd70kShSqXhckIkMv4PoV9F8E6kDGmmVefo2tBNbVN7Oz30EQMmgwZahpftckq2Ce3jSUlMjxkw')"></div>
+<div class="p-5 flex flex-col gap-2">
+<h3 class="font-display font-bold text-base">Western Cape Branch</h3>
+<p class="text-sm text-white/50">Icon Building, Lower Long St, Cape Town</p>
+<p class="text-sm text-white/50 flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
+<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
+<a class="text-accent hover:underline" href="tel:0737044444">073 704 4444</a>
+<a class="text-accent hover:underline" href="https://www.google.com/maps/search/?api=1&query=Western%20Cape%20Branch%20Icon%20Building%2C%20Lower%20Long%20St%2C%20Cape%20Town" target="_blank" rel="noopener">Get Directions</a>
+</div>
+</div>
+</article>
+</div>
+</main>
+<footer class="bg-surface-container-lowest text-white border-t border-border-dark">
+<div class="max-w-[1200px] mx-auto px-5 pt-10 pb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5 border-b border-border-dark">
+<div>
+<h3 class="font-display font-extrabold text-lg uppercase">Get exclusive deals</h3>
+<p class="text-sm text-white/50">New stock drops and flash deals, straight to your inbox.</p>
+</div>
+<form class="flex w-full md:w-auto gap-2">
+<input class="flex-1 md:w-64 px-4 py-2.5 rounded-full bg-surface-card border border-border-dark text-sm placeholder:text-white/30 focus:outline-none focus:border-accent" placeholder="you@company.co.za" type="email"/>
+<button class="px-5 py-2.5 rounded-full bg-accent text-black font-display font-bold text-sm hover:shadow-[0_0_20px_rgba(182,255,0,0.5)] transition-all whitespace-nowrap" type="submit">Subscribe</button>
+</form>
+</div>
+<div class="max-w-[1200px] mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
+<div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+<span class="font-display font-extrabold text-lg uppercase">TEXPERTS</span>
+<p class="text-sm text-white/50 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
+</div>
+<div class="flex flex-col gap-2.5 text-sm">
+<span class="font-bold text-white/90 mb-1 uppercase text-xs tracking-wide">Shop</span>
+<a class="text-white/50 hover:text-accent transition-colors" data-path="laptops" href="#">Laptops</a>
+<a class="text-white/50 hover:text-accent transition-colors" data-path="desktops" href="#">Desktops</a>
+<a class="text-white/50 hover:text-accent transition-colors" data-path="accessories" href="#">Accessories</a>
+</div>
+<div class="flex flex-col gap-2.5 text-sm">
+<span class="font-bold text-white/90 mb-1 uppercase text-xs tracking-wide">Company</span>
+<a class="text-white/50 hover:text-accent transition-colors" data-path="about" href="#">Our Stores</a>
+<a class="text-white/50 hover:text-accent transition-colors" data-path="support" href="#">Warranty</a>
+<a class="text-white/50 hover:text-accent transition-colors" data-path="support" href="#">Support</a>
+</div>
+<div class="flex flex-col gap-2.5 text-sm">
+<span class="font-bold text-white/90 mb-1 uppercase text-xs tracking-wide">Contact</span>
+<a class="text-white/50 hover:text-accent transition-colors" href="tel:0737233333">073 723 3333</a>
+<a class="text-white/50 hover:text-accent transition-colors break-all" href="mailto:info@texpertsonline.co.za">info@texpertsonline.co.za</a>
+</div>
+</div>
+<div class="border-t border-border-dark py-5 max-w-[1200px] mx-auto px-5 text-center text-xs text-white/30">&#169; 2026 Texperts &middot; Simple IT Solutions</div>
+</footer>
+<script defer="" src="../assets/proto-nav.js"></script>
+<script defer="" src="../assets/switcher.js"></script>
+</body>
+</html>
