@@ -1,6 +1,6 @@
 // Texperts prototype — client-side "routing" + light interactivity.
 // This is a static clickthrough prototype for design review only: no real
-// cart, search, or account logic. It just makes the exported Stitch screens
+// cart, search, or account logic. It just makes the exported screens
 // navigable to each other and gives dead-end links a friendly placeholder.
 (function () {
   var ROUTES = {
@@ -60,6 +60,16 @@
     var el = e.target.closest("a, button");
     if (!el) return;
 
+    // Mobile nav toggle.
+    if (el.hasAttribute("data-menu-toggle")) {
+      var menu = document.querySelector("[data-mobile-menu]");
+      if (menu) {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      }
+      return;
+    }
+
     var title = el.getAttribute("title") || "";
     var text = getLabel(el);
 
@@ -83,43 +93,35 @@
       return;
     }
 
+    if (/subscribe/i.test(text)) {
+      e.preventDefault();
+      showToast("Subscribed! (prototype preview — no real signup)");
+      return;
+    }
+
     var href = el.getAttribute && el.getAttribute("href");
     if (href === "#") {
       e.preventDefault();
     }
   });
 
-  // Highlight the current section in the top nav, matching the design's
-  // own data-active-classes convention.
-  document.querySelectorAll("nav[data-active-classes] [data-path]").forEach(function (a) {
+  // Highlight the current section in the header nav.
+  document.querySelectorAll("header nav a[data-path]").forEach(function (a) {
     if (a.getAttribute("data-path") === CURRENT_PAGE) {
-      var classes = a.closest("nav").getAttribute("data-active-classes").split(/\s+/);
-      classes.forEach(function (c) {
-        if (c) a.classList.add(c);
-      });
+      a.classList.add("text-primary", "font-semibold");
     }
   });
 
-  // Small non-blocking banner so reviewers know this is a design preview.
+  // Small banner so reviewers know this is a design preview, not the live
+  // store. It's a normal block at the very top of <body> — both the header
+  // (sticky) and the mobile menu panel below it flow naturally underneath,
+  // no manual offset math needed.
   var banner = document.createElement("div");
-  banner.textContent = "DESIGN PREVIEW — for client review only, not a live store";
+  banner.textContent = "Design preview — for client review only, not a live store";
   banner.style.cssText =
-    "position:fixed;top:0;left:0;right:0;z-index:100000;background:#C8F542;color:#0B0B10;" +
-    "font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.08em;" +
-    "text-align:center;padding:3px 8px;text-transform:uppercase;";
+    "background:#C8F542;color:#0B0B10;font-family:'Space Mono',monospace;font-size:10px;" +
+    "font-weight:700;letter-spacing:.06em;text-align:center;padding:4px 8px;text-transform:uppercase;";
   document.addEventListener("DOMContentLoaded", function () {
-    document.body.appendChild(banner);
-    var bannerHeight = banner.offsetHeight || 18;
-
-    // Fixed-position header/dock need to be nudged down manually since
-    // body padding doesn't affect position:fixed elements.
-    var header = document.querySelector("body > header");
-    if (header) header.style.top = bannerHeight + "px";
-
-    var aside = document.querySelector("body > aside");
-    if (aside) aside.style.marginTop = bannerHeight + "px";
-
-    var main = document.querySelector("body > main");
-    if (main) main.style.paddingTop = (parseInt(getComputedStyle(main).paddingTop, 10) || 0) + bannerHeight + "px";
+    document.body.insertBefore(banner, document.body.firstChild);
   });
 })();
