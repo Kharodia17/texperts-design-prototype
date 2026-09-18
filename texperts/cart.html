@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Texperts | Store Locations</title>
+<title>Texperts | Cart</title>
 <link href="../assets/logo/favicon.png" rel="icon" type="image/png"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -41,7 +41,7 @@ tailwind.config = {
   }
 };</script>
 </head>
-<body class="bg-surface font-body text-text-primary antialiased" data-page="about">
+<body class="bg-surface font-body text-text-primary antialiased" data-page="cart-and-checkout">
 <div class="bg-surface-dark text-white/80">
 <div class="max-w-[1200px] mx-auto px-5 h-9 flex items-center justify-between text-xs">
 <a class="flex items-center gap-1.5 hover:text-status-online transition-colors" href="tel:0737233333"><span class="material-symbols-outlined text-[14px] text-status-online">call</span>073 723 3333</a>
@@ -170,51 +170,37 @@ tailwind.config = {
 <nav class="flex items-center gap-1.5 text-xs text-text-muted mb-4">
 <a class="hover:text-primary transition-colors" data-path="catalog" href="#">Home</a>
 <span>/</span>
-<span class="text-text-primary font-medium">Store Locations</span>
+<span class="text-text-primary font-medium">Cart</span>
 </nav>
-<h1 class="font-display font-bold text-3xl mb-2">Visit Our Stores</h1>
-<p class="text-text-muted text-sm mb-8 max-w-lg">Three locations across South Africa &mdash; walk in, get expert advice, and collect your order.</p>
+<h1 class="font-display font-bold text-3xl mb-8">Your Cart</h1>
 
-<div class="grid md:grid-cols-3 gap-5">
+<div class="grid md:grid-cols-[1fr_320px] gap-8 items-start">
+<div class="flex flex-col gap-3" id="cart-items"></div>
 
-<article class="flex flex-col bg-surface-card border border-border-subtle rounded-lg overflow-hidden hover:shadow-lg transition-all">
-<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPakRdGn3sPTXFyr3riYivPeKtTG8FDYNvCFSgfB-cXPGdAQxMcTLDBweNJRt-TetXw4lXeLfXDWMT4M5EvHbKRiD-5uKfE99pPWrzJUKm3Hpd9ABNX4Qkhuabj2waSrQHgkl8OvZqpm0cECAo3mgRDYlN0SiOPLFo2IDBG6QDaMSy_IydOrANqkEfbxpnWV7bqTPqsKL-pUArGbIXN99vsrBLIDrLiqblfRdhnws8XrDbDkj3G-U')"></div>
-<div class="p-5 flex flex-col gap-2">
-<h3 class="font-semibold text-base">Head Office Showroom</h3>
-<p class="text-sm text-text-muted">China-Southern Africa Expo, Unit B-02/B-03, Johannesburg</p>
-<p class="text-sm text-text-muted flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
-<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
-<a class="text-primary hover:underline" href="tel:0737233333">073 723 3333</a>
-<a class="text-primary hover:underline" href="https://www.google.com/maps/search/?api=1&query=Head%20Office%20Showroom%20China-Southern%20Africa%20Expo%2C%20Unit%20B-02%2FB-03%2C%20Johannesburg" target="_blank" rel="noopener">Get Directions</a>
+<div class="hidden flex-col items-center gap-3 py-20 text-center col-span-2" id="cart-empty">
+<span class="material-symbols-outlined text-[40px] text-text-muted">shopping_bag</span>
+<p class="font-semibold">Your cart is empty</p>
+<p class="text-sm text-text-muted">Browse our certified laptops, desktops and accessories.</p>
+<a class="cursor-node mt-2 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-status-online text-surface-dark font-display font-bold text-sm hover:brightness-95 transition-all" data-path="laptops" href="#">Shop Laptops</a>
 </div>
-</div>
-</article>
 
-<article class="flex flex-col bg-surface-card border border-border-subtle rounded-lg overflow-hidden hover:shadow-lg transition-all">
-<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhqjxaQAVmOh5UJO0jowhqamK7e3LCsVi0KThwoNB3BvpG7H26YMQaWw-OQi5jkH2qtTr2ggZ_lev0kTpR5P1bqSMQ2pYUdgvJRC1bx1DIvGZI0H9EsQ_sJxD1Yl_I0D7LXG7VxjDBc8LD8kf7mtCi3AT1Lg-Z7dcoSXf_lsEawEJeM9OjohP70DPGhV2FZTHSYWeo-MlWbsYGPluIHy_AuXVFR-H1JMbSUV0H-8vqeQF-uXttx3g')"></div>
-<div class="p-5 flex flex-col gap-2">
-<h3 class="font-semibold text-base">Johannesburg Central</h3>
-<p class="text-sm text-text-muted">Oriental Plaza, Shop S234, Fordsburg</p>
-<p class="text-sm text-text-muted flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
-<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
-<a class="text-primary hover:underline" href="tel:0737144444">073 714 4444</a>
-<a class="text-primary hover:underline" href="https://www.google.com/maps/search/?api=1&query=Johannesburg%20Central%20Oriental%20Plaza%2C%20Shop%20S234%2C%20Fordsburg" target="_blank" rel="noopener">Get Directions</a>
+<div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-4 sticky top-24" id="cart-summary">
+<h2 class="font-semibold text-sm">Order Summary</h2>
+<div class="flex items-center justify-between text-sm">
+<span class="text-text-muted">Subtotal</span>
+<span class="font-semibold" id="cart-subtotal">R0</span>
 </div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-text-muted">Delivery</span>
+<span class="font-semibold text-status-online" id="cart-shipping">Free</span>
 </div>
-</article>
-
-<article class="flex flex-col bg-surface-card border border-border-subtle rounded-lg overflow-hidden hover:shadow-lg transition-all">
-<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlmnvNr2TR0q9DtSAmbd9cr0mPut2jwSCS9Oxj6mgPz1BoO93NzyaeqS7gJAQcnwiB4_JsVgIqd2dKVZN031qBVLsnC5A03SDkEGpEjg2m7zHQFM0n1iSF9UGtW-iwHVN3QWNUz1S9EHxJ-pekAG4jcAkcZsl2XPiw3fxBbRGJfd70kShSqXhckIkMv4PoV9F8E6kDGmmVefo2tBNbVN7Oz30EQMmgwZahpftckq2Ce3jSUlMjxkw')"></div>
-<div class="p-5 flex flex-col gap-2">
-<h3 class="font-semibold text-base">Western Cape Branch</h3>
-<p class="text-sm text-text-muted">Icon Building, Lower Long St, Cape Town</p>
-<p class="text-sm text-text-muted flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
-<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
-<a class="text-primary hover:underline" href="tel:0737044444">073 704 4444</a>
-<a class="text-primary hover:underline" href="https://www.google.com/maps/search/?api=1&query=Western%20Cape%20Branch%20Icon%20Building%2C%20Lower%20Long%20St%2C%20Cape%20Town" target="_blank" rel="noopener">Get Directions</a>
+<div class="flex items-center justify-between text-base border-t border-border-subtle pt-3">
+<span class="font-semibold">Total</span>
+<span class="font-display font-bold text-xl" id="cart-total">R0</span>
 </div>
+<a class="cursor-node w-full text-center py-3.5 rounded-full bg-status-online text-surface-dark font-display font-bold text-sm uppercase tracking-wide hover:brightness-95 transition-all" data-path="cart-and-checkout" href="#" id="cart-checkout-btn">Proceed to Checkout</a>
+<p class="text-[11px] text-text-muted text-center flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">lock</span>Secure checkout &middot; PayFast &amp; Instant EFT</p>
 </div>
-</article>
 </div>
 </main>
 <footer class="relative bg-surface-dark text-text-inverse overflow-hidden">
@@ -271,5 +257,88 @@ tailwind.config = {
 <script defer="" src="../assets/cart.js"></script>
 <script defer="" src="../assets/proto-nav.js"></script>
 <script defer="" src="../assets/switcher.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function money(n) { return "R" + Math.round(n).toLocaleString(); }
+  function num(str) { return parseInt(String(str).replace(/[^0-9]/g, ""), 10); }
+
+  var products = window.TEXPERTS_PRODUCTS || [];
+  var itemsWrap = document.getElementById("cart-items");
+  var emptyState = document.getElementById("cart-empty");
+  var summary = document.getElementById("cart-summary");
+  var checkoutBtn = document.getElementById("cart-checkout-btn");
+
+  function render() {
+    var cart = window.TexpertsCart.readCart();
+    var ids = Object.keys(cart);
+    itemsWrap.innerHTML = "";
+
+    if (!ids.length) {
+      emptyState.classList.remove("hidden");
+      emptyState.classList.add("flex");
+      summary.classList.add("hidden");
+      itemsWrap.classList.add("hidden");
+      return;
+    }
+    emptyState.classList.add("hidden");
+    summary.classList.remove("hidden");
+    itemsWrap.classList.remove("hidden");
+
+    var subtotal = 0;
+    ids.forEach(function (id) {
+      var p = products.find(function (x) { return x.id === id; });
+      if (!p) return;
+      var qty = cart[id];
+      var lineTotal = num(p.price) * qty;
+      subtotal += lineTotal;
+
+      var row = document.createElement("div");
+      row.className = "flex items-center gap-4 bg-surface-card border border-border-subtle rounded-xl p-4";
+      row.innerHTML =
+        '<span class="w-20 h-20 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 overflow-hidden"><img src="' + p.img + '" class="max-h-full max-w-full object-contain" alt=""/></span>' +
+        '<div class="flex-1 min-w-0"><h3 class="font-semibold text-sm truncate">' + p.name + '</h3><p class="text-xs text-text-muted">' + p.spec + '</p><p class="font-display font-bold text-base mt-1">' + p.price + '</p></div>' +
+        '<div class="flex flex-col items-end gap-2 shrink-0">' +
+        '<div class="flex items-center border border-border-subtle rounded-full"><button class="w-8 h-8 flex items-center justify-center text-sm" data-qty-minus="' + id + '" type="button">−</button><span class="w-7 text-center text-sm font-semibold" data-qty-value="' + id + '">' + qty + '</span><button class="w-8 h-8 flex items-center justify-center text-sm" data-qty-plus="' + id + '" type="button">+</button></div>' +
+        '<button class="text-xs text-text-muted hover:text-primary transition-colors underline" data-remove="' + id + '" type="button">Remove</button>' +
+        '</div>';
+      itemsWrap.appendChild(row);
+    });
+
+    document.getElementById("cart-subtotal").textContent = money(subtotal);
+    document.getElementById("cart-total").textContent = money(subtotal);
+
+    itemsWrap.querySelectorAll("[data-qty-minus]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = btn.getAttribute("data-qty-minus");
+        var current = window.TexpertsCart.readCart()[id] || 1;
+        window.TexpertsCart.setQty(id, current - 1);
+        render();
+      });
+    });
+    itemsWrap.querySelectorAll("[data-qty-plus]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var id = btn.getAttribute("data-qty-plus");
+        var current = window.TexpertsCart.readCart()[id] || 0;
+        window.TexpertsCart.setQty(id, Math.min(10, current + 1));
+        render();
+      });
+    });
+    itemsWrap.querySelectorAll("[data-remove]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        window.TexpertsCart.removeItem(btn.getAttribute("data-remove"));
+        render();
+      });
+    });
+  }
+
+  checkoutBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (window.TexpertsCart.count() > 0) window.location.href = "checkout.html";
+  }, true);
+
+  render();
+});
+</script>
 </body>
 </html>

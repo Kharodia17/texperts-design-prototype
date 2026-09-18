@@ -6,7 +6,12 @@
   var ROUTES = {
     catalog: "index.html",
     laptops: "laptops.html",
-    about: "stores.html"
+    desktops: "desktops.html",
+    accessories: "accessories.html",
+    "custom-builds": "custom-builds.html",
+    "cart-and-checkout": "cart.html",
+    about: "stores.html",
+    company: "about.html"
   };
 
   var CURRENT_PAGE = document.body.getAttribute("data-page") || "";
@@ -66,6 +71,19 @@
     } catch (err) {}
   }
 
+  function stashProduct(id) {
+    try {
+      sessionStorage.setItem("protoProductId", id);
+    } catch (err) {}
+  }
+
+  function productIdFor(el) {
+    var own = el.getAttribute && el.getAttribute("data-id");
+    if (own) return own;
+    var card = el.closest && el.closest("[data-product-card]");
+    return card ? card.getAttribute("data-id") : null;
+  }
+
   function renderSearchResults(query) {
     var box = document.querySelector("[data-search-results]");
     if (!box) return;
@@ -88,7 +106,7 @@
       row.href = "#";
       row.className = "flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors";
       row.setAttribute("data-search-result", "");
-      row.setAttribute("data-detail", p.detail ? "1" : "0");
+      row.setAttribute("data-id", p.id);
       row.setAttribute("data-name", p.name);
       row.innerHTML =
         '<span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center shrink-0 overflow-hidden"><img src="' +
@@ -179,21 +197,21 @@
     }
     if (el.hasAttribute("data-search-result")) {
       e.preventDefault();
-      if (el.getAttribute("data-detail") === "1") {
-        window.location.href = "product.html";
-      } else {
-        stashSearch(el.getAttribute("data-name") || "");
-        window.location.href = "laptops.html";
-      }
+      var searchId = productIdFor(el);
+      if (searchId) stashProduct(searchId);
+      window.location.href = "product.html";
       return;
     }
 
     var title = el.getAttribute("title") || "";
     var text = getLabel(el);
 
-    // Product quick-view / inquire actions -> the one built-out PDP.
+    // Product quick-view / inquire actions -> the dynamic PDP, stashing
+    // which product it should render.
     if (/^(view|inquire)\b/i.test(title)) {
       e.preventDefault();
+      var viewId = productIdFor(el);
+      if (viewId) stashProduct(viewId);
       window.location.href = "product.html";
       return;
     }
@@ -207,6 +225,12 @@
 
     if (/add to cart/i.test(text)) {
       e.preventDefault();
+      var cartId = productIdFor(el);
+      var qtyEl = document.getElementById("pdp-qty");
+      var qty = el.id === "pdp-add-btn" && qtyEl ? parseInt(qtyEl.textContent, 10) || 1 : 1;
+      if (cartId && window.TexpertsCart) {
+        window.TexpertsCart.addItem(cartId, qty);
+      }
       showToast("Added to cart (prototype preview — no real checkout)");
       return;
     }

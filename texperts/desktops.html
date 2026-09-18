@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Texperts | Store Locations</title>
+<title>Texperts | Desktops</title>
 <link href="../assets/logo/favicon.png" rel="icon" type="image/png"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -41,7 +41,7 @@ tailwind.config = {
   }
 };</script>
 </head>
-<body class="bg-surface font-body text-text-primary antialiased" data-page="about">
+<body class="bg-surface font-body text-text-primary antialiased" data-page="desktops">
 <div class="bg-surface-dark text-white/80">
 <div class="max-w-[1200px] mx-auto px-5 h-9 flex items-center justify-between text-xs">
 <a class="flex items-center gap-1.5 hover:text-status-online transition-colors" href="tel:0737233333"><span class="material-symbols-outlined text-[14px] text-status-online">call</span>073 723 3333</a>
@@ -170,51 +170,127 @@ tailwind.config = {
 <nav class="flex items-center gap-1.5 text-xs text-text-muted mb-4">
 <a class="hover:text-primary transition-colors" data-path="catalog" href="#">Home</a>
 <span>/</span>
-<span class="text-text-primary font-medium">Store Locations</span>
+<span class="text-text-primary font-medium">Desktops</span>
 </nav>
-<h1 class="font-display font-bold text-3xl mb-2">Visit Our Stores</h1>
-<p class="text-text-muted text-sm mb-8 max-w-lg">Three locations across South Africa &mdash; walk in, get expert advice, and collect your order.</p>
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-4">
+<div>
+<h1 class="font-display font-bold text-3xl">Certified Refurbished Desktops</h1>
+<p class="text-text-muted text-sm mt-1">Grade-A business towers and workstations, tested and warrantied.</p>
+</div>
+<div class="flex items-center gap-2 text-sm">
+<label class="text-text-muted" for="sort">Sort</label>
+<select class="border border-border-subtle rounded-md px-3 py-2 text-sm bg-surface-card" data-sort="" id="sort">
+<option value="featured">Featured</option>
+<option value="price-asc">Price: Low to High</option>
+<option value="price-desc">Price: High to Low</option>
+<option value="rating-desc">Top Rated</option>
+</select>
+</div>
+</div>
 
-<div class="grid md:grid-cols-3 gap-5">
+<div class="hidden mb-6 flex-wrap items-center gap-2" data-smart-banner="">
+<span class="text-sm text-text-muted">Showing best matches for</span>
+<span class="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-bold px-3 py-1.5 rounded-full" data-smart-label=""></span>
+<button class="text-xs font-semibold text-text-muted hover:text-primary transition-colors underline" data-smart-clear="" type="button">Clear</button>
+</div>
 
-<article class="flex flex-col bg-surface-card border border-border-subtle rounded-lg overflow-hidden hover:shadow-lg transition-all">
-<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPakRdGn3sPTXFyr3riYivPeKtTG8FDYNvCFSgfB-cXPGdAQxMcTLDBweNJRt-TetXw4lXeLfXDWMT4M5EvHbKRiD-5uKfE99pPWrzJUKm3Hpd9ABNX4Qkhuabj2waSrQHgkl8OvZqpm0cECAo3mgRDYlN0SiOPLFo2IDBG6QDaMSy_IydOrANqkEfbxpnWV7bqTPqsKL-pUArGbIXN99vsrBLIDrLiqblfRdhnws8XrDbDkj3G-U')"></div>
-<div class="p-5 flex flex-col gap-2">
-<h3 class="font-semibold text-base">Head Office Showroom</h3>
-<p class="text-sm text-text-muted">China-Southern Africa Expo, Unit B-02/B-03, Johannesburg</p>
-<p class="text-sm text-text-muted flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
-<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
-<a class="text-primary hover:underline" href="tel:0737233333">073 723 3333</a>
-<a class="text-primary hover:underline" href="https://www.google.com/maps/search/?api=1&query=Head%20Office%20Showroom%20China-Southern%20Africa%20Expo%2C%20Unit%20B-02%2FB-03%2C%20Johannesburg" target="_blank" rel="noopener">Get Directions</a>
+<div class="grid md:grid-cols-[200px_1fr] gap-8">
+<aside class="flex flex-col gap-6" data-filter-panel="">
+<div class="flex items-center justify-between">
+<h3 class="font-semibold text-sm">Filters</h3>
+<button class="text-xs font-semibold text-primary hover:underline" data-filters-clear="" type="button">Clear all</button>
+</div>
+<div>
+<h3 class="font-semibold text-sm mb-3">Brand</h3>
+<div class="flex flex-col gap-2 text-sm text-text-muted" data-filter-group="brand">
+<label class="flex items-center gap-2"><input checked="" class="accent-primary" data-value="dell" type="checkbox"/>Dell</label>
+<label class="flex items-center gap-2"><input checked="" class="accent-primary" data-value="hp" type="checkbox"/>HP</label>
+<label class="flex items-center gap-2"><input checked="" class="accent-primary" data-value="lenovo" type="checkbox"/>Lenovo</label>
 </div>
 </div>
-</article>
+<div>
+<h3 class="font-semibold text-sm mb-3">Price</h3>
+<div class="flex flex-col gap-2 text-sm text-text-muted" data-filter-group="price">
+<label class="flex items-center gap-2"><input class="accent-primary" data-value="under5" type="checkbox"/>Under R5,000</label>
+<label class="flex items-center gap-2"><input class="accent-primary" data-value="5to10" type="checkbox"/>R5,000 &ndash; R10,000</label>
+<label class="flex items-center gap-2"><input class="accent-primary" data-value="over10" type="checkbox"/>Over R10,000</label>
+</div>
+</div>
+<div>
+<h3 class="font-semibold text-sm mb-3">Condition</h3>
+<div class="flex flex-col gap-2 text-sm text-text-muted" data-filter-group="grade">
+<label class="flex items-center gap-2"><input checked="" class="accent-primary" data-value="a" type="checkbox"/>Grade A</label>
+<label class="flex items-center gap-2"><input checked="" class="accent-primary" data-value="b" type="checkbox"/>Grade B</label>
+</div>
+</div>
+</aside>
 
-<article class="flex flex-col bg-surface-card border border-border-subtle rounded-lg overflow-hidden hover:shadow-lg transition-all">
-<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhqjxaQAVmOh5UJO0jowhqamK7e3LCsVi0KThwoNB3BvpG7H26YMQaWw-OQi5jkH2qtTr2ggZ_lev0kTpR5P1bqSMQ2pYUdgvJRC1bx1DIvGZI0H9EsQ_sJxD1Yl_I0D7LXG7VxjDBc8LD8kf7mtCi3AT1Lg-Z7dcoSXf_lsEawEJeM9OjohP70DPGhV2FZTHSYWeo-MlWbsYGPluIHy_AuXVFR-H1JMbSUV0H-8vqeQF-uXttx3g')"></div>
-<div class="p-5 flex flex-col gap-2">
-<h3 class="font-semibold text-base">Johannesburg Central</h3>
-<p class="text-sm text-text-muted">Oriental Plaza, Shop S234, Fordsburg</p>
-<p class="text-sm text-text-muted flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
-<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
-<a class="text-primary hover:underline" href="tel:0737144444">073 714 4444</a>
-<a class="text-primary hover:underline" href="https://www.google.com/maps/search/?api=1&query=Johannesburg%20Central%20Oriental%20Plaza%2C%20Shop%20S234%2C%20Fordsburg" target="_blank" rel="noopener">Get Directions</a>
-</div>
-</div>
-</article>
+<div>
+<p class="text-sm text-text-muted mb-4" data-result-count=""></p>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-5" data-product-grid="" id="product-grid">
 
-<article class="flex flex-col bg-surface-card border border-border-subtle rounded-lg overflow-hidden hover:shadow-lg transition-all">
-<div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlmnvNr2TR0q9DtSAmbd9cr0mPut2jwSCS9Oxj6mgPz1BoO93NzyaeqS7gJAQcnwiB4_JsVgIqd2dKVZN031qBVLsnC5A03SDkEGpEjg2m7zHQFM0n1iSF9UGtW-iwHVN3QWNUz1S9EHxJ-pekAG4jcAkcZsl2XPiw3fxBbRGJfd70kShSqXhckIkMv4PoV9F8E6kDGmmVefo2tBNbVN7Oz30EQMmgwZahpftckq2Ce3jSUlMjxkw')"></div>
-<div class="p-5 flex flex-col gap-2">
-<h3 class="font-semibold text-base">Western Cape Branch</h3>
-<p class="text-sm text-text-muted">Icon Building, Lower Long St, Cape Town</p>
-<p class="text-sm text-text-muted flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span>Mon&ndash;Fri 8:30&ndash;17:00, Sat 9:00&ndash;13:00</p>
-<div class="flex items-center gap-4 mt-2 text-sm font-semibold">
-<a class="text-primary hover:underline" href="tel:0737044444">073 704 4444</a>
-<a class="text-primary hover:underline" href="https://www.google.com/maps/search/?api=1&query=Western%20Cape%20Branch%20Icon%20Building%2C%20Lower%20Long%20St%2C%20Cape%20Town" target="_blank" rel="noopener">Get Directions</a>
+<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="optiplex-tower" data-name="dell optiplex tower" data-brand="dell" data-grade="a" data-price="5299" data-rating="4.7" data-usecase="office">
+<a class="flex flex-col flex-1" href="#" title="View Dell OptiPlex Tower">
+<div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
+<span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-24%</span>
+<img alt="Dell OptiPlex Tower" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?fm=jpg&q=80&w=1200"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="font-mono text-[10px] uppercase tracking-wide text-primary font-bold">Grade A Certified</span>
+<h3 class="font-semibold text-text-primary text-[15px] leading-snug">Dell OptiPlex Tower</h3>
+<p class="text-xs text-text-muted">i5 10th Gen · 16GB · 512GB SSD</p>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
+<span class="text-[11px] text-text-muted">4.7 (52)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display font-bold text-xl text-text-primary">R5,299</span>
+<span class="text-xs text-text-muted line-through">R6,999</span>
 </div>
 </div>
-</article>
+</a>
+<div class="px-4 pb-4">
+<button class="cursor-node w-full py-2.5 rounded-full bg-status-online text-surface-dark font-bold text-xs uppercase tracking-wide hover:brightness-95 hover:shadow-[0_0_16px_rgba(200,245,66,0.45)] transition-all" data-id="optiplex-tower" type="button">Add to Cart</button>
+</div>
+</div>
+
+<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="z-workstation" data-name="hp z2 tower workstation" data-brand="hp" data-grade="a" data-price="13499" data-rating="4.8" data-usecase="power">
+<a class="flex flex-col flex-1" href="#" title="View HP Z2 Tower Workstation">
+<div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
+<span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-21%</span>
+<img alt="HP Z2 Tower Workstation" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1719927604476-dc404b85358f?fm=jpg&q=80&w=1200"/>
+</div>
+<div class="p-4 flex flex-col gap-1.5 flex-1">
+<span class="font-mono text-[10px] uppercase tracking-wide text-primary font-bold">Grade A Certified</span>
+<h3 class="font-semibold text-text-primary text-[15px] leading-snug">HP Z2 Tower Workstation</h3>
+<p class="text-xs text-text-muted">i7 8-Core · 32GB · 1TB NVMe</p>
+<div class="flex items-center gap-1.5">
+<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
+<span class="text-[11px] text-text-muted">4.8 (29)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display font-bold text-xl text-text-primary">R13,499</span>
+<span class="text-xs text-text-muted line-through">R16,999</span>
+</div>
+</div>
+</a>
+<div class="px-4 pb-4">
+<button class="cursor-node w-full py-2.5 rounded-full bg-status-online text-surface-dark font-bold text-xs uppercase tracking-wide hover:brightness-95 hover:shadow-[0_0_16px_rgba(200,245,66,0.45)] transition-all" data-id="z-workstation" type="button">Add to Cart</button>
+</div>
+</div>
+</div>
+<div class="hidden flex-col items-center gap-3 py-16 text-center" data-empty-state="">
+<span class="material-symbols-outlined text-[36px] text-text-muted">search_off</span>
+<p class="font-semibold">No desktops match your filters</p>
+<p class="text-sm text-text-muted">Try widening your brand, price or condition selection.</p>
+<button class="text-sm font-semibold text-primary hover:underline" data-filters-clear="" type="button">Clear all filters</button>
+</div>
+
+<div class="mt-10 flex items-center justify-between bg-surface-card border border-border-subtle rounded-lg px-5 py-3.5 text-sm text-text-muted">
+<span>Need 5+ units? <a class="text-primary font-semibold hover:underline" data-path="support" href="#">Talk to our trade desk</a></span>
+<a class="text-primary font-semibold hover:underline" href="tel:0737233333">073 723 3333</a>
+</div>
+</div>
 </div>
 </main>
 <footer class="relative bg-surface-dark text-text-inverse overflow-hidden">
@@ -271,5 +347,118 @@ tailwind.config = {
 <script defer="" src="../assets/cart.js"></script>
 <script defer="" src="../assets/proto-nav.js"></script>
 <script defer="" src="../assets/switcher.js"></script>
+<script>
+(function () {
+  var grid = document.querySelector("[data-product-grid]");
+  var cards = Array.prototype.slice.call(grid.querySelectorAll("[data-product-card]"));
+  var sortSelect = document.querySelector("[data-sort]");
+  var countEl = document.querySelector("[data-result-count]");
+  var emptyState = document.querySelector("[data-empty-state]");
+  var smartBanner = document.querySelector("[data-smart-banner]");
+  var smartLabel = document.querySelector("[data-smart-label]");
+  var activeUseCase = null;
+  var activeSearch = null;
+
+  function checkedValues(group) {
+    var box = document.querySelector('[data-filter-group="' + group + '"]');
+    if (!box) return [];
+    return Array.prototype.slice.call(box.querySelectorAll("input:checked")).map(function (i) { return i.getAttribute("data-value"); });
+  }
+
+  function priceMatches(priceNum, ranges) {
+    if (!ranges.length) return false;
+    return ranges.some(function (r) {
+      if (r === "under5") return priceNum < 5000;
+      if (r === "5to10") return priceNum >= 5000 && priceNum <= 10000;
+      if (r === "over10") return priceNum > 10000;
+      return false;
+    });
+  }
+
+  function applyFilters() {
+    var brandBox = document.querySelector('[data-filter-group="brand"]');
+    var brands = checkedValues("brand");
+    var prices = checkedValues("price");
+    var grades = checkedValues("grade");
+    var visible = 0;
+
+    cards.forEach(function (card) {
+      var brandOk = brandBox ? (brands.length ? brands.indexOf(card.getAttribute("data-brand")) !== -1 : false) : true;
+      var priceOk = prices.length ? priceMatches(parseInt(card.getAttribute("data-price"), 10), prices) : true;
+      var gradeOk = grades.length ? grades.indexOf(card.getAttribute("data-grade")) !== -1 : false;
+      var useCaseOk = activeUseCase ? (card.getAttribute("data-usecase") || "").indexOf(activeUseCase) !== -1 : true;
+      var searchOk = activeSearch ? card.getAttribute("data-name").indexOf(activeSearch) !== -1 : true;
+      var show = brandOk && priceOk && gradeOk && useCaseOk && searchOk;
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+
+    countEl.textContent = "Showing " + visible + " of " + cards.length + " desktops";
+    emptyState.classList.toggle("hidden", visible !== 0);
+    emptyState.classList.toggle("flex", visible === 0);
+    grid.classList.toggle("hidden", visible === 0);
+  }
+
+  function applySort() {
+    var mode = sortSelect.value;
+    var sorted = cards.slice();
+    if (mode === "price-asc") sorted.sort(function (a, b) { return a.getAttribute("data-price") - b.getAttribute("data-price"); });
+    if (mode === "price-desc") sorted.sort(function (a, b) { return b.getAttribute("data-price") - a.getAttribute("data-price"); });
+    if (mode === "rating-desc") sorted.sort(function (a, b) { return b.getAttribute("data-rating") - a.getAttribute("data-rating"); });
+    sorted.forEach(function (card) { grid.appendChild(card); });
+  }
+
+  function refresh() {
+    applyFilters();
+    applySort();
+  }
+
+  document.querySelectorAll('[data-filter-panel] input[type="checkbox"]').forEach(function (input) {
+    input.addEventListener("change", refresh);
+  });
+  sortSelect.addEventListener("change", refresh);
+
+  document.querySelectorAll("[data-filters-clear]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll('[data-filter-panel] input[type="checkbox"]').forEach(function (i) { i.checked = true; });
+      clearSmart();
+      refresh();
+    });
+  });
+
+  function clearSmart() {
+    activeUseCase = null;
+    activeSearch = null;
+    smartBanner.classList.add("hidden");
+    smartBanner.classList.remove("flex");
+    try { sessionStorage.removeItem("protoUseCase"); sessionStorage.removeItem("protoSearch"); } catch (err) {}
+  }
+
+  var clearBtn = document.querySelector("[data-smart-clear]");
+  if (clearBtn) clearBtn.addEventListener("click", function () { clearSmart(); refresh(); });
+
+  // Hand-off from the homepage "Smart Laptop Finder" or the header search.
+  var USE_CASE_LABELS = { office: "Everyday Office Work", travel: "Business Travel", power: "Power &amp; Design Work" };
+  try {
+    var useCase = sessionStorage.getItem("protoUseCase");
+    var search = sessionStorage.getItem("protoSearch");
+    if (useCase) {
+      activeUseCase = useCase;
+      smartLabel.innerHTML = USE_CASE_LABELS[useCase] || useCase;
+      smartBanner.classList.remove("hidden");
+      smartBanner.classList.add("flex");
+      sessionStorage.removeItem("protoUseCase");
+    } else if (search) {
+      activeSearch = search.toLowerCase();
+      smartLabel.textContent = '"' + search + '"';
+      smartBanner.classList.remove("hidden");
+      smartBanner.classList.add("flex");
+      sessionStorage.removeItem("protoSearch");
+    }
+  } catch (err) {}
+
+  refresh();
+})();
+</script>
 </body>
 </html>
