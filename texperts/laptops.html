@@ -42,135 +42,138 @@ tailwind.config = {
 };</script>
 </head>
 <body class="bg-surface font-body text-text-primary antialiased" data-page="laptops">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-status-online focus:text-surface-dark focus:font-bold focus:text-sm focus:px-4 focus:py-2.5 focus:rounded-full focus:shadow-lg" href="#main-content">Skip to main content</a>
 <div class="bg-surface-dark text-white/80">
 <div class="max-w-[1200px] mx-auto px-5 h-9 flex items-center justify-between text-xs">
-<a class="flex items-center gap-1.5 hover:text-status-online transition-colors" href="tel:0737233333"><span class="material-symbols-outlined text-[14px] text-status-online">call</span>073 723 3333</a>
-<span class="hidden sm:flex items-center gap-1.5 text-status-online font-semibold uppercase tracking-wide text-[10px]"><span class="material-symbols-outlined text-[14px]">local_shipping</span>Free delivery on orders over R2,000</span>
+<a class="flex items-center gap-1.5 hover:text-status-online focus-visible:text-status-online transition-colors rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-status-online" href="tel:0737233333"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">call</span>073 723 3333</a>
+<span class="hidden sm:flex items-center gap-1.5 text-status-online font-semibold uppercase tracking-wide text-[10px]"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">local_shipping</span>Free delivery on orders over R2,000</span>
 </div>
 </div>
 <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border-subtle shadow-sm">
 <div class="max-w-[1200px] mx-auto px-5 h-16 flex items-center justify-between gap-4">
-<a class="flex items-center gap-2.5 shrink-0" data-path="catalog" href="#">
+<a class="flex items-center gap-2.5 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="catalog" href="#">
 <img alt="Texperts" class="h-8 w-auto" src="../assets/logo/logo-icon-black.png"/>
 <div class="flex flex-col leading-none gap-0.5">
 <span class="font-display font-bold text-lg uppercase text-text-primary">Texperts</span>
 <span class="font-mono text-[8px] uppercase tracking-widest text-text-muted">Simple IT Solutions</span>
 </div>
 </a>
-<nav class="hidden lg:flex items-center gap-5">
+<nav aria-label="Primary" class="hidden lg:flex items-center gap-5">
 
 <div class="relative group h-16 flex items-center">
-<a class="flex items-center gap-1 text-sm font-medium text-text-primary/75 hover:text-primary transition-colors" data-path="laptops" href="#">Laptops<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<a class="flex items-center gap-1 text-sm font-medium text-text-primary/75 hover:text-primary focus-visible:text-primary transition-colors px-1 -mx-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="laptops" href="#">Laptops<span aria-hidden="true" class="material-symbols-outlined text-[16px]">expand_more</span></a>
 
-<div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-150 z-50">
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-150 z-50">
 <div class="w-72 bg-surface-card border border-border-subtle rounded-xl shadow-xl p-2">
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="dell-5410" href="#" title="View Dell Latitude 5410">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="dell-5410" href="#" title="View Dell Latitude 5410">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpcXrfpgkjqJP0sGcYZ1WUpnJgttgMvbeM2Y3f328zpFcXEX5E8TtgeD4xOXMuYXu5f0xmKB8HhMR4y7ARS1Ou4_8fKEWkvtT2NdZhM_PeccsywWrwcguCGfOXWtwTc9ebl10JVeCdmgZO1F6nANCRJDGed80nOqPuwThbvHxdJ5tKDonWoyXErWyh9r4kD6y4rdykjtuVJXlTZOEKQjkM16PiOe_lGtfKvQWhlmLyxvENON0idY8"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">Dell Latitude 5410</span><span class="text-xs text-text-muted">R4,500</span></span>
 </a>
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="hp-elitebook-840" href="#" title="View HP EliteBook 840 G7">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="hp-elitebook-840" href="#" title="View HP EliteBook 840 G7">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAJxrBxOK_N_-xDVHUWMUheZaEEf285YQV1uKW0XHuVNzMaxcn0BgRA-R2StdAAgS-VsMFH54-7x4LGkH6No4Il_NCUVuwnLCJkrJU94hKxQO-iqEkrp-eW-RWL8XndKmELKngeJX4irDF-DQI0Dga4WC-VLr4OkHhoilLiCGLgUHEbiizkk9XVNct1u-nkvFv55puxUZ8qksUZ6xmMQwq1KJC88D6KGV1Q7yodXqK2k_vCist2U4"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">HP EliteBook 840 G7</span><span class="text-xs text-text-muted">R5,999</span></span>
 </a>
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="thinkpad-t14" href="#" title="View Lenovo ThinkPad T14">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="thinkpad-t14" href="#" title="View Lenovo ThinkPad T14">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf3n48LYkEZ--OVAuKTnxjCPQlY9BZ3PkNhJOCHlT0CWvzEZc3bt3gztXIsPop12a5LnBN1Pn-SJqvvgGpa_KFzBDQUPoX4coJWNQl9AwFyJG0xIydoRkG9fJEP7lFqy1KBcv7-d42eO4N45l2bcblYr0OfbhmwatK7kbiW6HICU11cb6JJZOSIcY7lG844pDztQAuALaxoWSJjCgQ0Zc_4XDe42TcKwrOQh_J_SVxQ9B-M6rxQNs"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">Lenovo ThinkPad T14</span><span class="text-xs text-text-muted">R6,299</span></span>
 </a>
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="precision-3551" href="#" title="View Dell Precision 3551">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="precision-3551" href="#" title="View Dell Precision 3551">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6SxuQt6d3zJojtxlSH4y8QSgOnaEeRZETWRIiriQphoZChIFF9rJItncA_wBlIJVuUQR74rm38OzKJH4RlkJwpRLtl6X63TbFmgfsHRJmutG4oi8bRYULlcLHy3ZpRFj12WIZWuVXFhGMvH1_cXdgk9gXwJ1CaSL6ZIDCo_QZLCQ-hb5sNx1adMylos3Y2oy4D43g5bh3_KO6NkYtXk4E0mkTJjX7wd0RVa5Y1J-1peUefoJ3mlM"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">Dell Precision 3551</span><span class="text-xs text-text-muted">R11,999</span></span>
 </a>
-<a class="block text-center mt-1 pt-2 border-t border-border-subtle text-sm font-semibold text-primary hover:underline" data-path="laptops" href="#">Shop All Laptops &rarr;</a>
+<a class="block text-center mt-1 pt-2 border-t border-border-subtle text-sm font-semibold text-primary hover:underline focus-visible:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="laptops" href="#">Shop All Laptops &rarr;</a>
 </div>
 </div>
 </div>
 
 <div class="relative group h-16 flex items-center">
-<a class="flex items-center gap-1 text-sm font-medium text-text-primary/75 hover:text-primary transition-colors" data-path="desktops" href="#">Desktops<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<a class="flex items-center gap-1 text-sm font-medium text-text-primary/75 hover:text-primary focus-visible:text-primary transition-colors px-1 -mx-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="desktops" href="#">Desktops<span aria-hidden="true" class="material-symbols-outlined text-[16px]">expand_more</span></a>
 
-<div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-150 z-50">
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-150 z-50">
 <div class="w-72 bg-surface-card border border-border-subtle rounded-xl shadow-xl p-2">
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="optiplex-tower" href="#" title="View Dell OptiPlex Tower">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="optiplex-tower" href="#" title="View Dell OptiPlex Tower">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?fm=jpg&q=80&w=1200"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">Dell OptiPlex Tower</span><span class="text-xs text-text-muted">R5,299</span></span>
 </a>
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="z-workstation" href="#" title="View HP Z2 Tower Workstation">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="z-workstation" href="#" title="View HP Z2 Tower Workstation">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://images.unsplash.com/photo-1719927604476-dc404b85358f?fm=jpg&q=80&w=1200"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">HP Z2 Tower Workstation</span><span class="text-xs text-text-muted">R13,499</span></span>
 </a>
-<a class="block text-center mt-1 pt-2 border-t border-border-subtle text-sm font-semibold text-primary hover:underline" data-path="desktops" href="#">Shop All Desktops &rarr;</a>
+<a class="block text-center mt-1 pt-2 border-t border-border-subtle text-sm font-semibold text-primary hover:underline focus-visible:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="desktops" href="#">Shop All Desktops &rarr;</a>
 </div>
 </div>
 </div>
 
 <div class="relative group h-16 flex items-center">
-<a class="flex items-center gap-1 text-sm font-medium text-text-primary/75 hover:text-primary transition-colors" data-path="accessories" href="#">Accessories<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<a class="flex items-center gap-1 text-sm font-medium text-text-primary/75 hover:text-primary focus-visible:text-primary transition-colors px-1 -mx-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="accessories" href="#">Accessories<span aria-hidden="true" class="material-symbols-outlined text-[16px]">expand_more</span></a>
 
-<div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-150 z-50">
+<div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-150 z-50">
 <div class="w-72 bg-surface-card border border-border-subtle rounded-xl shadow-xl p-2">
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="monitor-24" href="#" title="View 24″ Full HD Business Monitor">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="monitor-24" href="#" title="View 24″ Full HD Business Monitor">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?fm=jpg&q=80&w=1200"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">24″ Full HD Business Monitor</span><span class="text-xs text-text-muted">R1,899</span></span>
 </a>
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="keyboard-mouse-combo" href="#" title="View Wireless Keyboard &amp; Mouse Combo">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="keyboard-mouse-combo" href="#" title="View Wireless Keyboard &amp; Mouse Combo">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://images.unsplash.com/photo-1602726428221-9af5b227ed5d?fm=jpg&q=80&w=1200"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">Wireless Keyboard &amp; Mouse Combo</span><span class="text-xs text-text-muted">R449</span></span>
 </a>
 
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors" data-id="usb-headset" href="#" title="View USB Business Headset with Mic">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-container-low focus-visible:bg-surface-container-low focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="usb-headset" href="#" title="View USB Business Headset with Mic">
 <span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center overflow-hidden shrink-0"><img alt="" class="max-h-full max-w-full object-contain" src="https://images.unsplash.com/photo-1553775282-20af80779df7?fm=jpg&q=80&w=1200"/></span>
 <span class="flex flex-col leading-tight min-w-0"><span class="text-sm font-medium truncate">USB Business Headset with Mic</span><span class="text-xs text-text-muted">R349</span></span>
 </a>
-<a class="block text-center mt-1 pt-2 border-t border-border-subtle text-sm font-semibold text-primary hover:underline" data-path="accessories" href="#">Shop All Accessories &rarr;</a>
+<a class="block text-center mt-1 pt-2 border-t border-border-subtle text-sm font-semibold text-primary hover:underline focus-visible:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="accessories" href="#">Shop All Accessories &rarr;</a>
 </div>
 </div>
 </div>
-<a class="text-sm font-medium text-text-primary/75 hover:text-primary transition-colors" data-path="custom-builds" href="#">Custom Builds</a>
-<a class="text-sm font-medium text-text-primary/75 hover:text-primary transition-colors" data-path="about" href="#">Stores</a>
+<a class="text-sm font-medium text-text-primary/75 hover:text-primary focus-visible:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="custom-builds" href="#">Custom Builds</a>
+<a class="text-sm font-medium text-text-primary/75 hover:text-primary focus-visible:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="about" href="#">Stores</a>
 </nav>
 <div class="flex items-center gap-3">
-<button class="text-text-primary/70 hover:text-primary transition-colors" data-search-toggle="" title="Search" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button>
-<a class="relative text-text-primary/70 hover:text-primary transition-colors" data-path="cart-and-checkout" href="#" title="Cart">
-<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
-<span class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-status-online text-[10px] font-bold flex items-center justify-center text-surface-dark" data-cart-count="">0</span>
+<button aria-controls="site-search-panel" aria-expanded="false" aria-label="Search" class="text-text-primary/70 hover:text-primary focus-visible:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-search-toggle="" title="Search" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[22px]">search</span></button>
+<a aria-label="Cart" class="relative text-text-primary/70 hover:text-primary focus-visible:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="cart-and-checkout" href="#" title="Cart">
+<span aria-hidden="true" class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span aria-hidden="true" class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-status-online text-[10px] font-bold flex items-center justify-center text-surface-dark" data-cart-count="">0</span>
 </a>
-<button class="lg:hidden text-text-primary/70 hover:text-primary transition-colors" data-menu-toggle="" title="Menu" type="button">
-<span class="material-symbols-outlined text-[24px]">menu</span>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu" class="lg:hidden text-text-primary/70 hover:text-primary focus-visible:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-menu-toggle="" title="Menu" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-[24px]">menu</span>
 </button>
 </div>
 </div>
-<div class="hidden border-t border-border-subtle bg-surface" data-search-panel="">
+<div class="hidden border-t border-border-subtle bg-surface" data-search-panel="" id="site-search-panel">
 <div class="max-w-[1200px] mx-auto px-5 py-4">
 <div class="relative">
-<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-text-muted text-[20px] pointer-events-none">search</span>
-<input autocomplete="off" class="w-full pl-11 pr-4 py-3 rounded-full border border-border-subtle bg-surface-container-lowest text-sm focus:outline-none focus:border-primary transition-colors" data-search-input="" placeholder="Search ThinkPad, EliteBook, Latitude..." type="text"/>
+<span aria-hidden="true" class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-text-muted text-[20px] pointer-events-none">search</span>
+<label class="sr-only" for="site-search">Search products</label>
+<input autocomplete="off" class="w-full pl-11 pr-4 py-3 rounded-full border border-border-subtle bg-surface-container-lowest text-sm focus:outline-none focus:border-primary transition-colors" data-search-input="" id="site-search" placeholder="Search ThinkPad, EliteBook, Latitude..." type="text"/>
 </div>
 <div class="mt-2 flex flex-col gap-0.5 max-h-80 overflow-y-auto" data-search-results=""></div>
 </div>
 </div>
-<nav class="lg:hidden hidden flex-col border-t border-border-subtle bg-surface" data-mobile-menu="">
-<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="laptops" href="#">Laptops</a>
-<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="desktops" href="#">Desktops</a>
-<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="accessories" href="#">Accessories</a>
-<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="custom-builds" href="#">Custom Builds</a>
-<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle" data-path="about" href="#">Stores</a>
-<a class="block px-5 py-3 text-sm font-medium text-text-primary" data-path="company" href="#">About Us</a>
+<nav aria-label="Mobile" class="lg:hidden hidden flex-col border-t border-border-subtle bg-surface" data-mobile-menu="" id="mobile-menu">
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="laptops" href="#">Laptops</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="desktops" href="#">Desktops</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="accessories" href="#">Accessories</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="custom-builds" href="#">Custom Builds</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary border-b border-border-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="about" href="#">Stores</a>
+<a class="block px-5 py-3 text-sm font-medium text-text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="company" href="#">About Us</a>
 </nav>
 </header>
 <script>window.TEXPERTS_PRODUCTS = [{"id":"dell-5410","name":"Dell Latitude 5410","price":"R4,500","was":"R5,999","spec":"i5 10th Gen · 8GB · 256GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBpcXrfpgkjqJP0sGcYZ1WUpnJgttgMvbeM2Y3f328zpFcXEX5E8TtgeD4xOXMuYXu5f0xmKB8HhMR4y7ARS1Ou4_8fKEWkvtT2NdZhM_PeccsywWrwcguCGfOXWtwTc9ebl10JVeCdmgZO1F6nANCRJDGed80nOqPuwThbvHxdJ5tKDonWoyXErWyh9r4kD6y4rdykjtuVJXlTZOEKQjkM16PiOe_lGtfKvQWhlmLyxvENON0idY8","rating":4.8,"reviews":156,"grade":"Grade A","category":"laptop","gallery":["https://lh3.googleusercontent.com/aida-public/AB6AXuDFFX6if5FcKaHjTSnNA8IC16J6t-dr-gO0YPmzd5yIMTdQ2chWL0ompg0Pte4OvbT2_TMdFUPzZKeY7AweoxjG3qCACo4js3P2Z9ssOPHMgOOSHQYgFC9Me47lc3_EqNetLyDT4SvpZQ7pYEm6boHbJpeHIyVDklX0gR87B7CfMtc2hE1f4X4KrYxr8NrNtJjBA24PfyBwsNUDcP2I-pvVUTF2XHjN76t-TUzTAP4s2nuO9DPaVo0","https://lh3.googleusercontent.com/aida-public/AB6AXuCNVuwA5cgtXU3eA74m_ABMQKPAfyUTwGbu6kkT9E3WaBM4Wl-HVTfCvstyITFtyGYPyObqOlrRvc1qESFyVlv7rhZKI6hV2W1xWdXzfKAwi0jQm6C7ffTbztZmzop7Uc0tWJY8lYxmvC39_2Wv9TnWNzuHavlFzZFg7V4BQ4C8CqjF1JeRY-kL85fiQc4bkXdSnXRl4h8lh67iavxmbKCL8t9bFC6lESPERz5LC6a3iTY3UUEoSZM","https://lh3.googleusercontent.com/aida-public/AB6AXuC125FgB-MPTll5-mbtkVLA8_nCRpTzeh37Vlfd7585T9_ud06YpeQXtfOedKjhR6Ozx6A5weS3g4tCkBMKE5URGVIH1qfmC3WBeOwIqV1dub6AGmKOw2gkWHU898RJBKFHl9JrmVuvCvXvdqna8KxZxzQYqj2CMzAobIu_38mZNhPPOXXhvccz7UtEoy7lONdge2Wx9ijIelz3lpQkr_P9P9DudISTF1WAMwSnCD9BT3cCpGvpazc","https://lh3.googleusercontent.com/aida-public/AB6AXuDMp_AjtF31iiJLnOm5gA0Js1_eCsHJHDaJoyk6mF4JPzimcxPgcVZyAEnReukFmb-A_5_18AQ7khVXcY0anoQfqLkvfS91pVXBZ7tQDBwtLmjzI_ee3omkCwcjssH-s_6Ux2Ov1yJsMQYAY8o8fQ7hu1nf75mQxmiV19p099dLWec3CJdYfhs-gJeJHyiy5FqKfG8Nv3q0b5AHkmNL3Nkb7vVehXY6JjIZdqeYJcflqN24y6Vx4G4"],"specs":[["Processor","Intel Core i5 10th Gen"],["Memory","8GB DDR4 RAM"],["Storage","256GB SSD"],["Display","14.0″ FHD IPS"],["Operating System","Windows 10 Pro"],["Battery Health","100% OEM Verified"]],"detail":true},{"id":"hp-elitebook-840","name":"HP EliteBook 840 G7","price":"R5,999","was":"R7,499","spec":"i5 10th Gen · 16GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuBAJxrBxOK_N_-xDVHUWMUheZaEEf285YQV1uKW0XHuVNzMaxcn0BgRA-R2StdAAgS-VsMFH54-7x4LGkH6No4Il_NCUVuwnLCJkrJU94hKxQO-iqEkrp-eW-RWL8XndKmELKngeJX4irDF-DQI0Dga4WC-VLr4OkHhoilLiCGLgUHEbiizkk9XVNct1u-nkvFv55puxUZ8qksUZ6xmMQwq1KJC88D6KGV1Q7yodXqK2k_vCist2U4","rating":4.7,"reviews":98,"grade":"Grade A","category":"laptop","gallery":null,"specs":[["Processor","Intel Core i5 10th Gen"],["Memory","16GB DDR4 RAM"],["Storage","256GB NVMe SSD"],["Display","14.0″ FHD Anti-Glare"],["Operating System","Windows 11 Pro"]],"detail":true},{"id":"thinkpad-t14","name":"Lenovo ThinkPad T14","price":"R6,299","was":"R7,999","spec":"Ryzen 5 PRO · 16GB · 512GB SSD","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDf3n48LYkEZ--OVAuKTnxjCPQlY9BZ3PkNhJOCHlT0CWvzEZc3bt3gztXIsPop12a5LnBN1Pn-SJqvvgGpa_KFzBDQUPoX4coJWNQl9AwFyJG0xIydoRkG9fJEP7lFqy1KBcv7-d42eO4N45l2bcblYr0OfbhmwatK7kbiW6HICU11cb6JJZOSIcY7lG844pDztQAuALaxoWSJjCgQ0Zc_4XDe42TcKwrOQh_J_SVxQ9B-M6rxQNs","rating":4.9,"reviews":142,"grade":"Grade A","category":"laptop","gallery":null,"specs":[["Processor","AMD Ryzen 5 PRO"],["Memory","16GB DDR4 RAM"],["Storage","512GB SSD"],["Display","14.0″ FHD IPS"],["Operating System","Windows 11 Pro"]],"detail":true},{"id":"precision-3551","name":"Dell Precision 3551","price":"R11,999","was":"R14,999","spec":"i7 8-Core · 32GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuB6SxuQt6d3zJojtxlSH4y8QSgOnaEeRZETWRIiriQphoZChIFF9rJItncA_wBlIJVuUQR74rm38OzKJH4RlkJwpRLtl6X63TbFmgfsHRJmutG4oi8bRYULlcLHy3ZpRFj12WIZWuVXFhGMvH1_cXdgk9gXwJ1CaSL6ZIDCo_QZLCQ-hb5sNx1adMylos3Y2oy4D43g5bh3_KO6NkYtXk4E0mkTJjX7wd0RVa5Y1J-1peUefoJ3mlM","rating":4.6,"reviews":41,"grade":"Grade A","category":"laptop","gallery":null,"specs":[["Processor","Intel Core i7 8-Core"],["Memory","32GB DDR4 RAM"],["Storage","512GB NVMe SSD"],["Graphics","Dedicated 4GB VRAM"],["Operating System","Windows 11 Pro"]],"detail":true},{"id":"probook-450","name":"HP ProBook 450 G8","price":"R3,799","was":"R4,999","spec":"i5 11th Gen · 8GB · 256GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDCJaSBSrzwrQ0_fZAD6qOWoJhlP3riTJTNLscVefjbxwqIadweYjPLsMoSCqVitkEMe9pr4f3iFYNgGq4YcJW8ZZBhKplTMqRQg3YvuW2RvbLHhUy4sv_xdCvwa-yWDXnEjAawDHg1XVaB8WlxoQJyNNsuN2DGk1_ncQrDbYQn5FB6nO2Da7_jQV8sdD8seocNkT4Pp0tU4SnAAwOqYhlsWHAwB2ohuRdqfMcnHMnobUXiTwg5cQc","rating":4.4,"reviews":67,"grade":"Grade B","category":"laptop","gallery":null,"specs":[["Processor","Intel Core i5 11th Gen"],["Memory","8GB DDR4 RAM"],["Storage","256GB NVMe SSD"],["Display","15.6″ Full HD"],["Operating System","Windows 11 Pro"]],"detail":true},{"id":"x1-carbon","name":"Lenovo X1 Carbon","price":"R8,499","was":"R10,999","spec":"i7 vPro · 16GB · 512GB NVMe","img":"https://lh3.googleusercontent.com/aida-public/AB6AXuDOKN0s2bZtq_xGciZnB39zDdmJQV7vhZQPCTJlmwiOUGJgbugRLbTdbSebpHiacduEQfWuaL65H-J9IwfMKWc8xBU_kZKeLqmXHfkybxTVNs81CLPSA9kQozkKj4wxmZiHI_6dxwz2quHThp6HHzbhGhzfi7ULQ4L8M9GBDondOw0mg8MsSk1GtdzwnXPodGT_5My_FT1hYLCArLUSopVH_NBJ-iS6yTCe86H4__ny9Gx83MWSooY","rating":4.8,"reviews":89,"grade":"Grade A","category":"laptop","gallery":null,"specs":[["Processor","Intel Core i7 vPro"],["Memory","16GB LPDDR3"],["Storage","512GB NVMe SSD"],["Display","14.0″ 4K UHD"],["Operating System","Windows 11 Pro"]],"detail":true},{"id":"optiplex-tower","name":"Dell OptiPlex Tower","price":"R5,299","was":"R6,999","spec":"i5 10th Gen · 16GB · 512GB SSD","img":"https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?fm=jpg&q=80&w=1200","rating":4.7,"reviews":52,"grade":"Grade A","category":"desktop","gallery":null,"specs":[["Processor","Intel Core i5 10th Gen"],["Memory","16GB DDR4 RAM"],["Storage","512GB SSD"],["Ports","USB-C, DisplayPort, VGA"],["Operating System","Windows 11 Pro"]],"detail":true},{"id":"z-workstation","name":"HP Z2 Tower Workstation","price":"R13,499","was":"R16,999","spec":"i7 8-Core · 32GB · 1TB NVMe","img":"https://images.unsplash.com/photo-1719927604476-dc404b85358f?fm=jpg&q=80&w=1200","rating":4.8,"reviews":29,"grade":"Grade A","category":"desktop","gallery":null,"specs":[["Processor","Intel Core i7 8-Core"],["Memory","32GB DDR4 RAM"],["Storage","1TB NVMe SSD"],["Graphics","Dedicated Workstation GPU"],["Operating System","Windows 11 Pro"]],"detail":true},{"id":"monitor-24","name":"24″ Full HD Business Monitor","price":"R1,899","was":"R2,499","spec":"1920x1080 · IPS · HDMI/VGA","img":"https://images.unsplash.com/photo-1587831990711-23ca6441447b?fm=jpg&q=80&w=1200","rating":4.6,"reviews":74,"grade":"Grade A","category":"accessory","gallery":null,"specs":[["Panel","24″ IPS, 1920x1080"],["Refresh Rate","75Hz"],["Ports","HDMI, VGA, DisplayPort"],["Mount","VESA 100x100"]],"detail":true},{"id":"keyboard-mouse-combo","name":"Wireless Keyboard &amp; Mouse Combo","price":"R449","was":"R699","spec":"2.4GHz Wireless · Ergonomic · Silent Click","img":"https://images.unsplash.com/photo-1602726428221-9af5b227ed5d?fm=jpg&q=80&w=1200","rating":4.5,"reviews":118,"grade":"Grade A","category":"accessory","gallery":null,"specs":[["Connectivity","2.4GHz USB Wireless"],["Battery Life","Up to 12 months"],["Layout","Full-size, ergonomic"],["Compatibility","Windows, macOS"]],"detail":true},{"id":"usb-headset","name":"USB Business Headset with Mic","price":"R349","was":"R549","spec":"Noise-Cancelling Mic · USB Plug &amp; Play","img":"https://images.unsplash.com/photo-1553775282-20af80779df7?fm=jpg&q=80&w=1200","rating":4.4,"reviews":63,"grade":"Grade A","category":"accessory","gallery":null,"specs":[["Connectivity","USB Plug &amp; Play"],["Microphone","Noise-cancelling boom mic"],["Fit","Over-ear, adjustable"],["Compatibility","Teams, Zoom, Skype"]],"detail":true}];</script>
-<main class="max-w-[1200px] mx-auto px-5 py-10">
-<nav class="flex items-center gap-1.5 text-xs text-text-muted mb-4">
-<a class="hover:text-primary transition-colors" data-path="catalog" href="#">Home</a>
-<span>/</span>
-<span class="text-text-primary font-medium">Laptops</span>
+<main class="max-w-[1200px] mx-auto px-5 py-10" id="main-content">
+<nav aria-label="Breadcrumb" class="mb-4 md:mb-5">
+<ol class="flex flex-wrap items-center gap-1 text-[13px] text-text-muted">
+<li class="flex items-center"><a class="text-text-muted hover:text-primary focus-visible:text-primary transition-colors inline-flex items-center px-1 -mx-1 py-1 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" data-path="catalog" href="#">Home</a></li>
+<li aria-hidden="true" class="flex items-center"><svg aria-hidden="true" class="w-3.5 h-3.5 shrink-0 text-border-subtle" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></li><li class="flex items-center"><span aria-current="page" class="text-text-primary font-semibold">Laptops</span></li>
+</ol>
 </nav>
 <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-4">
 <div>
@@ -441,11 +444,14 @@ tailwind.config = {
 <a class="flex items-center gap-2 text-white/60 hover:text-status-online transition-colors" href="mailto:info@texpertsonline.co.za"><svg class="shrink-0 " fill="none" height="11" viewBox="0 0 12 11" width="12"><line stroke="currentColor" stroke-width="1.4" x1="0" x2="4.5" y1="5.5" y2="5.5"></line><circle cx="8" cy="5.5" r="3" stroke="currentColor" stroke-width="1.4"></circle></svg><span class="break-all">info@texpertsonline.co.za</span></a>
 </div>
 </div>
-<div class="border-t border-white/10 py-5 max-w-[1200px] mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40 relative z-10">
+<div class="border-t border-white/10 py-5 max-w-[1200px] mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40 relative z-10">
 <span>&#169; 2026 Texperts &middot; Simple IT Solutions</span>
-<span class="flex items-center gap-3">
-<span>PayFast</span><span>&middot;</span><span>Instant EFT</span><span>&middot;</span><span>Visa</span><span>&middot;</span><span>Mastercard</span>
-</span>
+<div aria-label="Accepted payment methods" class="flex items-center gap-2">
+<span class="flex items-center bg-white rounded-md px-2.5 h-7"><img alt="Visa" class="h-3.5 md:h-4 w-auto object-contain" src="../assets/logo/payments/visa.svg"/></span>
+<span class="flex items-center bg-white rounded-md px-2.5 h-7"><img alt="Mastercard" class="h-3.5 md:h-4 w-auto object-contain" src="../assets/logo/payments/mastercard.svg"/></span>
+<span class="flex items-center bg-white rounded-md px-2.5 h-7"><img alt="PayFast" class="h-3.5 md:h-4 w-auto object-contain" src="../assets/logo/payments/payfast.svg"/></span>
+<span class="flex items-center gap-1.5 text-white/50 font-medium pl-1"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">account_balance</span>Instant EFT</span>
+</div>
 </div>
 </footer>
 <script defer="" src="../assets/cart.js"></script>

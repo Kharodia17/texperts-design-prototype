@@ -124,15 +124,22 @@
     });
   }
 
+  function setSearchExpanded(expanded) {
+    var toggle = document.querySelector("[data-search-toggle]");
+    if (toggle) toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+  }
+
   function closeSearch() {
     var panel = document.querySelector("[data-search-panel]");
     if (panel) panel.classList.add("hidden");
+    setSearchExpanded(false);
   }
 
   function openSearch() {
     var panel = document.querySelector("[data-search-panel]");
     var input = document.querySelector("[data-search-input]");
     if (panel) panel.classList.remove("hidden");
+    setSearchExpanded(true);
     if (input) {
       input.focus();
       renderSearchResults(input.value || "");
@@ -179,8 +186,10 @@
     if (el.hasAttribute("data-menu-toggle")) {
       var menu = document.querySelector("[data-mobile-menu]");
       if (menu) {
+        var wasHidden = menu.classList.contains("hidden");
         menu.classList.toggle("hidden");
         menu.classList.toggle("flex");
+        el.setAttribute("aria-expanded", wasHidden ? "true" : "false");
       }
       return;
     }
