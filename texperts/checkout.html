@@ -9,7 +9,22 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
-<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}.cursor-node{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='10' x2='8' y2='10' stroke='%230B0B10' stroke-width='2'/%3E%3Ccircle cx='13' cy='10' r='5' fill='none' stroke='%230B0B10' stroke-width='2'/%3E%3C/svg%3E") 13 10, pointer;}</style>
+<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}
+.tx-well{background-color:#FAF9FC;background-image:radial-gradient(#DAD5EA 1px,transparent 1.2px);background-size:14px 14px;}
+.tx-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(83,44,216,.3);border-color:#532CD8;}
+.tx-img{transition:transform .3s ease;}
+.tx-card:hover .tx-img{transform:scale(1.05);}
+.tx-sep{position:relative;border-top:1.5px dashed #D8D3E8;}
+.tx-sep::before,.tx-sep::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:#F5F3FA;border:1px solid #E4E1EE;}
+.tx-sep::before{left:-7px;}.tx-sep::after{right:-7px;}
+.tx-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.tx-marquee-track{display:flex;width:max-content;animation:tx-marquee 55s linear infinite;}
+.tx-marquee-list{display:flex;align-items:center;gap:2.5rem;padding-right:2.5rem;margin:0;list-style:none;}
+.tx-marquee:hover .tx-marquee-track,.tx-marquee[data-paused] .tx-marquee-track{animation-play-state:paused;}
+@keyframes tx-marquee{to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.tx-marquee-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center;}.tx-marquee-list[aria-hidden]{display:none;}.tx-marquee-list{flex-wrap:wrap;justify-content:center;padding-right:0;}.tx-card,.tx-img{transition:none;}.tx-card:hover{transform:none;}}
+.cursor-node{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='10' x2='8' y2='10' stroke='%230B0B10' stroke-width='2'/%3E%3Ccircle cx='13' cy='10' r='5' fill='none' stroke='%230B0B10' stroke-width='2'/%3E%3C/svg%3E") 13 10, pointer;}</style>
 <script src="https://cdn.tailwindcss.com"></script>
 <script id="tailwind-config">
 tailwind.config = {
@@ -51,12 +66,8 @@ tailwind.config = {
 </div>
 <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border-subtle shadow-sm">
 <div class="max-w-[1200px] mx-auto px-5 h-16 flex items-center justify-between gap-4">
-<a class="flex items-center gap-2.5 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="catalog" href="#">
-<img alt="Texperts" class="h-8 w-auto" src="../assets/logo/logo-icon-black.png"/>
-<div class="flex flex-col leading-none gap-0.5">
-<span class="font-display font-bold text-lg uppercase text-text-primary">Texperts</span>
-<span class="font-mono text-[8px] uppercase tracking-widest text-text-muted">Simple IT Solutions</span>
-</div>
+<a class="flex items-center shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="catalog" href="#" title="Texperts home">
+<img alt="Texperts - Simple IT Solutions" class="h-10 sm:h-11 w-auto" height="44" src="../assets/logo/logo-full-black.png" width="173"/>
 </a>
 <nav aria-label="Primary" class="hidden lg:flex items-center gap-5">
 
@@ -264,9 +275,8 @@ tailwind.config = {
 </div>
 <div class="max-w-[1200px] mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-10 relative z-10">
 <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
-<div class="flex items-center gap-2.5">
-<img alt="Texperts" class="h-7 w-auto" src="../assets/logo/logo-icon-white.png"/>
-<span class="font-display font-bold text-lg uppercase">Texperts</span>
+<div class="flex items-center">
+<img alt="Texperts - Simple IT Solutions" class="h-12 w-auto" height="48" src="../assets/logo/logo-full-white.png" width="188"/>
 </div>
 <p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
 <div class="flex items-center gap-3 pt-1">

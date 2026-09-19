@@ -9,7 +9,22 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
-<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}.cursor-node{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='10' x2='8' y2='10' stroke='%230B0B10' stroke-width='2'/%3E%3Ccircle cx='13' cy='10' r='5' fill='none' stroke='%230B0B10' stroke-width='2'/%3E%3C/svg%3E") 13 10, pointer;}</style>
+<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}
+.tx-well{background-color:#FAF9FC;background-image:radial-gradient(#DAD5EA 1px,transparent 1.2px);background-size:14px 14px;}
+.tx-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(83,44,216,.3);border-color:#532CD8;}
+.tx-img{transition:transform .3s ease;}
+.tx-card:hover .tx-img{transform:scale(1.05);}
+.tx-sep{position:relative;border-top:1.5px dashed #D8D3E8;}
+.tx-sep::before,.tx-sep::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:#F5F3FA;border:1px solid #E4E1EE;}
+.tx-sep::before{left:-7px;}.tx-sep::after{right:-7px;}
+.tx-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.tx-marquee-track{display:flex;width:max-content;animation:tx-marquee 55s linear infinite;}
+.tx-marquee-list{display:flex;align-items:center;gap:2.5rem;padding-right:2.5rem;margin:0;list-style:none;}
+.tx-marquee:hover .tx-marquee-track,.tx-marquee[data-paused] .tx-marquee-track{animation-play-state:paused;}
+@keyframes tx-marquee{to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.tx-marquee-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center;}.tx-marquee-list[aria-hidden]{display:none;}.tx-marquee-list{flex-wrap:wrap;justify-content:center;padding-right:0;}.tx-card,.tx-img{transition:none;}.tx-card:hover{transform:none;}}
+.cursor-node{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='10' x2='8' y2='10' stroke='%230B0B10' stroke-width='2'/%3E%3Ccircle cx='13' cy='10' r='5' fill='none' stroke='%230B0B10' stroke-width='2'/%3E%3C/svg%3E") 13 10, pointer;}</style>
 <script src="https://cdn.tailwindcss.com"></script>
 <script id="tailwind-config">
 tailwind.config = {
@@ -51,12 +66,8 @@ tailwind.config = {
 </div>
 <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border-subtle shadow-sm">
 <div class="max-w-[1200px] mx-auto px-5 h-16 flex items-center justify-between gap-4">
-<a class="flex items-center gap-2.5 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="catalog" href="#">
-<img alt="Texperts" class="h-8 w-auto" src="../assets/logo/logo-icon-black.png"/>
-<div class="flex flex-col leading-none gap-0.5">
-<span class="font-display font-bold text-lg uppercase text-text-primary">Texperts</span>
-<span class="font-mono text-[8px] uppercase tracking-widest text-text-muted">Simple IT Solutions</span>
-</div>
+<a class="flex items-center shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="catalog" href="#" title="Texperts home">
+<img alt="Texperts - Simple IT Solutions" class="h-10 sm:h-11 w-auto" height="44" src="../assets/logo/logo-full-black.png" width="173"/>
 </a>
 <nav aria-label="Primary" class="hidden lg:flex items-center gap-5">
 
@@ -228,43 +239,60 @@ Simple IT Solutions
 </div>
 </section>
 <section class="max-w-[1200px] mx-auto px-5 py-14">
-<h2 class="font-display font-bold text-2xl mb-6">What Our Customers Say</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-
-<div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-3">
-<div class="flex text-amber-400 text-sm leading-none">★★★★★</div>
-<p class="text-sm text-text-primary/90 leading-relaxed">&ldquo;Ordered 8 Latitudes for our office rollout. All arrived spotless, batteries at 95%+, and support answered every WhatsApp within minutes.&rdquo;</p>
-<div class="flex items-center gap-2 mt-1 pt-3 border-t border-border-subtle">
-<span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-xs text-primary">N</span>
-<div class="flex flex-col leading-tight">
-<span class="text-xs font-semibold">Naledi M.</span>
-<span class="text-[11px] text-text-muted">IT Manager, Joburg</span>
+<h2 class="font-display font-bold text-2xl mb-6">What our customers say</h2>
+<div class="grid lg:grid-cols-[280px_1fr] gap-5">
+<div class="relative overflow-hidden rounded-2xl bg-surface-dark text-text-inverse p-6 flex flex-col gap-5">
+<img alt="" class="pointer-events-none select-none absolute -right-12 -bottom-12 w-56 max-w-none opacity-[0.08]" src="../assets/logo/circuit-tree-white.png"/>
+<div class="relative">
+<div class="flex items-end gap-2"><span class="font-display font-bold text-6xl leading-none text-status-online">4.8</span><span class="text-sm text-white/60 pb-1">out of 5</span></div>
+<div aria-hidden="true" class="flex text-amber-400 text-sm leading-none mt-2">★★★★★</div>
+<p class="text-xs text-white/60 mt-1.5">from 1,214 verified reviews</p>
 </div>
+<ul class="relative flex flex-col gap-2">
+<li class="flex items-center gap-2 text-[11px] font-mono"><span class="w-6 text-white/70">5★</span><span class="flex-1 h-1.5 rounded-full bg-white/10 overflow-hidden"><span class="block h-full rounded-full bg-status-online" style="width:86%"></span></span><span class="w-8 text-right text-white/50">86%</span></li>
+<li class="flex items-center gap-2 text-[11px] font-mono"><span class="w-6 text-white/70">4★</span><span class="flex-1 h-1.5 rounded-full bg-white/10 overflow-hidden"><span class="block h-full rounded-full bg-status-online" style="width:10%"></span></span><span class="w-8 text-right text-white/50">10%</span></li>
+<li class="flex items-center gap-2 text-[11px] font-mono"><span class="w-6 text-white/70">3★</span><span class="flex-1 h-1.5 rounded-full bg-white/10 overflow-hidden"><span class="block h-full rounded-full bg-status-online" style="width:3%"></span></span><span class="w-8 text-right text-white/50">3%</span></li>
+<li class="flex items-center gap-2 text-[11px] font-mono"><span class="w-6 text-white/70">2★</span><span class="flex-1 h-1.5 rounded-full bg-white/10 overflow-hidden"><span class="block h-full rounded-full bg-status-online" style="width:1%"></span></span><span class="w-8 text-right text-white/50">1%</span></li>
+<li class="flex items-center gap-2 text-[11px] font-mono"><span class="w-6 text-white/70">1★</span><span class="flex-1 h-1.5 rounded-full bg-white/10 overflow-hidden"><span class="block h-full rounded-full bg-status-online" style="width:0%"></span></span><span class="w-8 text-right text-white/50">0%</span></li>
+</ul>
 </div>
+<div class="grid md:grid-cols-2 gap-5">
+<figure class="md:col-span-2 flex flex-col gap-5 bg-surface-card border border-border-subtle rounded-2xl p-6 md:p-8">
+<blockquote class="font-display text-lg md:text-xl leading-relaxed">&ldquo;Ordered 8 Latitudes for our office rollout. All arrived spotless, <mark class="bg-status-online/70 text-inherit px-1">batteries at 95%+</mark>, and support answered every WhatsApp within minutes.&rdquo;</blockquote>
+<div class="flex items-center gap-2.5">
+<span class="w-9 h-9 rounded-full bg-surface-dark text-status-online flex items-center justify-center font-display font-bold text-sm">N</span>
+<div class="flex flex-col leading-tight"><span class="text-sm font-bold">Naledi M.</span><span class="text-[11px] text-text-muted">IT Manager, Joburg</span></div>
+<span class="ml-auto inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-primary"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
 </div>
-
-<div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-3">
-<div class="flex text-amber-400 text-sm leading-none">★★★★★</div>
-<p class="text-sm text-text-primary/90 leading-relaxed">&ldquo;Half the price of new and you honestly can't tell the difference. My ThinkPad has been running non-stop for 6 months.&rdquo;</p>
-<div class="flex items-center gap-2 mt-1 pt-3 border-t border-border-subtle">
-<span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-xs text-primary">W</span>
-<div class="flex flex-col leading-tight">
-<span class="text-xs font-semibold">Werner B.</span>
-<span class="text-[11px] text-text-muted">Freelance Developer</span>
+<div class="mt-auto pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
+<span class="text-text-muted">8 &times; Dell Latitude 5410</span>
+<span class="font-bold text-primary whitespace-nowrap">Saved R11,992</span>
 </div>
+</figure>
+<figure class="flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6">
+<blockquote class="text-sm leading-relaxed">&ldquo;Half the price of new and you honestly can't tell the difference. My ThinkPad has been running non-stop for 6 months.&rdquo;</blockquote>
+<div class="flex items-center gap-2.5">
+<span class="w-9 h-9 rounded-full bg-surface-dark text-status-online flex items-center justify-center font-display font-bold text-sm">W</span>
+<div class="flex flex-col leading-tight"><span class="text-sm font-bold">Werner B.</span><span class="text-[11px] text-text-muted">Freelance developer</span></div>
+<span class="ml-auto inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-primary"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
 </div>
+<div class="mt-auto pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
+<span class="text-text-muted">1 &times; Lenovo ThinkPad T14</span>
+<span class="font-bold text-primary whitespace-nowrap">Saved R1,700</span>
 </div>
-
-<div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-3">
-<div class="flex text-amber-400 text-sm leading-none">★★★★★</div>
-<p class="text-sm text-text-primary/90 leading-relaxed">&ldquo;The 12-month warranty gave us confidence to switch our whole team over. Saved us over R40,000 on our budget this year.&rdquo;</p>
-<div class="flex items-center gap-2 mt-1 pt-3 border-t border-border-subtle">
-<span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-xs text-primary">A</span>
-<div class="flex flex-col leading-tight">
-<span class="text-xs font-semibold">Aisha K.</span>
-<span class="text-[11px] text-text-muted">Operations Lead, Cape Town</span>
+</figure>
+<figure class="flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6">
+<blockquote class="text-sm leading-relaxed">&ldquo;The 12-month warranty gave us the confidence to switch the whole team over. <mark class="bg-status-online/70 text-inherit px-1">Saved over R14,000</mark> this year.&rdquo;</blockquote>
+<div class="flex items-center gap-2.5">
+<span class="w-9 h-9 rounded-full bg-surface-dark text-status-online flex items-center justify-center font-display font-bold text-sm">A</span>
+<div class="flex flex-col leading-tight"><span class="text-sm font-bold">Aisha K.</span><span class="text-[11px] text-text-muted">Operations lead, Cape Town</span></div>
+<span class="ml-auto inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-primary"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
 </div>
+<div class="mt-auto pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
+<span class="text-text-muted">12 &times; HP ProBook 450 G8</span>
+<span class="font-bold text-primary whitespace-nowrap">Saved R14,400</span>
 </div>
+</figure>
 </div>
 </div>
 </section>
@@ -307,9 +335,8 @@ Simple IT Solutions
 </div>
 <div class="max-w-[1200px] mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-10 relative z-10">
 <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
-<div class="flex items-center gap-2.5">
-<img alt="Texperts" class="h-7 w-auto" src="../assets/logo/logo-icon-white.png"/>
-<span class="font-display font-bold text-lg uppercase">Texperts</span>
+<div class="flex items-center">
+<img alt="Texperts - Simple IT Solutions" class="h-12 w-auto" height="48" src="../assets/logo/logo-full-white.png" width="188"/>
 </div>
 <p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
 <div class="flex items-center gap-3 pt-1">

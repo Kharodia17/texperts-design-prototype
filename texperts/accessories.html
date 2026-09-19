@@ -9,7 +9,22 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
-<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}.cursor-node{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='10' x2='8' y2='10' stroke='%230B0B10' stroke-width='2'/%3E%3Ccircle cx='13' cy='10' r='5' fill='none' stroke='%230B0B10' stroke-width='2'/%3E%3C/svg%3E") 13 10, pointer;}</style>
+<style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}
+.tx-well{background-color:#FAF9FC;background-image:radial-gradient(#DAD5EA 1px,transparent 1.2px);background-size:14px 14px;}
+.tx-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(83,44,216,.3);border-color:#532CD8;}
+.tx-img{transition:transform .3s ease;}
+.tx-card:hover .tx-img{transform:scale(1.05);}
+.tx-sep{position:relative;border-top:1.5px dashed #D8D3E8;}
+.tx-sep::before,.tx-sep::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:#F5F3FA;border:1px solid #E4E1EE;}
+.tx-sep::before{left:-7px;}.tx-sep::after{right:-7px;}
+.tx-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.tx-marquee-track{display:flex;width:max-content;animation:tx-marquee 55s linear infinite;}
+.tx-marquee-list{display:flex;align-items:center;gap:2.5rem;padding-right:2.5rem;margin:0;list-style:none;}
+.tx-marquee:hover .tx-marquee-track,.tx-marquee[data-paused] .tx-marquee-track{animation-play-state:paused;}
+@keyframes tx-marquee{to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.tx-marquee-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center;}.tx-marquee-list[aria-hidden]{display:none;}.tx-marquee-list{flex-wrap:wrap;justify-content:center;padding-right:0;}.tx-card,.tx-img{transition:none;}.tx-card:hover{transform:none;}}
+.cursor-node{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cline x1='2' y1='10' x2='8' y2='10' stroke='%230B0B10' stroke-width='2'/%3E%3Ccircle cx='13' cy='10' r='5' fill='none' stroke='%230B0B10' stroke-width='2'/%3E%3C/svg%3E") 13 10, pointer;}</style>
 <script src="https://cdn.tailwindcss.com"></script>
 <script id="tailwind-config">
 tailwind.config = {
@@ -51,12 +66,8 @@ tailwind.config = {
 </div>
 <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur border-b border-border-subtle shadow-sm">
 <div class="max-w-[1200px] mx-auto px-5 h-16 flex items-center justify-between gap-4">
-<a class="flex items-center gap-2.5 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="catalog" href="#">
-<img alt="Texperts" class="h-8 w-auto" src="../assets/logo/logo-icon-black.png"/>
-<div class="flex flex-col leading-none gap-0.5">
-<span class="font-display font-bold text-lg uppercase text-text-primary">Texperts</span>
-<span class="font-mono text-[8px] uppercase tracking-widest text-text-muted">Simple IT Solutions</span>
-</div>
+<a class="flex items-center shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-md" data-path="catalog" href="#" title="Texperts home">
+<img alt="Texperts - Simple IT Solutions" class="h-10 sm:h-11 w-auto" height="44" src="../assets/logo/logo-full-black.png" width="173"/>
 </a>
 <nav aria-label="Primary" class="hidden lg:flex items-center gap-5">
 
@@ -180,80 +191,104 @@ tailwind.config = {
 
 <div class="grid grid-cols-2 lg:grid-cols-3 gap-5">
 
-<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="monitor-24" data-name="24″ full hd business monitor" data-brand="hp" data-grade="a" data-price="1899" data-rating="4.6" data-usecase="">
-<a class="flex flex-col flex-1" href="#" title="View 24″ Full HD Business Monitor">
-<div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
-<span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-24%</span>
-<img alt="24″ Full HD Business Monitor" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?fm=jpg&q=80&w=1200"/>
-</div>
-<div class="p-4 flex flex-col gap-1.5 flex-1">
-<span class="font-mono text-[10px] uppercase tracking-wide text-primary font-bold">Grade A Certified</span>
-<h3 class="font-semibold text-text-primary text-[15px] leading-snug">24″ Full HD Business Monitor</h3>
-<p class="text-xs text-text-muted">1920x1080 · IPS · HDMI/VGA</p>
-<div class="flex items-center gap-1.5">
-<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
-<span class="text-[11px] text-text-muted">4.6 (74)</span>
-</div>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="font-display font-bold text-xl text-text-primary">R1,899</span>
-<span class="text-xs text-text-muted line-through">R2,499</span>
-</div>
-</div>
-</a>
-<div class="px-4 pb-4">
-<button class="cursor-node w-full py-2.5 rounded-full bg-status-online text-surface-dark font-bold text-xs uppercase tracking-wide hover:brightness-95 hover:shadow-[0_0_16px_rgba(200,245,66,0.45)] transition-all" data-id="monitor-24" type="button">Add to Cart</button>
-</div>
-</div>
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="monitor-24" data-name="24″ full hd business monitor" data-brand="hp" data-grade="a" data-price="1899" data-rating="4.6" data-usecase="">
+<a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View 24″ Full HD Business Monitor">
+<div class="tx-well relative aspect-[4/3] flex items-center justify-center p-5">
+<span class="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-md bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1"><span class="w-1.5 h-1.5 rounded-full bg-status-online"></span>Grade A</span>
 
-<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="keyboard-mouse-combo" data-name="wireless keyboard &amp; mouse combo" data-brand="dell" data-grade="a" data-price="449" data-rating="4.5" data-usecase="">
-<a class="flex flex-col flex-1" href="#" title="View Wireless Keyboard &amp; Mouse Combo">
-<div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
-<span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-36%</span>
-<img alt="Wireless Keyboard &amp; Mouse Combo" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1602726428221-9af5b227ed5d?fm=jpg&q=80&w=1200"/>
+<img alt="24″ Full HD Business Monitor" class="tx-img max-h-full object-contain mix-blend-multiply" src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?fm=jpg&q=80&w=1200"/>
 </div>
-<div class="p-4 flex flex-col gap-1.5 flex-1">
-<span class="font-mono text-[10px] uppercase tracking-wide text-primary font-bold">Grade A Certified</span>
-<h3 class="font-semibold text-text-primary text-[15px] leading-snug">Wireless Keyboard &amp; Mouse Combo</h3>
-<p class="text-xs text-text-muted">2.4GHz Wireless · Ergonomic · Silent Click</p>
-<div class="flex items-center gap-1.5">
-<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span></span>
-<span class="text-[11px] text-text-muted">4.5 (118)</span>
+<div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
+<div class="flex items-center justify-between gap-2">
+<span class="font-mono text-[10px] uppercase tracking-widest text-text-muted font-bold">HP</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold"><span class="text-amber-500">★</span>4.6<span class="text-text-muted font-normal">(74)</span></span>
 </div>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="font-display font-bold text-xl text-text-primary">R449</span>
-<span class="text-xs text-text-muted line-through">R699</span>
+<h3 class="font-bold text-[15px] leading-snug">24″ Full HD Business Monitor</h3>
+<ul class="flex flex-wrap gap-1.5">
+<li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">1920x1080</li><li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">IPS</li><li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">HDMI/VGA</li>
+</ul>
+<div class="mt-auto pt-1">
+<div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-text-muted mb-1.5"><span>Panel test</span><span class="font-bold text-text-primary">100%</span></div>
+<div aria-label="Panel test 100%" class="flex gap-0.5" role="img"><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span></div>
 </div>
 </div>
 </a>
-<div class="px-4 pb-4">
-<button class="cursor-node w-full py-2.5 rounded-full bg-status-online text-surface-dark font-bold text-xs uppercase tracking-wide hover:brightness-95 hover:shadow-[0_0_16px_rgba(200,245,66,0.45)] transition-all" data-id="keyboard-mouse-combo" type="button">Add to Cart</button>
+<div class="tx-sep"></div>
+<div class="px-4 py-3.5 flex flex-wrap items-end justify-between gap-x-2 gap-y-3">
+<div class="flex flex-col leading-tight">
+<span class="text-[11px] text-text-muted line-through">R2,499</span>
+<span class="font-display font-bold text-xl">R1,899</span>
+<span class="text-[11px] font-bold text-primary">Save R600</span>
 </div>
+<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-dark text-white text-xs font-bold px-3.5 py-2.5 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="monitor-24" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
 </div>
+</article>
 
-<div class="group flex flex-col bg-surface-card rounded-xl border border-border-subtle shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200" data-product-card="" data-id="usb-headset" data-name="usb business headset with mic" data-brand="lenovo" data-grade="a" data-price="349" data-rating="4.4" data-usecase="">
-<a class="flex flex-col flex-1" href="#" title="View USB Business Headset with Mic">
-<div class="relative aspect-[4/3] bg-surface-container-lowest flex items-center justify-center p-5">
-<span class="absolute top-3 left-3 bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full shadow-sm">-36%</span>
-<img alt="USB Business Headset with Mic" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://images.unsplash.com/photo-1553775282-20af80779df7?fm=jpg&q=80&w=1200"/>
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="keyboard-mouse-combo" data-name="wireless keyboard &amp; mouse combo" data-brand="dell" data-grade="a" data-price="449" data-rating="4.5" data-usecase="">
+<a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View Wireless Keyboard &amp; Mouse Combo">
+<div class="tx-well relative aspect-[4/3] flex items-center justify-center p-5">
+<span class="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-md bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1"><span class="w-1.5 h-1.5 rounded-full bg-status-online"></span>Grade A</span>
+
+<img alt="Wireless Keyboard &amp; Mouse Combo" class="tx-img max-h-full object-contain mix-blend-multiply" src="https://images.unsplash.com/photo-1602726428221-9af5b227ed5d?fm=jpg&q=80&w=1200"/>
 </div>
-<div class="p-4 flex flex-col gap-1.5 flex-1">
-<span class="font-mono text-[10px] uppercase tracking-wide text-primary font-bold">Grade A Certified</span>
-<h3 class="font-semibold text-text-primary text-[15px] leading-snug">USB Business Headset with Mic</h3>
-<p class="text-xs text-text-muted">Noise-Cancelling Mic · USB Plug &amp; Play</p>
-<div class="flex items-center gap-1.5">
-<span class="flex text-[13px] leading-none tracking-tight"><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-border-subtle">★</span></span>
-<span class="text-[11px] text-text-muted">4.4 (63)</span>
+<div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
+<div class="flex items-center justify-between gap-2">
+<span class="font-mono text-[10px] uppercase tracking-widest text-text-muted font-bold">Dell</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold"><span class="text-amber-500">★</span>4.5<span class="text-text-muted font-normal">(118)</span></span>
 </div>
-<div class="flex items-baseline gap-2 mt-1">
-<span class="font-display font-bold text-xl text-text-primary">R349</span>
-<span class="text-xs text-text-muted line-through">R549</span>
+<h3 class="font-bold text-[15px] leading-snug">Wireless Keyboard &amp; Mouse Combo</h3>
+<ul class="flex flex-wrap gap-1.5">
+<li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">2.4GHz Wireless</li><li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">Ergonomic</li><li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">Silent Click</li>
+</ul>
+<div class="mt-auto pt-1">
+<div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-text-muted mb-1.5"><span>Function test</span><span class="font-bold text-text-primary">100%</span></div>
+<div aria-label="Function test 100%" class="flex gap-0.5" role="img"><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span></div>
 </div>
 </div>
 </a>
-<div class="px-4 pb-4">
-<button class="cursor-node w-full py-2.5 rounded-full bg-status-online text-surface-dark font-bold text-xs uppercase tracking-wide hover:brightness-95 hover:shadow-[0_0_16px_rgba(200,245,66,0.45)] transition-all" data-id="usb-headset" type="button">Add to Cart</button>
+<div class="tx-sep"></div>
+<div class="px-4 py-3.5 flex flex-wrap items-end justify-between gap-x-2 gap-y-3">
+<div class="flex flex-col leading-tight">
+<span class="text-[11px] text-text-muted line-through">R699</span>
+<span class="font-display font-bold text-xl">R449</span>
+<span class="text-[11px] font-bold text-primary">Save R250</span>
+</div>
+<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-dark text-white text-xs font-bold px-3.5 py-2.5 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="keyboard-mouse-combo" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
+</div>
+</article>
+
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="usb-headset" data-name="usb business headset with mic" data-brand="lenovo" data-grade="a" data-price="349" data-rating="4.4" data-usecase="">
+<a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View USB Business Headset with Mic">
+<div class="tx-well relative aspect-[4/3] flex items-center justify-center p-5">
+<span class="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-md bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1"><span class="w-1.5 h-1.5 rounded-full bg-status-online"></span>Grade A</span>
+<span class="absolute bottom-3 left-3 rounded-md bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-wide px-2 py-1">Only 5 left</span>
+<img alt="USB Business Headset with Mic" class="tx-img max-h-full object-contain mix-blend-multiply" src="https://images.unsplash.com/photo-1553775282-20af80779df7?fm=jpg&q=80&w=1200"/>
+</div>
+<div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
+<div class="flex items-center justify-between gap-2">
+<span class="font-mono text-[10px] uppercase tracking-widest text-text-muted font-bold">Lenovo</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold"><span class="text-amber-500">★</span>4.4<span class="text-text-muted font-normal">(63)</span></span>
+</div>
+<h3 class="font-bold text-[15px] leading-snug">USB Business Headset with Mic</h3>
+<ul class="flex flex-wrap gap-1.5">
+<li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">Noise-Cancelling Mic</li><li class="text-[11px] leading-none px-2 py-1.5 rounded-md bg-surface-container-low text-text-primary/80">USB Plug &amp; Play</li>
+</ul>
+<div class="mt-auto pt-1">
+<div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-text-muted mb-1.5"><span>Function test</span><span class="font-bold text-text-primary">100%</span></div>
+<div aria-label="Function test 100%" class="flex gap-0.5" role="img"><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span><span class="h-2 flex-1 rounded-[2px] bg-primary"></span></div>
 </div>
 </div>
+</a>
+<div class="tx-sep"></div>
+<div class="px-4 py-3.5 flex flex-wrap items-end justify-between gap-x-2 gap-y-3">
+<div class="flex flex-col leading-tight">
+<span class="text-[11px] text-text-muted line-through">R549</span>
+<span class="font-display font-bold text-xl">R349</span>
+<span class="text-[11px] font-bold text-primary">Save R200</span>
+</div>
+<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-dark text-white text-xs font-bold px-3.5 py-2.5 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="usb-headset" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
+</div>
+</article>
 </div>
 
 <div class="mt-10 flex items-center justify-between bg-surface-card border border-border-subtle rounded-lg px-5 py-3.5 text-sm text-text-muted">
@@ -275,9 +310,8 @@ tailwind.config = {
 </div>
 <div class="max-w-[1200px] mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-10 relative z-10">
 <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
-<div class="flex items-center gap-2.5">
-<img alt="Texperts" class="h-7 w-auto" src="../assets/logo/logo-icon-white.png"/>
-<span class="font-display font-bold text-lg uppercase">Texperts</span>
+<div class="flex items-center">
+<img alt="Texperts - Simple IT Solutions" class="h-12 w-auto" height="48" src="../assets/logo/logo-full-white.png" width="188"/>
 </div>
 <p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
 <div class="flex items-center gap-3 pt-1">
