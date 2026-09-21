@@ -11,8 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
 <style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}
 .tx-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
-.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(83,44,216,.3);border-color:#532CD8;}
+.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -16px rgba(11,11,16,.4);border-color:#0B0B10;}
 .tx-img{transition:transform .3s ease;}
+.tx-hl{background-image:linear-gradient(transparent 58%,#C8F542 58%);}
+.tx-cart-btn:hover,.tx-cart-btn:focus-visible{background-color:#C8F542;color:#0B0B10;}
+.tx-cart-btn:hover .material-symbols-outlined,.tx-cart-btn:focus-visible .material-symbols-outlined{color:#0B0B10;}
 .tx-card:hover .tx-img{transform:scale(1.05);}
 .tx-sep{position:relative;border-top:1.5px dashed #D8D3E8;}
 .tx-sep::before,.tx-sep::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:var(--tx-bg,#F5F3FA);border:1px solid #E4E1EE;}
@@ -199,7 +202,7 @@ tailwind.config = {
 <h1 class="font-display font-bold text-4xl leading-tight mt-1.5">Terms of Use</h1>
 <p class="text-text-muted mt-3">These terms cover your use of the Texperts website. Buying from us is covered separately by our Terms &amp; Conditions.</p>
 <p class="mt-4 inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono text-text-muted"><span>Last updated 21 September 2026</span></p>
-<p class="mt-4 flex items-start gap-2 rounded-xl bg-primary/10 text-primary text-xs font-bold px-3.5 py-2.5 max-w-xl"><span aria-hidden="true" class="material-symbols-outlined text-[16px] mt-px">info</span>Draft copy for design review. Have a South African attorney check this text before it is published.</p>
+<p class="mt-4 flex items-start gap-2 rounded-xl bg-amber-100 text-amber-900 text-xs font-bold px-3.5 py-2.5 max-w-xl"><span aria-hidden="true" class="material-symbols-outlined text-[16px] mt-px">info</span>Draft copy for design review. Have a South African attorney check this text before it is published.</p>
 </div>
 
 <div class="lg:grid lg:grid-cols-[240px_minmax(0,1fr)] gap-14 items-start">
@@ -268,7 +271,7 @@ tailwind.config = {
 <p class="text-sm text-white/70 mt-1">Our team replies within one business day.</p>
 </div>
 <div class="flex flex-wrap gap-2.5">
-<a class="inline-flex items-center gap-1.5 rounded-full bg-status-online text-surface-dark px-4 py-2.5 text-sm font-bold hover:brightness-95" href="mailto:info@texpertsonline.co.za"><span aria-hidden="true" class="material-symbols-outlined text-[18px]">mail</span>Email us</a>
+<a class="inline-flex items-center gap-1.5 rounded-full bg-status-online text-surface-dark px-4 py-2.5 text-sm font-bold hover:brightness-95" href="mailto:info@texpertsonline.co.za"><span aria-hidden="true" class="inline-block bg-current w-[18px] h-[18px]" style="-webkit-mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat"></span>Email us</a>
 <a class="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-4 py-2.5 text-sm font-bold hover:border-status-online hover:text-status-online transition-colors" href="tel:0737233333"><span aria-hidden="true" class="material-symbols-outlined text-[18px]">call</span>073 723 3333</a>
 </div>
 </div>
@@ -279,22 +282,22 @@ tailwind.config = {
 <h2 class="font-display font-bold text-xl mb-5" id="more-policies">More policies</h2>
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 <a class="tx-card group flex flex-col gap-2 rounded-2xl border border-border-subtle bg-surface-card p-5" data-path="terms" href="#">
-<span aria-hidden="true" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">gavel</span></span>
+<span aria-hidden="true" class="w-10 h-10 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">gavel</span></span>
 <span class="font-bold text-sm">Terms & Conditions</span>
 <span class="text-xs text-text-muted">The rules that apply when you buy from Texperts.</span>
 </a>
 <a class="tx-card group flex flex-col gap-2 rounded-2xl border border-border-subtle bg-surface-card p-5" data-path="privacy" href="#">
-<span aria-hidden="true" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">lock</span></span>
+<span aria-hidden="true" class="w-10 h-10 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">lock</span></span>
 <span class="font-bold text-sm">Privacy Policy</span>
 <span class="text-xs text-text-muted">What we collect, why, and the choices you have.</span>
 </a>
 <a class="tx-card group flex flex-col gap-2 rounded-2xl border border-border-subtle bg-surface-card p-5" data-path="warranty" href="#">
-<span aria-hidden="true" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">verified_user</span></span>
+<span aria-hidden="true" class="w-10 h-10 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">verified_user</span></span>
 <span class="font-bold text-sm">Warranty & Returns</span>
 <span class="text-xs text-text-muted">Your 12-month warranty and how to return an order.</span>
 </a>
 <a class="tx-card group flex flex-col gap-2 rounded-2xl border border-border-subtle bg-surface-card p-5" data-path="delivery" href="#">
-<span aria-hidden="true" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">local_shipping</span></span>
+<span aria-hidden="true" class="w-10 h-10 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">local_shipping</span></span>
 <span class="font-bold text-sm">Delivery Policy</span>
 <span class="text-xs text-text-muted">Fees, timing and collection.</span>
 </a>
@@ -319,11 +322,11 @@ tailwind.config = {
 <img alt="Texperts - Simple IT Solutions" class="h-12 w-auto" height="48" src="../assets/logo/logo-full-white.png" width="188"/>
 </div>
 <p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
-<div class="flex items-center gap-3 pt-1">
-<a class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://wa.me/27737233333" target="_blank" rel="noopener" title="WhatsApp"><span class="material-symbols-outlined text-[16px]">chat</span></a>
-<a class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="mailto:info@texpertsonline.co.za" title="Email"><span class="material-symbols-outlined text-[16px]">mail</span></a>
-<a aria-label="Texperts on Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://www.facebook.com/texpertsonline" rel="noopener" target="_blank" title="Facebook"><span aria-hidden="true" class="inline-block w-4 h-4 bg-current" style="-webkit-mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat"></span></a>
-<a aria-label="Texperts on Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://www.instagram.com/texpertsonline" rel="noopener" target="_blank" title="Instagram"><span aria-hidden="true" class="inline-block w-4 h-4 bg-current" style="-webkit-mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat"></span></a>
+<div class="flex items-center gap-2.5 pt-1">
+<a aria-label="Chat on WhatsApp" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://wa.me/27737233333" rel="noopener" target="_blank" style="background:#25D366" title="Chat on WhatsApp"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Email Texperts" class="w-10 h-10 rounded-full flex items-center justify-center text-surface-dark hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="mailto:info@texpertsonline.co.za"  style="background:#FFFFFF" title="Email Texperts"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Texperts on Facebook" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://www.facebook.com/texpertsonline" rel="noopener" target="_blank" style="background:#1877F2" title="Texperts on Facebook"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Texperts on Instagram" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://www.instagram.com/texpertsonline" rel="noopener" target="_blank" style="background:linear-gradient(45deg,#F9A825 0%,#E1306C 50%,#833AB4 100%)" title="Texperts on Instagram"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat"></span></a>
 </div>
 </div>
 <div class="flex flex-col gap-2.5 text-sm">

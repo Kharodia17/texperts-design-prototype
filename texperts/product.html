@@ -11,8 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
 <style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}
 .tx-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
-.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(83,44,216,.3);border-color:#532CD8;}
+.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -16px rgba(11,11,16,.4);border-color:#0B0B10;}
 .tx-img{transition:transform .3s ease;}
+.tx-hl{background-image:linear-gradient(transparent 58%,#C8F542 58%);}
+.tx-cart-btn:hover,.tx-cart-btn:focus-visible{background-color:#C8F542;color:#0B0B10;}
+.tx-cart-btn:hover .material-symbols-outlined,.tx-cart-btn:focus-visible .material-symbols-outlined{color:#0B0B10;}
 .tx-card:hover .tx-img{transform:scale(1.05);}
 .tx-sep{position:relative;border-top:1.5px dashed #D8D3E8;}
 .tx-sep::before,.tx-sep::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:var(--tx-bg,#F5F3FA);border:1px solid #E4E1EE;}
@@ -205,7 +208,7 @@ tailwind.config = {
 </div>
 
 <div class="flex flex-col gap-4">
-<span class="w-fit font-mono text-[10px] uppercase tracking-wide text-primary font-bold px-2 py-1 rounded bg-primary/10" id="pdp-grade">Grade A Certified</span>
+<span class="w-fit font-mono text-[10px] uppercase tracking-wider text-white font-bold px-2.5 py-1 rounded-full bg-surface-dark" id="pdp-grade">Grade A Certified</span>
 <h1 class="font-display font-bold text-3xl leading-tight" id="pdp-name">&nbsp;</h1>
 <p class="text-text-muted text-sm" id="pdp-spec">&nbsp;</p>
 <div class="flex items-center gap-1.5" id="pdp-rating"></div>
@@ -213,13 +216,13 @@ tailwind.config = {
 <div class="flex items-baseline gap-3">
 <span class="font-display font-bold text-3xl" id="pdp-price">&nbsp;</span>
 <span class="text-text-muted line-through text-base" id="pdp-was"></span>
-<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded" id="pdp-save"></span>
+<span class="font-mono text-[11px] font-bold uppercase tracking-wide text-status-online bg-surface-dark px-2.5 py-1 rounded-full" id="pdp-save"></span>
 </div>
 
 <div class="flex flex-col gap-2 text-sm text-text-muted border-y border-border-subtle py-4">
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">verified</span>12-month hardware warranty</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">local_shipping</span>Free delivery over R2,000, dispatched in 24h</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary">shield</span>100% data-wiped &amp; certified tested</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-text-primary/70">verified</span>12-month hardware warranty</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-text-primary/70">local_shipping</span>Free delivery over R2,000, dispatched in 24h</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-text-primary/70">shield</span>100% data-wiped &amp; certified tested</span>
 </div>
 
 <div class="flex items-center gap-3">
@@ -232,7 +235,7 @@ tailwind.config = {
 </div>
 
 <button class="cursor-node w-full py-4 rounded-full bg-status-online text-surface-dark font-display font-bold text-sm uppercase tracking-wide hover:brightness-95 transition-all" id="pdp-add-btn" type="button">Add to Cart</button>
-<a class="text-center text-sm text-primary font-semibold hover:underline" href="https://wa.me/27737233333" target="_blank" rel="noopener">Need 5+ units? WhatsApp our trade desk</a>
+<a class="inline-flex items-center justify-center gap-2 text-sm text-primary font-semibold hover:underline" href="https://wa.me/27737233333" target="_blank" rel="noopener"><span aria-hidden="true" class="inline-block bg-current w-4 h-4 text-[#25D366]" style="-webkit-mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat"></span>Need 5+ units? WhatsApp our trade desk</a>
 
 <div class="mt-4">
 <h2 class="font-semibold text-sm mb-3">Specifications</h2>
@@ -244,7 +247,7 @@ tailwind.config = {
 <section class="mt-20">
 <div class="tx-reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
 <div>
-<span class="font-mono text-[11px] uppercase tracking-widest text-primary font-bold">Keep browsing</span>
+<span class="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-text-primary/70 font-bold"><span class="text-primary"><svg class="shrink-0 " fill="none" height="11" viewBox="0 0 12 11" width="12"><line stroke="currentColor" stroke-width="1.4" x1="0" x2="4.5" y1="5.5" y2="5.5"></line><circle cx="8" cy="5.5" r="3" stroke="currentColor" stroke-width="1.4"></circle></svg></span>Keep browsing</span>
 <h2 class="font-display font-bold text-3xl leading-tight mt-1.5">You might also like</h2>
 
 </div>
@@ -265,7 +268,7 @@ tailwind.config = {
 <span class="inline-flex items-center gap-1 text-[11px] font-bold"><span class="text-amber-600">★</span>4.9<span class="text-text-muted font-normal">(142)</span></span>
 </div>
 <h3 class="font-bold text-[15px] leading-snug">Lenovo ThinkPad T14</h3>
-<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory</span>Ryzen 5 PRO</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory_alt</span>16GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">hard_drive</span>512GB SSD</li></ul>
+<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory</span>Ryzen 5 PRO</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory_alt</span>16GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">hard_drive</span>512GB SSD</li></ul>
 <div class="mt-auto pt-1">
 <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-text-muted mb-1.5"><span>Battery health</span><span class="font-bold text-text-primary">91%</span></div>
 <div aria-label="Battery health 91%" class="flex gap-0.5" role="img"><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:0"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:1"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:2"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:3"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:4"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:5"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:6"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:7"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:8"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-border-subtle" style="--i:9"></span></div>
@@ -277,9 +280,9 @@ tailwind.config = {
 <div class="flex flex-col items-start gap-1 leading-none">
 <span class="text-[11px] text-text-muted line-through">R7,999</span>
 <span class="font-display font-bold text-xl">R6,299</span>
-<span class="inline-flex items-center rounded-full bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5">Save R1,700</span>
+<span class="inline-flex items-center rounded-full bg-surface-dark text-status-online font-mono text-[10px] font-bold uppercase tracking-wide px-2 py-1">Save R1,700</span>
 </div>
-<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="thinkpad-t14" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
+<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 tx-cart-btn focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="thinkpad-t14" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
 </div>
 </article>
 
@@ -296,7 +299,7 @@ tailwind.config = {
 <span class="inline-flex items-center gap-1 text-[11px] font-bold"><span class="text-amber-600">★</span>4.8<span class="text-text-muted font-normal">(156)</span></span>
 </div>
 <h3 class="font-bold text-[15px] leading-snug">Dell Latitude 5410</h3>
-<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory</span>i5 10th Gen</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory_alt</span>8GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">hard_drive</span>256GB SSD</li></ul>
+<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory</span>i5 10th Gen</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory_alt</span>8GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">hard_drive</span>256GB SSD</li></ul>
 <div class="mt-auto pt-1">
 <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-text-muted mb-1.5"><span>Battery health</span><span class="font-bold text-text-primary">94%</span></div>
 <div aria-label="Battery health 94%" class="flex gap-0.5" role="img"><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:0"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:1"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:2"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:3"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:4"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:5"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:6"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:7"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:8"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-border-subtle" style="--i:9"></span></div>
@@ -308,9 +311,9 @@ tailwind.config = {
 <div class="flex flex-col items-start gap-1 leading-none">
 <span class="text-[11px] text-text-muted line-through">R5,999</span>
 <span class="font-display font-bold text-xl">R4,500</span>
-<span class="inline-flex items-center rounded-full bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5">Save R1,499</span>
+<span class="inline-flex items-center rounded-full bg-surface-dark text-status-online font-mono text-[10px] font-bold uppercase tracking-wide px-2 py-1">Save R1,499</span>
 </div>
-<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="dell-5410" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
+<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 tx-cart-btn focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="dell-5410" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
 </div>
 </article>
 
@@ -327,7 +330,7 @@ tailwind.config = {
 <span class="inline-flex items-center gap-1 text-[11px] font-bold"><span class="text-amber-600">★</span>4.8<span class="text-text-muted font-normal">(89)</span></span>
 </div>
 <h3 class="font-bold text-[15px] leading-snug">Lenovo X1 Carbon</h3>
-<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory</span>i7 vPro</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory_alt</span>16GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">hard_drive</span>512GB NVMe</li></ul>
+<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory</span>i7 vPro</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory_alt</span>16GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">hard_drive</span>512GB NVMe</li></ul>
 <div class="mt-auto pt-1">
 <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-text-muted mb-1.5"><span>Battery health</span><span class="font-bold text-text-primary">93%</span></div>
 <div aria-label="Battery health 93%" class="flex gap-0.5" role="img"><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:0"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:1"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:2"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:3"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:4"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:5"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:6"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:7"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:8"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-border-subtle" style="--i:9"></span></div>
@@ -339,9 +342,9 @@ tailwind.config = {
 <div class="flex flex-col items-start gap-1 leading-none">
 <span class="text-[11px] text-text-muted line-through">R10,999</span>
 <span class="font-display font-bold text-xl">R8,499</span>
-<span class="inline-flex items-center rounded-full bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5">Save R2,500</span>
+<span class="inline-flex items-center rounded-full bg-surface-dark text-status-online font-mono text-[10px] font-bold uppercase tracking-wide px-2 py-1">Save R2,500</span>
 </div>
-<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="x1-carbon" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
+<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 tx-cart-btn focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="x1-carbon" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
 </div>
 </article>
 
@@ -358,7 +361,7 @@ tailwind.config = {
 <span class="inline-flex items-center gap-1 text-[11px] font-bold"><span class="text-amber-600">★</span>4.8<span class="text-text-muted font-normal">(29)</span></span>
 </div>
 <h3 class="font-bold text-[15px] leading-snug">HP Z2 Tower Workstation</h3>
-<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory</span>i7 8-Core</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">memory_alt</span>32GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-primary">hard_drive</span>1TB NVMe</li></ul>
+<ul class="flex flex-wrap gap-1.5"><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory</span>i7 8-Core</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">memory_alt</span>32GB</li><li class="inline-flex items-center gap-1 rounded-full bg-surface-container-low pl-1.5 pr-2.5 py-1 text-[11px] leading-none text-text-primary/85"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-text-primary/55">hard_drive</span>1TB NVMe</li></ul>
 <div class="mt-auto pt-1">
 <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-text-muted mb-1.5"><span>Drive health</span><span class="font-bold text-text-primary">99%</span></div>
 <div aria-label="Drive health 99%" class="flex gap-0.5" role="img"><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:0"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:1"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:2"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:3"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:4"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:5"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:6"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:7"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:8"></span><span class="tx-seg h-2 flex-1 rounded-[2px] bg-primary" style="--i:9"></span></div>
@@ -370,9 +373,9 @@ tailwind.config = {
 <div class="flex flex-col items-start gap-1 leading-none">
 <span class="text-[11px] text-text-muted line-through">R16,999</span>
 <span class="font-display font-bold text-xl">R13,499</span>
-<span class="inline-flex items-center rounded-full bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5">Save R3,500</span>
+<span class="inline-flex items-center rounded-full bg-surface-dark text-status-online font-mono text-[10px] font-bold uppercase tracking-wide px-2 py-1">Save R3,500</span>
 </div>
-<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="z-workstation" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
+<button class="cursor-node grow xl:grow-0 inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-surface-dark text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-2.5 tx-cart-btn focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-id="z-workstation" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[16px] text-status-online">add_shopping_cart</span>Add to Cart</button>
 </div>
 </article>
 </div>
@@ -396,11 +399,11 @@ tailwind.config = {
 <img alt="Texperts - Simple IT Solutions" class="h-12 w-auto" height="48" src="../assets/logo/logo-full-white.png" width="188"/>
 </div>
 <p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
-<div class="flex items-center gap-3 pt-1">
-<a class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://wa.me/27737233333" target="_blank" rel="noopener" title="WhatsApp"><span class="material-symbols-outlined text-[16px]">chat</span></a>
-<a class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="mailto:info@texpertsonline.co.za" title="Email"><span class="material-symbols-outlined text-[16px]">mail</span></a>
-<a aria-label="Texperts on Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://www.facebook.com/texpertsonline" rel="noopener" target="_blank" title="Facebook"><span aria-hidden="true" class="inline-block w-4 h-4 bg-current" style="-webkit-mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat"></span></a>
-<a aria-label="Texperts on Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://www.instagram.com/texpertsonline" rel="noopener" target="_blank" title="Instagram"><span aria-hidden="true" class="inline-block w-4 h-4 bg-current" style="-webkit-mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat"></span></a>
+<div class="flex items-center gap-2.5 pt-1">
+<a aria-label="Chat on WhatsApp" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://wa.me/27737233333" rel="noopener" target="_blank" style="background:#25D366" title="Chat on WhatsApp"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Email Texperts" class="w-10 h-10 rounded-full flex items-center justify-center text-surface-dark hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="mailto:info@texpertsonline.co.za"  style="background:#FFFFFF" title="Email Texperts"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Texperts on Facebook" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://www.facebook.com/texpertsonline" rel="noopener" target="_blank" style="background:#1877F2" title="Texperts on Facebook"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Texperts on Instagram" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://www.instagram.com/texpertsonline" rel="noopener" target="_blank" style="background:linear-gradient(45deg,#F9A825 0%,#E1306C 50%,#833AB4 100%)" title="Texperts on Instagram"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat"></span></a>
 </div>
 </div>
 <div class="flex flex-col gap-2.5 text-sm">

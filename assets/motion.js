@@ -78,6 +78,7 @@
     var timer = null;
     var userPaused = reduce;
     var hovering = false;
+    var holdUntil = 0;
     var dots = [];
 
     function metrics() {
@@ -101,8 +102,11 @@
       dotsBox.innerHTML = "";
       dots = [];
       for (var i = 0; i <= m.last; i++) {
-        var d = document.createElement("span");
-        d.className = "h-1.5 rounded-full bg-border-subtle transition-all duration-300 w-1.5";
+        var d = document.createElement("button");
+        d.type = "button";
+        d.setAttribute("aria-label", "Show review " + (i + 1));
+        d.className = "relative h-1.5 rounded-full transition-all duration-300 w-1.5 after:absolute after:-inset-2 after:content-['']";
+        d.addEventListener("click", (function (k) { return function () { go(k); hold(); }; })(i));
         dotsBox.appendChild(d);
         dots.push(d);
       }
@@ -112,12 +116,15 @@
       var i = index();
       if (dots.length !== m.last + 1) buildDots();
       dots.forEach(function (d, k) {
-        d.className = "h-1.5 rounded-full transition-all duration-300 " + (k === i ? "w-6 bg-primary" : "w-1.5 bg-border-subtle");
+        d.className = "relative h-1.5 rounded-full transition-all duration-300 after:absolute after:-inset-2 after:content-[''] " + (k === i ? "w-6 bg-surface-dark" : "w-1.5 bg-border-subtle");
+        if (k === i) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current");
       });
       if (prev) prev.disabled = i <= 0;
       if (next) next.disabled = i >= m.last;
     }
+    function hold() { holdUntil = Date.now() + 12000; }
     function advance() {
+      if (Date.now() < holdUntil) return;
       var m = metrics();
       var i = index();
       go(i >= m.last ? 0 : i + 1);
@@ -145,12 +152,11 @@
       if (raf) return;
       raf = requestAnimationFrame(function () { raf = null; update(); });
     }, { passive: true });
-    if (prev) prev.addEventListener("click", function () { go(index() - 1); setPaused(true); });
-    if (next) next.addEventListener("click", function () { go(index() + 1); setPaused(true); });
-    if (toggle) toggle.addEventListener("click", function () { setPaused(!userPaused); });
+    track.addEventListener("touchstart", hold, { passive: true });
+    track.addEventListener("wheel", hold, { passive: true });
     track.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") { e.preventDefault(); go(index() + 1); setPaused(true); }
-      if (e.key === "ArrowLeft") { e.preventDefault(); go(index() - 1); setPaused(true); }
+      if (e.key === "ArrowRight") { e.preventDefault(); go(index() + 1); hold(); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(index() - 1); hold(); }
     });
     root.addEventListener("mouseenter", function () { hovering = true; schedule(); });
     root.addEventListener("mouseleave", function () { hovering = false; schedule(); });

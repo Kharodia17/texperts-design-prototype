@@ -11,8 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
 <style>html,body{margin:0;padding:0;}::-webkit-scrollbar{display:none;}
 .tx-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
-.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -14px rgba(83,44,216,.3);border-color:#532CD8;}
+.tx-card:hover,.tx-card:focus-within{transform:translateY(-3px);box-shadow:0 18px 34px -16px rgba(11,11,16,.4);border-color:#0B0B10;}
 .tx-img{transition:transform .3s ease;}
+.tx-hl{background-image:linear-gradient(transparent 58%,#C8F542 58%);}
+.tx-cart-btn:hover,.tx-cart-btn:focus-visible{background-color:#C8F542;color:#0B0B10;}
+.tx-cart-btn:hover .material-symbols-outlined,.tx-cart-btn:focus-visible .material-symbols-outlined{color:#0B0B10;}
 .tx-card:hover .tx-img{transform:scale(1.05);}
 .tx-sep{position:relative;border-top:1.5px dashed #D8D3E8;}
 .tx-sep::before,.tx-sep::after{content:"";position:absolute;top:-8px;width:14px;height:14px;border-radius:50%;background:var(--tx-bg,#F5F3FA);border:1px solid #E4E1EE;}
@@ -210,10 +213,10 @@ Simple IT Solutions
 
 <section class="max-w-[1200px] mx-auto px-5 py-14">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-16">
-<div class="flex flex-col gap-1"><span class="font-display font-bold text-3xl text-primary" data-count="12000" data-suffix="+">12,000+</span><span class="text-xs text-text-muted">Units Refurbished</span></div>
-<div class="flex flex-col gap-1"><span class="font-display font-bold text-3xl text-primary" data-count="7" data-suffix=" Years">7 Years</span><span class="text-xs text-text-muted">In Business</span></div>
-<div class="flex flex-col gap-1"><span class="font-display font-bold text-3xl text-primary" data-count="3000" data-suffix="+">3,000+</span><span class="text-xs text-text-muted">Businesses Served</span></div>
-<div class="flex flex-col gap-1"><span class="font-display font-bold text-3xl text-primary" data-count="4.7" data-decimals="1" data-suffix="/5">4.7/5</span><span class="text-xs text-text-muted">Average Rating</span></div>
+<div class="flex flex-col gap-1"><span class="tx-hl font-display font-bold text-3xl" data-count="12000" data-suffix="+">12,000+</span><span class="text-xs text-text-muted">Units Refurbished</span></div>
+<div class="flex flex-col gap-1"><span class="tx-hl font-display font-bold text-3xl" data-count="7" data-suffix=" Years">7 Years</span><span class="text-xs text-text-muted">In Business</span></div>
+<div class="flex flex-col gap-1"><span class="tx-hl font-display font-bold text-3xl" data-count="3000" data-suffix="+">3,000+</span><span class="text-xs text-text-muted">Businesses Served</span></div>
+<div class="flex flex-col gap-1"><span class="tx-hl font-display font-bold text-3xl" data-count="4.7" data-decimals="1" data-suffix="/5">4.7/5</span><span class="text-xs text-text-muted">Average Rating</span></div>
 </div>
 
 <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -224,22 +227,22 @@ Simple IT Solutions
 </div>
 <div class="grid grid-cols-2 gap-4">
 <div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-2">
-<span class="material-symbols-outlined text-primary text-[26px]">verified</span>
+<span aria-hidden="true" class="w-11 h-11 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">verified</span></span>
 <h3 class="font-semibold text-sm">Certified Grade A/B</h3>
 <p class="text-xs text-text-muted">Every unit graded, tested and battery-checked before listing.</p>
 </div>
 <div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-2">
-<span class="material-symbols-outlined text-primary text-[26px]">shield</span>
+<span aria-hidden="true" class="w-11 h-11 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shield</span></span>
 <h3 class="font-semibold text-sm">Data-Wiped</h3>
 <p class="text-xs text-text-muted">Certified secure erasure on every drive, every time.</p>
 </div>
 <div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-2">
-<span class="material-symbols-outlined text-primary text-[26px]">local_shipping</span>
+<span aria-hidden="true" class="w-11 h-11 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">local_shipping</span></span>
 <h3 class="font-semibold text-sm">Nationwide Delivery</h3>
 <p class="text-xs text-text-muted">Free delivery on orders over R2,000, anywhere in SA.</p>
 </div>
 <div class="bg-surface-card border border-border-subtle rounded-xl p-5 flex flex-col gap-2">
-<span class="material-symbols-outlined text-primary text-[26px]">support_agent</span>
+<span aria-hidden="true" class="w-11 h-11 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">support_agent</span></span>
 <h3 class="font-semibold text-sm">12-Month Warranty</h3>
 <p class="text-xs text-text-muted">Real support from a local trade desk, not a call centre.</p>
 </div>
@@ -249,15 +252,11 @@ Simple IT Solutions
 <section aria-labelledby="reviews-heading" class="max-w-[1200px] mx-auto px-5 py-16" data-carousel-root="">
 <div class="tx-reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
 <div>
-<span class="font-mono text-[11px] uppercase tracking-widest text-primary font-bold">Reviews</span>
+<span class="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-text-primary/70 font-bold"><span class="text-primary"><svg class="shrink-0 " fill="none" height="11" viewBox="0 0 12 11" width="12"><line stroke="currentColor" stroke-width="1.4" x1="0" x2="4.5" y1="5.5" y2="5.5"></line><circle cx="8" cy="5.5" r="3" stroke="currentColor" stroke-width="1.4"></circle></svg></span>Reviews</span>
 <h2 class="font-display font-bold text-3xl leading-tight mt-1.5" id="reviews-heading">What our customers say</h2>
 
 </div>
-<div class="flex items-center gap-2">
-<button aria-label="Previous review" class="w-11 h-11 rounded-full border border-border-subtle bg-surface-card flex items-center justify-center text-text-primary hover:border-primary hover:text-primary disabled:opacity-40 disabled:pointer-events-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-carousel-prev="" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">arrow_back</span></button>
-<button aria-label="Next review" class="w-11 h-11 rounded-full border border-border-subtle bg-surface-card flex items-center justify-center text-text-primary hover:border-primary hover:text-primary disabled:opacity-40 disabled:pointer-events-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-carousel-next="" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">arrow_forward</span></button>
-<button aria-label="Pause automatic scrolling" aria-pressed="false" class="w-11 h-11 rounded-full border border-border-subtle bg-surface-card flex items-center justify-center text-text-primary hover:border-primary hover:text-primary disabled:opacity-40 disabled:pointer-events-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-carousel-toggle="" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[20px]" data-carousel-toggle-icon="">pause</span></button>
-</div>
+
 </div>
 <div class="grid lg:grid-cols-[280px_minmax(0,1fr)] gap-5">
 <div class="tx-reveal relative overflow-hidden rounded-2xl bg-surface-dark text-text-inverse p-6 flex flex-col gap-5">
@@ -279,8 +278,8 @@ Simple IT Solutions
 <div aria-live="off" class="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-2xl" data-carousel-track="" tabindex="0">
 <figure aria-label="1 of 6" aria-roledescription="slide" class="snap-start shrink-0 basis-full md:basis-[calc(50%-10px)] flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6" role="group">
 <div class="flex items-center justify-between">
-<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-primary/25">format_quote</span>
-<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wide pl-1.5 pr-2.5 py-1"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-text-primary/15">format_quote</span>
+<span class="inline-flex items-center gap-1.5 rounded-full border border-border-subtle text-text-primary text-[10px] font-bold uppercase tracking-wide pl-1 pr-2.5 py-1"><span aria-hidden="true" class="w-4 h-4 rounded-full bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[11px]">check</span></span>Verified buyer</span>
 </div>
 <blockquote class="text-[15px] leading-relaxed flex-1">Ordered 8 Latitudes for our office rollout. All arrived spotless, <mark class="bg-status-online/70 text-inherit px-1">batteries at 95%+</mark>, and support answered every WhatsApp within minutes.</blockquote>
 <figcaption class="flex items-center gap-2.5">
@@ -289,13 +288,13 @@ Simple IT Solutions
 </figcaption>
 <div class="pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
 <span class="text-text-muted">8 &times; Dell Latitude 5410</span>
-<span class="font-bold text-primary whitespace-nowrap">Saved R11,992</span>
+<span class="tx-hl font-bold whitespace-nowrap px-0.5">Saved R11,992</span>
 </div>
 </figure>
 <figure aria-label="2 of 6" aria-roledescription="slide" class="snap-start shrink-0 basis-full md:basis-[calc(50%-10px)] flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6" role="group">
 <div class="flex items-center justify-between">
-<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-primary/25">format_quote</span>
-<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wide pl-1.5 pr-2.5 py-1"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-text-primary/15">format_quote</span>
+<span class="inline-flex items-center gap-1.5 rounded-full border border-border-subtle text-text-primary text-[10px] font-bold uppercase tracking-wide pl-1 pr-2.5 py-1"><span aria-hidden="true" class="w-4 h-4 rounded-full bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[11px]">check</span></span>Verified buyer</span>
 </div>
 <blockquote class="text-[15px] leading-relaxed flex-1">Half the price of new and you honestly can't tell the difference. My ThinkPad has been <mark class="bg-status-online/70 text-inherit px-1">running non-stop for 6 months</mark>.</blockquote>
 <figcaption class="flex items-center gap-2.5">
@@ -304,13 +303,13 @@ Simple IT Solutions
 </figcaption>
 <div class="pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
 <span class="text-text-muted">1 &times; Lenovo ThinkPad T14</span>
-<span class="font-bold text-primary whitespace-nowrap">Saved R1,700</span>
+<span class="tx-hl font-bold whitespace-nowrap px-0.5">Saved R1,700</span>
 </div>
 </figure>
 <figure aria-label="3 of 6" aria-roledescription="slide" class="snap-start shrink-0 basis-full md:basis-[calc(50%-10px)] flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6" role="group">
 <div class="flex items-center justify-between">
-<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-primary/25">format_quote</span>
-<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wide pl-1.5 pr-2.5 py-1"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-text-primary/15">format_quote</span>
+<span class="inline-flex items-center gap-1.5 rounded-full border border-border-subtle text-text-primary text-[10px] font-bold uppercase tracking-wide pl-1 pr-2.5 py-1"><span aria-hidden="true" class="w-4 h-4 rounded-full bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[11px]">check</span></span>Verified buyer</span>
 </div>
 <blockquote class="text-[15px] leading-relaxed flex-1">The 12-month warranty gave us the confidence to switch the whole team over. <mark class="bg-status-online/70 text-inherit px-1">Saved over R14,000</mark> this year.</blockquote>
 <figcaption class="flex items-center gap-2.5">
@@ -319,13 +318,13 @@ Simple IT Solutions
 </figcaption>
 <div class="pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
 <span class="text-text-muted">12 &times; HP ProBook 450 G8</span>
-<span class="font-bold text-primary whitespace-nowrap">Saved R14,400</span>
+<span class="tx-hl font-bold whitespace-nowrap px-0.5">Saved R14,400</span>
 </div>
 </figure>
 <figure aria-label="4 of 6" aria-roledescription="slide" class="snap-start shrink-0 basis-full md:basis-[calc(50%-10px)] flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6" role="group">
 <div class="flex items-center justify-between">
-<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-primary/25">format_quote</span>
-<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wide pl-1.5 pr-2.5 py-1"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-text-primary/15">format_quote</span>
+<span class="inline-flex items-center gap-1.5 rounded-full border border-border-subtle text-text-primary text-[10px] font-bold uppercase tracking-wide pl-1 pr-2.5 py-1"><span aria-hidden="true" class="w-4 h-4 rounded-full bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[11px]">check</span></span>Verified buyer</span>
 </div>
 <blockquote class="text-[15px] leading-relaxed flex-1">Bought three X1 Carbons for my practice. Light, quick, and the keyboards feel brand new. <mark class="bg-status-online/70 text-inherit px-1">Delivered to Durban in two days</mark>.</blockquote>
 <figcaption class="flex items-center gap-2.5">
@@ -334,13 +333,13 @@ Simple IT Solutions
 </figcaption>
 <div class="pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
 <span class="text-text-muted">3 &times; Lenovo X1 Carbon</span>
-<span class="font-bold text-primary whitespace-nowrap">Saved R7,500</span>
+<span class="tx-hl font-bold whitespace-nowrap px-0.5">Saved R7,500</span>
 </div>
 </figure>
 <figure aria-label="5 of 6" aria-roledescription="slide" class="snap-start shrink-0 basis-full md:basis-[calc(50%-10px)] flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6" role="group">
 <div class="flex items-center justify-between">
-<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-primary/25">format_quote</span>
-<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wide pl-1.5 pr-2.5 py-1"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-text-primary/15">format_quote</span>
+<span class="inline-flex items-center gap-1.5 rounded-full border border-border-subtle text-text-primary text-[10px] font-bold uppercase tracking-wide pl-1 pr-2.5 py-1"><span aria-hidden="true" class="w-4 h-4 rounded-full bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[11px]">check</span></span>Verified buyer</span>
 </div>
 <blockquote class="text-[15px] leading-relaxed flex-1">We refreshed a <mark class="bg-status-online/70 text-inherit px-1">20-seat computer lab</mark> with OptiPlex towers. Every unit arrived wiped, labelled and ready to image.</blockquote>
 <figcaption class="flex items-center gap-2.5">
@@ -349,13 +348,13 @@ Simple IT Solutions
 </figcaption>
 <div class="pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
 <span class="text-text-muted">20 &times; Dell OptiPlex Tower</span>
-<span class="font-bold text-primary whitespace-nowrap">Saved R34,000</span>
+<span class="tx-hl font-bold whitespace-nowrap px-0.5">Saved R34,000</span>
 </div>
 </figure>
 <figure aria-label="6 of 6" aria-roledescription="slide" class="snap-start shrink-0 basis-full md:basis-[calc(50%-10px)] flex flex-col gap-4 bg-surface-card border border-border-subtle rounded-2xl p-6" role="group">
 <div class="flex items-center justify-between">
-<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-primary/25">format_quote</span>
-<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wide pl-1.5 pr-2.5 py-1"><span aria-hidden="true" class="material-symbols-outlined text-[14px]">verified</span>Verified buyer</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[30px] text-text-primary/15">format_quote</span>
+<span class="inline-flex items-center gap-1.5 rounded-full border border-border-subtle text-text-primary text-[10px] font-bold uppercase tracking-wide pl-1 pr-2.5 py-1"><span aria-hidden="true" class="w-4 h-4 rounded-full bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[11px]">check</span></span>Verified buyer</span>
 </div>
 <blockquote class="text-[15px] leading-relaxed flex-1">Needed CAD-capable machines on a seed-stage budget. The Precision 3551 <mark class="bg-status-online/70 text-inherit px-1">handles our models without complaint</mark>.</blockquote>
 <figcaption class="flex items-center gap-2.5">
@@ -364,35 +363,98 @@ Simple IT Solutions
 </figcaption>
 <div class="pt-4 border-t border-dashed border-border-subtle flex items-center justify-between gap-3 text-[11px] font-mono">
 <span class="text-text-muted">2 &times; Dell Precision 3551</span>
-<span class="font-bold text-primary whitespace-nowrap">Saved R6,000</span>
+<span class="tx-hl font-bold whitespace-nowrap px-0.5">Saved R6,000</span>
 </div>
 </figure>
 </div>
-<div aria-hidden="true" class="flex items-center justify-center gap-2 mt-5" data-carousel-dots=""></div>
+<div class="flex items-center justify-center gap-3 mt-5" data-carousel-dots=""></div>
 </div>
 </div>
 </section>
-<section class="bg-surface-dark mt-16">
-<div class="max-w-[1200px] mx-auto px-5 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-<div class="flex items-center gap-3">
-<span class="w-11 h-11 shrink-0 rounded-full bg-status-online/15 flex items-center justify-center"><span class="material-symbols-outlined text-status-online text-[22px]">verified</span></span>
-<span class="text-sm font-semibold text-white/90">12-Month Warranty</span>
+<section aria-labelledby="promise-heading" class="bg-surface-container-low border-t border-border-subtle">
+<div class="max-w-[1200px] mx-auto px-5 py-16">
+<div class="tx-reveal flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+<div>
+<span class="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-text-primary/70 font-bold"><span class="text-primary"><svg class="shrink-0 " fill="none" height="11" viewBox="0 0 12 11" width="12"><line stroke="currentColor" stroke-width="1.4" x1="0" x2="4.5" y1="5.5" y2="5.5"></line><circle cx="8" cy="5.5" r="3" stroke="currentColor" stroke-width="1.4"></circle></svg></span>Our promise</span>
+<h2 class="font-display font-bold text-3xl leading-tight mt-1.5" id="promise-heading">Buy refurbished without the guesswork</h2>
+<p class="text-sm text-text-muted mt-2 max-w-lg">What comes with every Texperts order.</p>
 </div>
 
-<div class="flex items-center gap-3">
-<span class="w-11 h-11 shrink-0 rounded-full bg-status-online/15 flex items-center justify-center"><span class="material-symbols-outlined text-status-online text-[22px]">local_shipping</span></span>
-<span class="text-sm font-semibold text-white/90">Free delivery over R2,000</span>
 </div>
-
-<div class="flex items-center gap-3">
-<span class="w-11 h-11 shrink-0 rounded-full bg-status-online/15 flex items-center justify-center"><span class="material-symbols-outlined text-status-online text-[22px]">shield</span></span>
-<span class="text-sm font-semibold text-white/90">Data-Wiped &amp; Certified</span>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="tx-card group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-surface-card p-6">
+<div class="flex items-start justify-between gap-3">
+<span aria-hidden="true" class="w-11 h-11 shrink-0 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">verified_user</span></span>
+<span class="tx-hl font-display font-bold text-2xl leading-none px-0.5 mt-1">12 months</span>
 </div>
+<div class="flex flex-col gap-1.5 flex-1">
+<h3 class="font-bold text-base">12-month warranty</h3>
+<p class="text-sm text-text-muted leading-relaxed">We repair, replace or refund any hardware fault. Claims are answered within one business day.</p>
 
-<div class="flex items-center gap-3">
-<span class="w-11 h-11 shrink-0 rounded-full bg-status-online/15 flex items-center justify-center"><span class="material-symbols-outlined text-status-online text-[22px]">credit_card</span></span>
-<span class="text-sm font-semibold text-white/90">Secure Checkout</span>
+</div>
+<a class="inline-flex w-fit items-center gap-1 rounded text-sm font-bold text-text-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-path="warranty" href="#">Warranty &amp; returns<span aria-hidden="true" class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+</div>
+<div class="tx-card group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-surface-card p-6">
+<div class="flex items-start justify-between gap-3">
+<span aria-hidden="true" class="w-11 h-11 shrink-0 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">local_shipping</span></span>
+<span class="tx-hl font-display font-bold text-2xl leading-none px-0.5 mt-1">R2,000+</span>
+</div>
+<div class="flex flex-col gap-1.5 flex-1">
+<h3 class="font-bold text-base">Free delivery over R2,000</h3>
+<p class="text-sm text-text-muted leading-relaxed">A flat R99 below that. Collecting at any of our three branches is always free.</p>
+
+</div>
+<a class="inline-flex w-fit items-center gap-1 rounded text-sm font-bold text-text-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-path="delivery" href="#">Delivery policy<span aria-hidden="true" class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+</div>
+<div class="tx-card group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-surface-card p-6">
+<div class="flex items-start justify-between gap-3">
+<span aria-hidden="true" class="w-11 h-11 shrink-0 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shield</span></span>
+<span class="tx-hl font-display font-bold text-2xl leading-none px-0.5 mt-1">Every drive</span>
+</div>
+<div class="flex flex-col gap-1.5 flex-1">
+<h3 class="font-bold text-base">Data-wiped &amp; certified</h3>
+<p class="text-sm text-text-muted leading-relaxed">Drives are securely erased and every unit is tested. Battery and drive health are shown on each listing.</p>
+
+</div>
+<a class="inline-flex w-fit items-center gap-1 rounded text-sm font-bold text-text-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-path="terms" href="#">How we grade<span aria-hidden="true" class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+</div>
+<div class="tx-card group flex flex-col gap-4 rounded-2xl border border-border-subtle bg-surface-card p-6">
+<div class="flex items-start justify-between gap-3">
+<span aria-hidden="true" class="w-11 h-11 shrink-0 rounded-xl bg-surface-dark text-status-online flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">credit_card</span></span>
+<span class="tx-hl font-display font-bold text-2xl leading-none px-0.5 mt-1">4 ways</span>
+</div>
+<div class="flex flex-col gap-1.5 flex-1">
+<h3 class="font-bold text-base">Secure checkout</h3>
+<p class="text-sm text-text-muted leading-relaxed">Pay with PayFast, Instant EFT, Visa or Mastercard. We never store your card details.</p>
+<div class="flex flex-wrap items-center gap-1.5 pt-1"><span class="flex items-center rounded-md border border-border-subtle bg-white px-2 h-6"><img alt="Visa" class="h-3 w-auto" src="../assets/logo/payments/visa.svg"/></span><span class="flex items-center rounded-md border border-border-subtle bg-white px-2 h-6"><img alt="Mastercard" class="h-3 w-auto" src="../assets/logo/payments/mastercard.svg"/></span><span class="flex items-center rounded-md border border-border-subtle bg-white px-2 h-6"><img alt="PayFast" class="h-3 w-auto" src="../assets/logo/payments/payfast.svg"/></span><span class="flex items-center gap-1 rounded-md border border-border-subtle bg-white px-2 h-6 text-[10px] font-bold"><span aria-hidden="true" class="material-symbols-outlined text-[12px]">account_balance</span>EFT</span></div>
+</div>
+<a class="inline-flex w-fit items-center gap-1 rounded text-sm font-bold text-text-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors" data-path="privacy" href="#">Privacy policy<span aria-hidden="true" class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+</div>
+</div>
+<div class="tx-reveal mt-6 rounded-2xl bg-surface-dark text-text-inverse p-6 md:p-8">
+<h3 class="font-mono text-[11px] uppercase tracking-widest text-status-online mb-6">What happens to every unit before it ships</h3>
+<ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-6">
+<li class="border-t border-dashed border-white/25 pt-4 flex flex-col gap-1.5">
+<span class="font-mono text-xs font-bold text-status-online">01</span>
+<span class="font-bold text-sm">Sourced</span>
+<span class="text-xs text-white/65 leading-relaxed">Business-class Dell, HP and Lenovo hardware from corporate lease returns.</span>
+</li>
+<li class="border-t border-dashed border-white/25 pt-4 flex flex-col gap-1.5">
+<span class="font-mono text-xs font-bold text-status-online">02</span>
+<span class="font-bold text-sm">Tested</span>
+<span class="text-xs text-white/65 leading-relaxed">Battery, drive, screen, keyboard and ports are checked and logged.</span>
+</li>
+<li class="border-t border-dashed border-white/25 pt-4 flex flex-col gap-1.5">
+<span class="font-mono text-xs font-bold text-status-online">03</span>
+<span class="font-bold text-sm">Wiped &amp; graded</span>
+<span class="text-xs text-white/65 leading-relaxed">Drives are securely erased, then graded A or B on cosmetic condition.</span>
+</li>
+<li class="border-t border-dashed border-white/25 pt-4 flex flex-col gap-1.5">
+<span class="font-mono text-xs font-bold text-status-online">04</span>
+<span class="font-bold text-sm">Warranted &amp; shipped</span>
+<span class="text-xs text-white/65 leading-relaxed">Covered for 12 months and dispatched within 24 hours of payment.</span>
+</li>
+</ol>
 </div>
 </div>
 </section>
@@ -415,11 +477,11 @@ Simple IT Solutions
 <img alt="Texperts - Simple IT Solutions" class="h-12 w-auto" height="48" src="../assets/logo/logo-full-white.png" width="188"/>
 </div>
 <p class="text-sm text-white/60 max-w-[220px]">Certified refurbished business laptops, backed by a 12-month warranty.</p>
-<div class="flex items-center gap-3 pt-1">
-<a class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://wa.me/27737233333" target="_blank" rel="noopener" title="WhatsApp"><span class="material-symbols-outlined text-[16px]">chat</span></a>
-<a class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="mailto:info@texpertsonline.co.za" title="Email"><span class="material-symbols-outlined text-[16px]">mail</span></a>
-<a aria-label="Texperts on Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://www.facebook.com/texpertsonline" rel="noopener" target="_blank" title="Facebook"><span aria-hidden="true" class="inline-block w-4 h-4 bg-current" style="-webkit-mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat"></span></a>
-<a aria-label="Texperts on Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-status-online hover:text-surface-dark focus-visible:bg-status-online focus-visible:text-surface-dark transition-colors" href="https://www.instagram.com/texpertsonline" rel="noopener" target="_blank" title="Instagram"><span aria-hidden="true" class="inline-block w-4 h-4 bg-current" style="-webkit-mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat"></span></a>
+<div class="flex items-center gap-2.5 pt-1">
+<a aria-label="Chat on WhatsApp" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://wa.me/27737233333" rel="noopener" target="_blank" style="background:#25D366" title="Chat on WhatsApp"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/whatsapp-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Email Texperts" class="w-10 h-10 rounded-full flex items-center justify-center text-surface-dark hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="mailto:info@texpertsonline.co.za"  style="background:#FFFFFF" title="Email Texperts"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/mail-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Texperts on Facebook" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://www.facebook.com/texpertsonline" rel="noopener" target="_blank" style="background:#1877F2" title="Texperts on Facebook"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/facebook-white.svg) center/contain no-repeat"></span></a>
+<a aria-label="Texperts on Instagram" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-transform" href="https://www.instagram.com/texpertsonline" rel="noopener" target="_blank" style="background:linear-gradient(45deg,#F9A825 0%,#E1306C 50%,#833AB4 100%)" title="Texperts on Instagram"><span aria-hidden="true" class="inline-block bg-current w-5 h-5" style="-webkit-mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat;mask:url(../assets/logo/social/instagram-white.svg) center/contain no-repeat"></span></a>
 </div>
 </div>
 <div class="flex flex-col gap-2.5 text-sm">
