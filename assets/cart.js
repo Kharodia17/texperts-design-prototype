@@ -53,11 +53,20 @@
     }, 0);
   }
 
+  var lastCount = null;
+
   function updateBadge() {
     var n = count();
+    var grew = lastCount !== null && n > lastCount;
+    lastCount = n;
     document.querySelectorAll("[data-cart-count]").forEach(function (el) {
       el.textContent = n;
       el.style.display = n > 0 ? "" : "none";
+      if (grew) {
+        el.classList.remove("tx-bump");
+        void el.offsetWidth;
+        el.classList.add("tx-bump");
+      }
     });
   }
 

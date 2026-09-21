@@ -11,7 +11,12 @@
     "custom-builds": "custom-builds.html",
     "cart-and-checkout": "cart.html",
     about: "stores.html",
-    company: "about.html"
+    company: "about.html",
+    terms: "terms-and-conditions.html",
+    privacy: "privacy-policy.html",
+    "terms-of-use": "terms-of-use.html",
+    warranty: "warranty-returns.html",
+    delivery: "delivery-policy.html"
   };
 
   var CURRENT_PAGE = document.body.getAttribute("data-page") || "";
@@ -77,6 +82,19 @@
     } catch (err) {}
   }
 
+  function flashAdded(el) {
+    if (el._flash) return;
+    var icon = el.querySelector(".material-symbols-outlined");
+    var old = icon ? icon.textContent : null;
+    if (icon) icon.textContent = "check";
+    el.classList.add("tx-added");
+    el._flash = setTimeout(function () {
+      if (icon) icon.textContent = old;
+      el.classList.remove("tx-added");
+      el._flash = null;
+    }, 1400);
+  }
+
   function productUrl(id) {
     return "product.html" + (id ? "#" + encodeURIComponent(id) : "");
   }
@@ -114,7 +132,7 @@
       row.setAttribute("data-name", p.name);
       row.innerHTML =
         '<span class="w-10 h-10 rounded-md bg-surface-container-lowest flex items-center justify-center shrink-0 overflow-hidden"><img src="' +
-        p.img +
+        (p.imgSm || p.img) +
         '" class="max-h-full max-w-full object-contain" alt=""/></span>' +
         '<span class="flex flex-col leading-tight flex-1 min-w-0"><span class="text-sm font-medium truncate">' +
         p.name +
@@ -244,6 +262,7 @@
       if (cartId && window.TexpertsCart) {
         window.TexpertsCart.addItem(cartId, qty);
       }
+      flashAdded(el);
       showToast("Added to cart (prototype preview — no real checkout)");
       return;
     }
