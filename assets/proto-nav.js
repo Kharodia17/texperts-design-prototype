@@ -77,6 +77,10 @@
     } catch (err) {}
   }
 
+  function productUrl(id) {
+    return "product.html" + (id ? "#" + encodeURIComponent(id) : "");
+  }
+
   function productIdFor(el) {
     var own = el.getAttribute && el.getAttribute("data-id");
     if (own) return own;
@@ -208,7 +212,7 @@
       e.preventDefault();
       var searchId = productIdFor(el);
       if (searchId) stashProduct(searchId);
-      window.location.href = "product.html";
+      window.location.href = productUrl(searchId);
       return;
     }
 
@@ -221,7 +225,7 @@
       e.preventDefault();
       var viewId = productIdFor(el);
       if (viewId) stashProduct(viewId);
-      window.location.href = "product.html";
+      window.location.href = productUrl(viewId);
       return;
     }
 
