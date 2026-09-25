@@ -59,6 +59,7 @@ tailwind.config = {
 <p class="text-white/70 text-[15px] leading-relaxed">
 This part of the prototype hasn't been designed yet. It's not part of this design review round — check back once it's ready, or head to one of the finished screens below.
 </p>
+<p class="text-white/70 text-[15px] leading-relaxed hidden" id="support-note">Payment options coming soon. Follow us on Instagram and Facebook for exciting offers and competitions.</p>
 <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
 <a class="inline-flex items-center gap-2 px-6 py-3 bg-status-online text-surface-dark rounded-full font-display text-sm font-bold hover:shadow-[0_0_25px_rgba(200,245,66,0.4)] transition-all" href="index.html">Home</a>
 <a class="inline-flex items-center gap-2 px-6 py-3 bg-surface-dark-card border border-border-dark rounded-full font-display text-sm font-bold hover:bg-primary-container transition-all" href="laptops.html">Laptops Catalog</a>
@@ -90,6 +91,7 @@ Texperts Design Prototype — For Client Review Only
   if (section) {
     document.getElementById("section-name").textContent = section;
     document.title = "Texperts | " + section + " — Coming Soon";
+    if (/support/i.test(section)) document.getElementById("support-note").classList.remove("hidden");
   }
   var backLink = document.getElementById("back-link");
   if (from && ROUTES[from]) {

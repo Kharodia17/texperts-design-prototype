@@ -244,6 +244,11 @@ tailwind.config = {
 <h2 class="font-semibold text-sm mb-3">Specifications</h2>
 <dl class="grid grid-cols-2 gap-y-2.5 text-sm" id="pdp-specs"></dl>
 </div>
+
+<div class="mt-4">
+<h2 class="font-semibold text-sm mb-2">Description</h2>
+<p class="text-sm text-text-muted leading-relaxed" id="pdp-desc"></p>
+</div>
 </div>
 </div>
 
@@ -509,6 +514,8 @@ tailwind.config = {
     thumbWrap.style.display = "none";
   }
 
+  var descEl = document.getElementById("pdp-desc");
+  if (descEl) descEl.textContent = p.name + " (" + p.grade + "), expert refurbished, tested and backed by a Texperts warranty." + (p.category === "laptop" ? " In the box: laptop and charger." : "");
   var specsList = document.getElementById("pdp-specs");
   (p.specs || []).forEach(function (row) {
     var dt = document.createElement("dt");
