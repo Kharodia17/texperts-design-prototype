@@ -211,7 +211,7 @@ tailwind.config = {
 <span class="inline-flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-[18px]">tune</span>Filters<span class="hidden min-w-5 h-5 px-1.5 rounded-full bg-primary text-white text-[11px] items-center justify-center" data-filter-badge=""></span></span>
 <span aria-hidden="true" class="material-symbols-outlined text-[18px]">expand_more</span>
 </button>
-<aside class="hidden lg:flex flex-col gap-6 lg:sticky lg:top-24 rounded-2xl border border-border-subtle bg-surface-card p-5 mb-6 lg:mb-0" data-filter-panel="" id="filter-panel">
+<aside class="hidden lg:flex flex-col gap-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto rounded-2xl border border-border-subtle bg-surface-card p-5 mb-6 lg:mb-0" data-filter-panel="" id="filter-panel">
 <div class="flex items-center justify-between">
 <h2 class="font-bold text-sm">Refine</h2>
 <button class="text-xs font-bold text-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded" data-filters-clear="" type="button">Clear all</button>
@@ -228,6 +228,17 @@ tailwind.config = {
 <div class="grid grid-cols-1 gap-2" data-filter-group="brand">
 <label class="block cursor-pointer"><input class="peer sr-only" data-label="Dell" data-value="dell" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"><img alt="" class="h-4 w-4 object-contain" src="../assets/logo/brands/dell.svg"/>Dell<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label>
 <label class="block cursor-pointer"><input class="peer sr-only" data-label="HP" data-value="hp" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"><img alt="" class="h-4 w-4 object-contain" src="../assets/logo/brands/hp.svg"/>HP<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label>
+</div>
+</div>
+<div>
+<h3 class="font-mono text-[11px] uppercase tracking-widest text-text-muted mb-2.5">Processor</h3>
+<div class="grid gap-2" data-filter-group="cpu">
+<label class="block cursor-pointer"><input class="peer sr-only" data-label="Intel Core i5" data-value="Intel Core i5" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">Intel Core i5<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="Intel Core i7" data-value="Intel Core i7" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">Intel Core i7<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label>
+</div>
+</div><div>
+<h3 class="font-mono text-[11px] uppercase tracking-widest text-text-muted mb-2.5">Memory (RAM)</h3>
+<div class="grid gap-2" data-filter-group="ram">
+<label class="block cursor-pointer"><input class="peer sr-only" data-label="16GB" data-value="16GB" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">16GB<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="32GB" data-value="32GB" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">32GB<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label>
 </div>
 </div>
 <div>
@@ -255,18 +266,20 @@ tailwind.config = {
 <option value="price-asc">Price: Low to High</option>
 <option value="price-desc">Price: High to Low</option>
 <option value="rating-desc">Top Rated</option>
+<option value="ram-desc">Memory: High to Low</option>
+
 </select>
 </div>
 </div>
 <div class="hidden flex-wrap items-center gap-2 mb-4" data-active-chips=""></div>
 <div class="grid grid-cols-2 xl:grid-cols-3 gap-5" data-product-grid="" id="product-grid">
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="optiplex-tower" data-name="dell optiplex tower" data-brand="dell" data-grade="a" data-price="5299" data-rating="4.7" data-usecase="office">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="optiplex-tower" data-name="dell optiplex tower" data-brand="dell" data-grade="a" data-price="5299" data-rating="4.7" data-usecase="office" data-ram="16GB" data-cpu="Intel Core i5" data-size="" data-res="">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View Dell OptiPlex Tower">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="Dell OptiPlex Tower" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?fm=jpg&q=80&w=720" style="object-position:center 62%" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">verified</span>Grade A</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -289,12 +302,12 @@ tailwind.config = {
 </div>
 </article>
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="z-workstation" data-name="hp z2 tower workstation" data-brand="hp" data-grade="a" data-price="13499" data-rating="4.8" data-usecase="power">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="z-workstation" data-name="hp z2 tower workstation" data-brand="hp" data-grade="a" data-price="13499" data-rating="4.8" data-usecase="power" data-ram="32GB" data-cpu="Intel Core i7" data-size="" data-res="">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View HP Z2 Tower Workstation">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="HP Z2 Tower Workstation" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://images.unsplash.com/photo-1719927604476-dc404b85358f?fm=jpg&q=80&w=720" style="object-position:center 55%" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">verified</span>Grade A</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 <span class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wide pl-2 pr-2.5 py-1 shadow-md"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Only 2 left</span>
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -433,6 +446,7 @@ tailwind.config = {
         (!brands.length || brands.indexOf(card.getAttribute("data-brand")) !== -1) &&
         (!grades.length || grades.indexOf(card.getAttribute("data-grade")) !== -1) &&
         (!uses.length || uses.some(function (u) { return use.indexOf(" " + u + " ") !== -1; })) &&
+        ["cpu", "ram", "size", "res"].every(function (g) { var sel = values(g); return !sel.length || sel.indexOf(card.getAttribute("data-" + g)) !== -1; }) &&
         parseInt(card.getAttribute("data-price"), 10) <= max &&
         (!search || card.getAttribute("data-name").indexOf(search) !== -1);
       card.style.display = ok ? "" : "none";
@@ -449,6 +463,8 @@ tailwind.config = {
     var sorted = cards.slice();
     if (mode === "price-asc") sorted.sort(function (a, b) { return a.getAttribute("data-price") - b.getAttribute("data-price"); });
     if (mode === "price-desc") sorted.sort(function (a, b) { return b.getAttribute("data-price") - a.getAttribute("data-price"); });
+    if (mode === "ram-desc") sorted.sort(function (a, b) { return (parseInt(b.getAttribute("data-ram"), 10) || 0) - (parseInt(a.getAttribute("data-ram"), 10) || 0); });
+    if (mode === "size-desc") sorted.sort(function (a, b) { return (parseFloat(b.getAttribute("data-size")) || 0) - (parseFloat(a.getAttribute("data-size")) || 0); });
     if (mode === "rating-desc") sorted.sort(function (a, b) { return b.getAttribute("data-rating") - a.getAttribute("data-rating"); });
     sorted.forEach(function (card) { grid.appendChild(card); });
   }

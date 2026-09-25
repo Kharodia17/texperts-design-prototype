@@ -211,7 +211,7 @@ tailwind.config = {
 <span class="inline-flex items-center gap-2"><span aria-hidden="true" class="material-symbols-outlined text-[18px]">tune</span>Filters<span class="hidden min-w-5 h-5 px-1.5 rounded-full bg-primary text-white text-[11px] items-center justify-center" data-filter-badge=""></span></span>
 <span aria-hidden="true" class="material-symbols-outlined text-[18px]">expand_more</span>
 </button>
-<aside class="hidden lg:flex flex-col gap-6 lg:sticky lg:top-24 rounded-2xl border border-border-subtle bg-surface-card p-5 mb-6 lg:mb-0" data-filter-panel="" id="filter-panel">
+<aside class="hidden lg:flex flex-col gap-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto rounded-2xl border border-border-subtle bg-surface-card p-5 mb-6 lg:mb-0" data-filter-panel="" id="filter-panel">
 <div class="flex items-center justify-between">
 <h2 class="font-bold text-sm">Refine</h2>
 <button class="text-xs font-bold text-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded" data-filters-clear="" type="button">Clear all</button>
@@ -231,6 +231,27 @@ tailwind.config = {
 <label class="block cursor-pointer"><input class="peer sr-only" data-label="Dell" data-value="dell" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"><img alt="" class="h-4 w-4 object-contain" src="../assets/logo/brands/dell.svg"/>Dell<span class="ml-auto font-mono font-normal opacity-60">2</span></span></label>
 <label class="block cursor-pointer"><input class="peer sr-only" data-label="HP" data-value="hp" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"><img alt="" class="h-4 w-4 object-contain" src="../assets/logo/brands/hp.svg"/>HP<span class="ml-auto font-mono font-normal opacity-60">2</span></span></label>
 <label class="block cursor-pointer"><input class="peer sr-only" data-label="Lenovo" data-value="lenovo" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary"><img alt="" class="h-4 w-4 object-contain" src="../assets/logo/brands/lenovo.svg"/>Lenovo<span class="ml-auto font-mono font-normal opacity-60">2</span></span></label>
+</div>
+</div>
+<div>
+<h3 class="font-mono text-[11px] uppercase tracking-widest text-text-muted mb-2.5">Processor</h3>
+<div class="grid gap-2" data-filter-group="cpu">
+<label class="block cursor-pointer"><input class="peer sr-only" data-label="AMD Ryzen 5" data-value="AMD Ryzen 5" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">AMD Ryzen 5<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="Intel Core i5" data-value="Intel Core i5" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">Intel Core i5<span class="ml-auto font-mono font-normal opacity-60">3</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="Intel Core i7" data-value="Intel Core i7" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">Intel Core i7<span class="ml-auto font-mono font-normal opacity-60">2</span></span></label>
+</div>
+</div><div>
+<h3 class="font-mono text-[11px] uppercase tracking-widest text-text-muted mb-2.5">Memory (RAM)</h3>
+<div class="grid gap-2" data-filter-group="ram">
+<label class="block cursor-pointer"><input class="peer sr-only" data-label="8GB" data-value="8GB" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">8GB<span class="ml-auto font-mono font-normal opacity-60">2</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="16GB" data-value="16GB" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">16GB<span class="ml-auto font-mono font-normal opacity-60">3</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="32GB" data-value="32GB" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">32GB<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label>
+</div>
+</div><div>
+<h3 class="font-mono text-[11px] uppercase tracking-widest text-text-muted mb-2.5">Screen size</h3>
+<div class="grid gap-2" data-filter-group="size">
+<label class="block cursor-pointer"><input class="peer sr-only" data-label="14″" data-value="14″" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">14″<span class="ml-auto font-mono font-normal opacity-60">4</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="15.6″" data-value="15.6″" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">15.6″<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label>
+</div>
+</div><div>
+<h3 class="font-mono text-[11px] uppercase tracking-widest text-text-muted mb-2.5">Resolution</h3>
+<div class="grid gap-2" data-filter-group="res">
+<label class="block cursor-pointer"><input class="peer sr-only" data-label="4K UHD" data-value="4K UHD" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">4K UHD<span class="ml-auto font-mono font-normal opacity-60">1</span></span></label><label class="block cursor-pointer"><input class="peer sr-only" data-label="Full HD" data-value="Full HD" type="checkbox"/><span class="flex items-center gap-2 rounded-lg border border-border-subtle bg-surface-container-lowest px-3 py-2 text-xs font-bold transition-colors hover:border-text-primary/50 peer-checked:border-surface-dark peer-checked:bg-surface-dark peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-primary">Full HD<span class="ml-auto font-mono font-normal opacity-60">4</span></span></label>
 </div>
 </div>
 <div>
@@ -258,18 +279,20 @@ tailwind.config = {
 <option value="price-asc">Price: Low to High</option>
 <option value="price-desc">Price: High to Low</option>
 <option value="rating-desc">Top Rated</option>
+<option value="ram-desc">Memory: High to Low</option>
+<option value="size-desc">Screen size: Large to Small</option>
 </select>
 </div>
 </div>
 <div class="hidden flex-wrap items-center gap-2 mb-4" data-active-chips=""></div>
 <div class="grid grid-cols-2 xl:grid-cols-3 gap-5" data-product-grid="" id="product-grid">
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="dell-5410" data-name="dell latitude 5410" data-brand="dell" data-grade="a" data-price="4500" data-rating="4.8" data-usecase="office budget">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="dell-5410" data-name="dell latitude 5410" data-brand="dell" data-grade="a" data-price="4500" data-rating="4.8" data-usecase="office budget" data-ram="8GB" data-cpu="Intel Core i5" data-size="14″" data-res="Full HD">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View Dell Latitude 5410">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="Dell Latitude 5410" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpcXrfpgkjqJP0sGcYZ1WUpnJgttgMvbeM2Y3f328zpFcXEX5E8TtgeD4xOXMuYXu5f0xmKB8HhMR4y7ARS1Ou4_8fKEWkvtT2NdZhM_PeccsywWrwcguCGfOXWtwTc9ebl10JVeCdmgZO1F6nANCRJDGed80nOqPuwThbvHxdJ5tKDonWoyXErWyh9r4kD6y4rdykjtuVJXlTZOEKQjkM16PiOe_lGtfKvQWhlmLyxvENON0idY8=w720" style="object-position:center" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">verified</span>Grade A</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -292,12 +315,12 @@ tailwind.config = {
 </div>
 </article>
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="hp-elitebook-840" data-name="hp elitebook 840 g7" data-brand="hp" data-grade="a" data-price="5999" data-rating="4.7" data-usecase="office travel">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="hp-elitebook-840" data-name="hp elitebook 840 g7" data-brand="hp" data-grade="a" data-price="5999" data-rating="4.7" data-usecase="office travel" data-ram="16GB" data-cpu="Intel Core i5" data-size="14″" data-res="Full HD">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View HP EliteBook 840 G7">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="HP EliteBook 840 G7" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAJxrBxOK_N_-xDVHUWMUheZaEEf285YQV1uKW0XHuVNzMaxcn0BgRA-R2StdAAgS-VsMFH54-7x4LGkH6No4Il_NCUVuwnLCJkrJU94hKxQO-iqEkrp-eW-RWL8XndKmELKngeJX4irDF-DQI0Dga4WC-VLr4OkHhoilLiCGLgUHEbiizkk9XVNct1u-nkvFv55puxUZ8qksUZ6xmMQwq1KJC88D6KGV1Q7yodXqK2k_vCist2U4=w720" style="object-position:center" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">verified</span>Grade A</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 <span class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wide pl-2 pr-2.5 py-1 shadow-md"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Only 3 left</span>
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -320,12 +343,12 @@ tailwind.config = {
 </div>
 </article>
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="thinkpad-t14" data-name="lenovo thinkpad t14" data-brand="lenovo" data-grade="a" data-price="6299" data-rating="4.9" data-usecase="travel">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="thinkpad-t14" data-name="lenovo thinkpad t14" data-brand="lenovo" data-grade="a" data-price="6299" data-rating="4.9" data-usecase="travel" data-ram="16GB" data-cpu="AMD Ryzen 5" data-size="14″" data-res="Full HD">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View Lenovo ThinkPad T14">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="Lenovo ThinkPad T14" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf3n48LYkEZ--OVAuKTnxjCPQlY9BZ3PkNhJOCHlT0CWvzEZc3bt3gztXIsPop12a5LnBN1Pn-SJqvvgGpa_KFzBDQUPoX4coJWNQl9AwFyJG0xIydoRkG9fJEP7lFqy1KBcv7-d42eO4N45l2bcblYr0OfbhmwatK7kbiW6HICU11cb6JJZOSIcY7lG844pDztQAuALaxoWSJjCgQ0Zc_4XDe42TcKwrOQh_J_SVxQ9B-M6rxQNs=w720" style="object-position:center" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">verified</span>Grade A</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 <span class="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-red-600 text-white text-[10px] font-bold uppercase tracking-wide pl-2 pr-2.5 py-1 shadow-md"><span class="w-1.5 h-1.5 rounded-full bg-white"></span>Only 4 left</span>
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -348,12 +371,12 @@ tailwind.config = {
 </div>
 </article>
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="precision-3551" data-name="dell precision 3551" data-brand="dell" data-grade="a" data-price="11999" data-rating="4.6" data-usecase="power">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="precision-3551" data-name="dell precision 3551" data-brand="dell" data-grade="a" data-price="11999" data-rating="4.6" data-usecase="power" data-ram="32GB" data-cpu="Intel Core i7" data-size="" data-res="">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View Dell Precision 3551">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="Dell Precision 3551" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6SxuQt6d3zJojtxlSH4y8QSgOnaEeRZETWRIiriQphoZChIFF9rJItncA_wBlIJVuUQR74rm38OzKJH4RlkJwpRLtl6X63TbFmgfsHRJmutG4oi8bRYULlcLHy3ZpRFj12WIZWuVXFhGMvH1_cXdgk9gXwJ1CaSL6ZIDCo_QZLCQ-hb5sNx1adMylos3Y2oy4D43g5bh3_KO6NkYtXk4E0mkTJjX7wd0RVa5Y1J-1peUefoJ3mlM=w720" style="object-position:center" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">verified</span>Grade A</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -376,12 +399,12 @@ tailwind.config = {
 </div>
 </article>
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="probook-450" data-name="hp probook 450 g8" data-brand="hp" data-grade="b" data-price="3799" data-rating="4.4" data-usecase="office budget">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="probook-450" data-name="hp probook 450 g8" data-brand="hp" data-grade="b" data-price="3799" data-rating="4.4" data-usecase="office budget" data-ram="8GB" data-cpu="Intel Core i5" data-size="15.6″" data-res="Full HD">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View HP ProBook 450 G8">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="HP ProBook 450 G8" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCJaSBSrzwrQ0_fZAD6qOWoJhlP3riTJTNLscVefjbxwqIadweYjPLsMoSCqVitkEMe9pr4f3iFYNgGq4YcJW8ZZBhKplTMqRQg3YvuW2RvbLHhUy4sv_xdCvwa-yWDXnEjAawDHg1XVaB8WlxoQJyNNsuN2DGk1_ncQrDbYQn5FB6nO2Da7_jQV8sdD8seocNkT4Pp0tU4SnAAwOqYhlsWHAwB2ohuRdqfMcnHMnobUXiTwg5cQc=w720" style="object-position:center" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-white text-text-primary ring-1 ring-border-subtle text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-amber-500">check_circle</span>Grade B</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -404,12 +427,12 @@ tailwind.config = {
 </div>
 </article>
 
-<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="x1-carbon" data-name="lenovo x1 carbon" data-brand="lenovo" data-grade="a" data-price="8499" data-rating="4.8" data-usecase="travel power">
+<article class="tx-card group flex flex-col h-full bg-surface-card rounded-2xl border border-border-subtle overflow-hidden" data-product-card="" data-id="x1-carbon" data-name="lenovo x1 carbon" data-brand="lenovo" data-grade="a" data-price="8499" data-rating="4.8" data-usecase="travel power" data-ram="16GB" data-cpu="Intel Core i7" data-size="14″" data-res="4K UHD">
 <a class="flex flex-col flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary" href="#" title="View Lenovo X1 Carbon">
 <div class="tx-media relative aspect-[16/11] overflow-hidden">
 <img alt="Lenovo X1 Carbon" class="tx-img absolute inset-0 h-full w-full object-cover" decoding="async" height="495" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOKN0s2bZtq_xGciZnB39zDdmJQV7vhZQPCTJlmwiOUGJgbugRLbTdbSebpHiacduEQfWuaL65H-J9IwfMKWc8xBU_kZKeLqmXHfkybxTVNs81CLPSA9kQozkKj4wxmZiHI_6dxwz2quHThp6HHzbhGhzfi7ULQ4L8M9GBDondOw0mg8MsSk1GtdzwnXPodGT_5My_FT1hYLCArLUSopVH_NBJ-iS6yTCe86H4__ny9Gx83MWSooY=w720" style="object-position:center" width="720"/>
 <span class="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-surface-dark text-white text-[10px] font-bold uppercase tracking-wider pl-1.5 pr-2.5 py-1 shadow-md"><span aria-hidden="true" class="material-symbols-outlined text-[14px] text-status-online">verified</span>Grade A</span>
-<span class="absolute top-3 right-3 rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
+<span class="absolute top-11 left-3 sm:top-3 sm:right-3 sm:left-auto rounded-full bg-status-online text-surface-dark text-[10px] font-bold uppercase tracking-[0.18em] px-2.5 py-1 shadow-md">Refurbished</span>
 
 </div>
 <div class="px-4 pt-4 pb-4 flex flex-col gap-3 flex-1">
@@ -548,6 +571,7 @@ tailwind.config = {
         (!brands.length || brands.indexOf(card.getAttribute("data-brand")) !== -1) &&
         (!grades.length || grades.indexOf(card.getAttribute("data-grade")) !== -1) &&
         (!uses.length || uses.some(function (u) { return use.indexOf(" " + u + " ") !== -1; })) &&
+        ["cpu", "ram", "size", "res"].every(function (g) { var sel = values(g); return !sel.length || sel.indexOf(card.getAttribute("data-" + g)) !== -1; }) &&
         parseInt(card.getAttribute("data-price"), 10) <= max &&
         (!search || card.getAttribute("data-name").indexOf(search) !== -1);
       card.style.display = ok ? "" : "none";
@@ -564,6 +588,8 @@ tailwind.config = {
     var sorted = cards.slice();
     if (mode === "price-asc") sorted.sort(function (a, b) { return a.getAttribute("data-price") - b.getAttribute("data-price"); });
     if (mode === "price-desc") sorted.sort(function (a, b) { return b.getAttribute("data-price") - a.getAttribute("data-price"); });
+    if (mode === "ram-desc") sorted.sort(function (a, b) { return (parseInt(b.getAttribute("data-ram"), 10) || 0) - (parseInt(a.getAttribute("data-ram"), 10) || 0); });
+    if (mode === "size-desc") sorted.sort(function (a, b) { return (parseFloat(b.getAttribute("data-size")) || 0) - (parseFloat(a.getAttribute("data-size")) || 0); });
     if (mode === "rating-desc") sorted.sort(function (a, b) { return b.getAttribute("data-rating") - a.getAttribute("data-rating"); });
     sorted.forEach(function (card) { grid.appendChild(card); });
   }
